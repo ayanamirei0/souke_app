@@ -11,5 +11,31 @@ export default new Router({
       name: 'index',
       component: index
     }
-  ]
+    // ,
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   component: home
+    // },
+    // {
+    //   path: '/',
+    //   name: 'search',
+    //   component: search
+    // },
+    // {
+    //   path: '/',
+    //   name: 'msg',
+    //   component: msg
+    // },
+    // {
+    //   path: '/',
+    //   name: 'mine',
+    //   component: mine
+    // }
+  ],
+  methods:{
+    switchTo(path){
+      this.$router.replace(path);
+    }
+  }
 })

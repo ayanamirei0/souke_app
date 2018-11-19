@@ -1,2 +1,3 @@
-@import "./css.css";
-@import "./goole.css";
+@import "./common/css.css";
+@import "./common/goole.css";
+@import "./index/index.css"

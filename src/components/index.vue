@@ -7,19 +7,17 @@
             </div>
         </header>
         <div class="banner">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/15.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/15.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/15.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <van-swipe :autoplay="3000" :show-indicators="false">
+                <van-swipe-item>
+                    <img src="../assets/img/banner.png" alt="">
+                </van-swipe-item>
+                <van-swipe-item>
+                    <img src="../assets/img/banner.png" alt="">
+                </van-swipe-item>
+                <van-swipe-item>
+                    <img src="../assets/img/banner.png" alt="">
+                </van-swipe-item>
+            </van-swipe>
         </div>
         <div class="subject">
             <div class="yxkc square middle">
@@ -104,110 +102,213 @@
                 </div>
             </div>
         </div>
+        <div class="line1"></div>
+        <div class="menu_title">
+            <span class="line"></span>
+            <van-tabs v-model="active">
+                <van-tab title="小学课程" class="primary">
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>巨人大语文</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>思维训练精英班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>巨人作文启航班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>思维训练培优班</span>
+                    </div>
+                </van-tab>
+                <van-tab title="中学课程" class="middle">
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>巨人大语文</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>思维训练精英班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>巨人作文启航班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>思维训练培优班</span>
+                    </div>
+                </van-tab>
+            </van-tabs>
+            <span class="more">></span>
+        </div>
+        <div class="line1"></div>
+        <div class="menu_title">
+            <span class="line"></span>
+            <van-tabs v-model="active">
+                <van-tab title="英语学习" class="primary">
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>巨人大语文</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>思维训练精英班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>巨人作文启航班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>思维训练培优班</span>
+                    </div>
+                </van-tab>
+                <van-tab title="特长课程" class="middle">
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>巨人大语文</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>思维训练精英班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>巨人作文启航班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>思维训练培优班</span>
+                    </div>
+                </van-tab>
+            </van-tabs>
+            <span class="more">></span>
+        </div>
+        <div class="line1"></div>
+        <div class="menu_title">
+            <span class="line"></span>
+            <van-tabs v-model="active">
+                <van-tab title="国内冬令营" class="primary">
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>巨人大语文</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>思维训练精英班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>巨人作文启航班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/15.png" alt="">
+                        </div>
+                        <span>思维训练培优班</span>
+                    </div>
+                </van-tab>
+                <van-tab title="国际游学" class="middle">
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>巨人大语文</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>思维训练精英班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>巨人作文启航班</span>
+                    </div>
+                    <div class="title">
+                        <div class="img">
+                            <img src="../assets/img/16.png" alt="">
+                        </div>
+                        <span>思维训练培优班</span>
+                    </div>
+                </van-tab>
+            </van-tabs>
+            <span class="more">></span>
+        </div>
+        <footer class="foot">
+            <div class="home">
+                <img src="../assets/img/icon_1.png" alt="">
+            </div>
+            <div class="search">
+                <img src="../assets/img/icon_2.png" alt="">
+            </div>
+            <div class="msg">
+                <img src="../assets/img/icon_3.png" alt="">
+            </div>
+            <div class="main">
+                <img src="../assets/img/icon_4.png" alt="">
+            </div>
+        </footer>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'index',
-    data () {
-        return {
-            
-        }
-    }
-}
+  name: "index",
+  data() {
+      tabBarImgArr:[   //图片切换
+        {normal: require('../assets/img/icon_1.png'), selected: require('../assets/img/icon_11.png')},
+        {normal: require('../assets/img/icon_2.png'), selected: require('../assets/img/icon_22.png')},
+        {normal: require('../assets/img/icon_3.png'), selected: require('../assets/img/icon_33.png')},
+        {normal: require('../assets/img/icon_4.png'), selected: require('../assets/img/icon_44.png')}
+      ]
+    return {};
+  }
+};
+
 </script>
-
-
-<style>
-.head {
-  margin-top: 1.4rem;
-}
-.head .title {
-  font-family: "PingFang-SC-Regular";
-  font-size: 0.9rem;
-  color: #333333;
-  margin-left: 0.975rem;
-  font-weight: bold;
-  margin-right: 0.375rem;
-}
-.head .city {
-  font-family: "PingFang-SC-Regular";
-  font-size: 0.55rem;
-  color: #333333;
-  padding: 0.15rem 0.35rem;
-  background-color: #efefef;
-  line-height: 1rem;
-  font-weight: 400;
-}
-.banner {
-  margin-top: 0.6rem;
-}
-.banner .swiper-container .swiper-slide img {
-  width: 100%;
-  height: 5rem;
-}
-.subject {
-  margin-top: 0.925rem;
-  margin-bottom: 0.6rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  display: flex;
-  flex-flow: wrap;
-}
-.subject .square {
-  margin-right: 1.075rem;
-}
-.subject .img {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.subject .title {
-  /* width: 2.375rem;
-    height: .575rem; */
-  font-size: 0.6rem;
-  text-align: center;
-}
-.subject .middle .title {
-  padding: 0.425rem 0;
-}
-.subject .bottom .title {
-  padding-top: 0.275rem;
-}
-.line {
-  width: 18.75rem;
-  height: 0.35rem;
-  background-color: #efefef;
-}
-.hot_subject .line {
-  display: inline-block;
-  width: 0.2rem;
-  height: 0.8rem;
-  background-color: #2bb8ee;
-}
-.hot_subject .title {
-  padding-left: 0.5rem;
-  margin-top: 0.725rem;
-}
-.hot_subject .text {
-  margin-left: 0.275rem;
-  font-family: "PingFang-SC-Regular";
-}
-.hot_subject .content {
-  padding-left: 0.5rem;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.hot_subject .content .img {
-  margin-left: 0.4rem;
-}
-.hot_subject .content .img img {
-  width: 6.175rem;
-  height: 3.425rem;
-}
-.hot_subject .content .img p {
-  font-size: 0.65rem;
-  color: #333333;
-}
-</style>
 
