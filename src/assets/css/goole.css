@@ -1,0 +1,51 @@
+/* CSS Document */
+*{
+	font-family: "Microsoft YaHei", "\u5fae\u8f6f\u96c5\u9ed1", "Open Sans", "Hiragino Sans GB","STHeiti", "WenQuanYi Micro Hei", 'SimSun', sans-serif;
+	padding:0;
+	margin:0
+}
+body{ padding:0;	margin:0; width:100%;}
+a {
+	color:#000;
+	text-decoration:none;
+	
+}
+a:hover {
+	text-decoration:none;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.clear {
+	clear:both
+}
+em,i{ font-style:normal;}
+ul{ padding:0; margin:0}
+ul li,li{ list-style-type:none;}
+input,select,textarea{outline:none;-webkit-appearance:none;	border-radius:0;border:none;} 
+img{ border:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+    overflow:hidden;
+}
+.clearfix {
+    zoom:1; /*for ie6 & ie7 */
+}
+.h5{ height:0.125rem; clear:both; overflow:hidden;}
+.h10{ height:0.25rem; clear:both; overflow:hidden;}
+.h20{ height:0.5rem; clear:both; overflow:hidden;}
+.h30{ height:0.75rem; clear:both; overflow:hidden;}
+.h40{ height:1.0rem; clear:both; overflow:hidden;}
+.h50{ height:1.25rem; clear:both; overflow:hidden;}
+.h60{ height:1.5rem; clear:both; overflow:hidden;}
+.h70{ height:1.75rem; clear:both; overflow:hidden;}
+.h80{ height:2.0rem; clear:both; overflow:hidden;}
+.h90{ height:2.25rem; clear:both; overflow:hidden;}
+.h36{ height: .9rem; clear: both; overflow: hidden;}
+.cl{ clear:both; }
