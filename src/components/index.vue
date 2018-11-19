@@ -281,7 +281,7 @@
         </div>
         <footer class="foot">
             <div class="home">
-                <img :src="'/' === $route.path ? tabBarImgArr[0].selected : tabBarImgArr[0].normal" alt="">
+                <img :src="'/' === $route.path ? tabBarImgArr[0].normal : tabBarImgArr[0].selected" alt="">
             </div>
             <div class="search">
                 <img src="../assets/img/icon_2.png" alt="">
@@ -300,15 +300,20 @@
 export default {
   name: "index",
   data() {
-      tabBarImgArr:[   //图片切换
+    return {
+        active: '',
+        tabBarImgArr:[   //图片切换
         {normal: require('../assets/img/icon_1.png'), selected: require('../assets/img/icon_11.png')},
         {normal: require('../assets/img/icon_2.png'), selected: require('../assets/img/icon_22.png')},
         {normal: require('../assets/img/icon_3.png'), selected: require('../assets/img/icon_33.png')},
         {normal: require('../assets/img/icon_4.png'), selected: require('../assets/img/icon_44.png')}
       ]
-    return {
-        active: ''
     };
+  },
+  methods:{
+    switchTo(path){
+      this.$router.replace(path);
+    }
   }
 };
 
