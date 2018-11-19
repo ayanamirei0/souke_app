@@ -281,7 +281,7 @@
         </div>
         <footer class="foot">
             <div class="home">
-                <img src="../assets/img/icon_1.png" alt="">
+                <img :src="'/' === $route.path ? tabBarImgArr[0].selected : tabBarImgArr[0].normal" alt="">
             </div>
             <div class="search">
                 <img src="../assets/img/icon_2.png" alt="">
@@ -306,7 +306,9 @@ export default {
         {normal: require('../assets/img/icon_3.png'), selected: require('../assets/img/icon_33.png')},
         {normal: require('../assets/img/icon_4.png'), selected: require('../assets/img/icon_44.png')}
       ]
-    return {};
+    return {
+        active: ''
+    };
   }
 };
 
