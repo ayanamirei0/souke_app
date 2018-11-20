@@ -307,34 +307,11 @@
             <p class="text">已经到底了~</p>
         </div>
         <footer class="foot">
-            <!-- <bottom-nav :list="arr" @sendMessage="getData"></bottom-nav> -->
-            <!-- // :list 是子组件内部约定的名称,类型内外不符合会warn  把arr传入子组件 父传子-->
-            <!-- 子传父的写法  sendMessage 和子组件里发射的名字一样，在外面用一个函数接值 getData-->
-            <!-- <component :is="content"></component> -->
-            <!-- vue语法，通过is的变量值，来决定加载什么组件 -->
-            <div class="home">
-                <img src="../assets/img/icon_1.png" alt="">
-            </div>
-            <div class="search">
-                <img src="../assets/img/icon_2.png" alt="">
-            </div>
-            <div class="msg">
-                <img src="../assets/img/icon_3.png" alt="">
-            </div>
-            <div class="main">
-                <img src="../assets/img/icon_4.png" alt="">
-            </div>
         </footer>
     </div>
 </template>
 
 <script>
-// import BottomNav from "@/views/tabBar_bottom.vue"; // 引入组件
-// import FirstComponent from "@/views/index.vue";
-// import SecondComponent from "@/views/components/search.vue";
-// import ThirdComponent from "@/views/components/msg.vue";
-// import FourComponent from "@/views/components/mine.vue";
-
 export default {
   name: "index",
   data() {
@@ -346,31 +323,10 @@ export default {
       num2: 0,
       num3: 0,
 
-    //   arr: ["首页", "搜索", "消息", "我的"], //自己内部的变量
-    //   content: "FirstComponent", // 这个需要切换的组件
-
-      active: "",
-    //   tabBarImgArr: [
-    //     //图片切换
-    //     {
-    //       normal: require("../assets/img/icon_1.png"),
-    //       selected: require("../assets/img/icon_11.png")
-    //     },
-    //     {
-    //       normal: require("../assets/img/icon_2.png"),
-    //       selected: require("../assets/img/icon_22.png")
-    //     },
-    //     {
-    //       normal: require("../assets/img/icon_3.png"),
-    //       selected: require("../assets/img/icon_33.png")
-    //     },
-    //     {
-    //       normal: require("../assets/img/icon_4.png"),
-    //       selected: require("../assets/img/icon_44.png")
-    //     }
-    //   ]
+      active: ""
     };
   },
+ 
   methods: {
     tabSwitch1(index) {
       this.num1 = index;
@@ -380,31 +336,7 @@ export default {
     },
     tabSwitch3(index) {
       this.num3 = index;
-    },
-    // getData(res) {
-    //   console.log(res); // 你就能看到值了，然后就可以判断了
-    //   switch (res) {
-    //     case 0:
-    //       this.content = "FirstComponent";
-    //       break;
-    //     case 1:
-    //       this.content = "SecondComponent";
-    //       break;
-    //     case 2:
-    //       this.content = "ThirdComponent";
-    //       break;
-    //     case 3:
-    //       this.content = "FourComponent";
-    //       break;
-    //   }
-    // },
-    // components: {
-    //     BottomNav, // 一定要在component声明 引入的组件
-    //     FirstComponent,
-    //     SecondComponent,
-    //     ThirdComponent,
-    //     FourComponent
-    // }
+    }
   }
 };
 </script>
