@@ -119,6 +119,13 @@
   top: .175rem;
   left: .25rem;
 }
+.select_title .more{
+  color: #8E8E8E;
+  font-size: 28px;
+  position: absolute;
+  top: -0.1rem;
+  right: .35rem;
+}
 .select_title ul{
   display: flex;
   flex-wrap: wrap;

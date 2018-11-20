@@ -111,7 +111,8 @@
                         <span class="underline" v-show="index == num1"></span>
                         {{item}}
                     </li>
-                </ul>  
+                </ul>
+                <span class="more">></span>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num1 == 0">
@@ -177,7 +178,8 @@
                         <span class="underline" v-show="index == num2"></span>
                         {{item}}
                     </li>
-                </ul>  
+                </ul>
+                <span class="more">></span>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num2 === 0">
@@ -243,7 +245,8 @@
                         <span class="underline" v-show="index == num3"></span>
                         {{item}}
                     </li>
-                </ul>  
+                </ul>
+                <span class="more">></span>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num3 === 0">
@@ -304,6 +307,11 @@
             <p class="text">已经到底了~</p>
         </div>
         <footer class="foot">
+            <!-- <bottom-nav :list="arr" @sendMessage="getData"></bottom-nav> -->
+            <!-- // :list 是子组件内部约定的名称,类型内外不符合会warn  把arr传入子组件 父传子-->
+            <!-- 子传父的写法  sendMessage 和子组件里发射的名字一样，在外面用一个函数接值 getData-->
+            <!-- <component :is="content"></component> -->
+            <!-- vue语法，通过is的变量值，来决定加载什么组件 -->
             <div class="home">
                 <img src="../assets/img/icon_1.png" alt="">
             </div>
@@ -321,52 +329,82 @@
 </template>
 
 <script>
+// import BottomNav from "@/views/tabBar_bottom.vue"; // 引入组件
+// import FirstComponent from "@/views/index.vue";
+// import SecondComponent from "@/views/components/search.vue";
+// import ThirdComponent from "@/views/components/msg.vue";
+// import FourComponent from "@/views/components/mine.vue";
+
 export default {
   name: "index",
   data() {
     return {
-        tabs1: ["小学课程", "中学课程"],
-        tabs2: ["英语学习", "特长课程"],
-        tabs3: ["国内冬令营", "国际游学"],
-        num1: 0,
-        num2: 0,
-        num3: 0,
+      tabs1: ["小学课程", "中学课程"],
+      tabs2: ["英语学习", "特长课程"],
+      tabs3: ["国内冬令营", "国际游学"],
+      num1: 0,
+      num2: 0,
+      num3: 0,
 
-        active: "",
-        tabBarImgArr: [
-        //图片切换
-        {
-          normal: require("../assets/img/icon_1.png"),
-          selected: require("../assets/img/icon_11.png")
-        },
-        {
-          normal: require("../assets/img/icon_2.png"),
-          selected: require("../assets/img/icon_22.png")
-        },
-        {
-          normal: require("../assets/img/icon_3.png"),
-          selected: require("../assets/img/icon_33.png")
-        },
-        {
-          normal: require("../assets/img/icon_4.png"),
-          selected: require("../assets/img/icon_44.png")
-        }
-      ]
+    //   arr: ["首页", "搜索", "消息", "我的"], //自己内部的变量
+    //   content: "FirstComponent", // 这个需要切换的组件
+
+      active: "",
+    //   tabBarImgArr: [
+    //     //图片切换
+    //     {
+    //       normal: require("../assets/img/icon_1.png"),
+    //       selected: require("../assets/img/icon_11.png")
+    //     },
+    //     {
+    //       normal: require("../assets/img/icon_2.png"),
+    //       selected: require("../assets/img/icon_22.png")
+    //     },
+    //     {
+    //       normal: require("../assets/img/icon_3.png"),
+    //       selected: require("../assets/img/icon_33.png")
+    //     },
+    //     {
+    //       normal: require("../assets/img/icon_4.png"),
+    //       selected: require("../assets/img/icon_44.png")
+    //     }
+    //   ]
     };
   },
   methods: {
-    switchTo(path) {
-      this.$router.replace(path);
-    },
     tabSwitch1(index) {
-        this.num1 = index;
+      this.num1 = index;
     },
     tabSwitch2(index) {
-        this.num2 = index;    
+      this.num2 = index;
     },
     tabSwitch3(index) {
-        this.num3 = index;
+      this.num3 = index;
     },
+    // getData(res) {
+    //   console.log(res); // 你就能看到值了，然后就可以判断了
+    //   switch (res) {
+    //     case 0:
+    //       this.content = "FirstComponent";
+    //       break;
+    //     case 1:
+    //       this.content = "SecondComponent";
+    //       break;
+    //     case 2:
+    //       this.content = "ThirdComponent";
+    //       break;
+    //     case 3:
+    //       this.content = "FourComponent";
+    //       break;
+    //   }
+    // },
+    // components: {
+    //     BottomNav, // 一定要在component声明 引入的组件
+    //     FirstComponent,
+    //     SecondComponent,
+    //     ThirdComponent,
+    //     FourComponent
+    // }
   }
 };
 </script>
