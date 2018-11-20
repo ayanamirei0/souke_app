@@ -173,7 +173,7 @@
             <div class="select_title">
                 <span class="line"></span>
                 <ul>
-                    <li v-for="(item,index) in tabs2" :class="{active:index == num2}" @click="tab2(index)">
+                    <li v-for="(item,index) in tabs2" :class="{active:index == num2}" @click="tab1(index)">
                         <span class="underline" v-show="index == num2"></span>
                         {{item}}
                     </li>
@@ -239,7 +239,7 @@
             <div class="select_title">
                 <span class="line"></span>
                 <ul>
-                    <li v-for="(item,index) in tabs3" :class="{active:index == num3}" @click="tab3(index)">
+                    <li v-for="(item,index) in tabs3" :class="{active:index == num3}" @click="tab1(index)">
                         <span class="underline" v-show="index == num3"></span>
                         {{item}}
                     </li>
@@ -360,13 +360,9 @@ export default {
     },
     tab1(index) {
             this.num1 = index;
+            this.num2 = index;
+            this.num3 = index;
         },
-    tab2(index) {
-        this.num2 = index;
-    },
-    tab3(index) {
-        this.num3 = index;
-    }
   }
 };
 </script>
