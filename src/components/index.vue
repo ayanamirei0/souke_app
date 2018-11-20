@@ -107,7 +107,7 @@
             <div class="select_title">
                 <span class="line"></span>
                 <ul>
-                    <li v-for="(item,index) in tabs1" :class="{active:index == num1}" @click="tab1(index)">
+                    <li v-for="(item,index) in tabs1" :class="{active:index == num1}" @click="tabSwitch1(index)">
                         <span class="underline" v-show="index == num1"></span>
                         {{item}}
                     </li>
@@ -173,7 +173,7 @@
             <div class="select_title">
                 <span class="line"></span>
                 <ul>
-                    <li v-for="(item,index) in tabs2" :class="{active:index == num2}" @click="tab1(index)">
+                    <li v-for="(item,index) in tabs2" :class="{active:index == num2}" @click="tabSwitch2(index)">
                         <span class="underline" v-show="index == num2"></span>
                         {{item}}
                     </li>
@@ -239,7 +239,7 @@
             <div class="select_title">
                 <span class="line"></span>
                 <ul>
-                    <li v-for="(item,index) in tabs3" :class="{active:index == num3}" @click="tab1(index)">
+                    <li v-for="(item,index) in tabs3" :class="{active:index == num3}" @click="tabSwitch3(index)">
                         <span class="underline" v-show="index == num3"></span>
                         {{item}}
                     </li>
@@ -358,11 +358,15 @@ export default {
     switchTo(path) {
       this.$router.replace(path);
     },
-    tab1(index) {
-            this.num1 = index;
-            this.num2 = index;
-            this.num3 = index;
-        },
+    tabSwitch1(index) {
+        this.num1 = index;
+    },
+    tabSwitch2(index) {
+        this.num2 = index;    
+    },
+    tabSwitch3(index) {
+        this.num3 = index;
+    },
   }
 };
 </script>

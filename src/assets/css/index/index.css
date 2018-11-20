@@ -148,7 +148,7 @@
   position: absolute;
   bottom: -0.4rem;
   left: .3rem;
-  font-size: .375rem;
+  font-size: .3rem;
 }
 .select .active{
   color: #2bb8ee;
@@ -165,6 +165,7 @@
 .bottom .text{
   color: #999999;
   font-size: .3rem;
+  margin-top: .55rem;
 }
 .foot{
     display: flex;
