@@ -81,7 +81,7 @@
                 <p class="title">托管班</p>
             </div>
         </div>
-        <div class="line"></div>
+        <div class="line_y"></div>
         <div class="hot_subject">
             <div class="title">
                 <span class="line"></span>
@@ -103,10 +103,18 @@
             </div>
         </div>
         <div class="line1"></div>
-        <div class="menu_title">
-            <span class="line"></span>
-            <van-tabs v-model="active">
-                <van-tab title="小学课程" class="primary">
+        <div class="select">
+            <div class="select_title">
+                <span class="line"></span>
+                <ul>
+                    <li v-for="(item,index) in tabs1" :class="{active:index == num1}" @click="tab1(index)">
+                        <span class="underline" v-show="index == num1"></span>
+                        {{item}}
+                    </li>
+                </ul>  
+            </div>
+            <div class="select_content">
+                <div class="content" v-if="num1 == 0">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
@@ -131,8 +139,8 @@
                         </div>
                         <span>思维训练培优班</span>
                     </div>
-                </van-tab>
-                <van-tab title="中学课程" class="middle">
+                </div>
+                <div class="content" v-if="num1 == 1">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
@@ -157,26 +165,33 @@
                         </div>
                         <span>思维训练培优班</span>
                     </div>
-                </van-tab>
-            </van-tabs>
-            <span class="more">></span>
+                </div>
+            </div>
         </div>
         <div class="line1"></div>
-        <div class="menu_title">
-            <span class="line"></span>
-            <van-tabs v-model="active">
-                <van-tab title="英语学习" class="primary">
+        <div class="select">
+            <div class="select_title">
+                <span class="line"></span>
+                <ul>
+                    <li v-for="(item,index) in tabs2" :class="{active:index == num2}" @click="tab2(index)">
+                        <span class="underline" v-show="index == num2"></span>
+                        {{item}}
+                    </li>
+                </ul>  
+            </div>
+            <div class="select_content">
+                <div class="content" v-if="num2 === 0">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人大语文</span>
+                        <span>新概念英语</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练精英班</span>
+                        <span>THINK国际</span>
                     </div>
                     <div class="title">
                         <div class="img">
@@ -190,67 +205,74 @@
                         </div>
                         <span>思维训练培优班</span>
                     </div>
-                </van-tab>
-                <van-tab title="特长课程" class="middle">
+                </div>
+                <div class="content" v-if="num2 === 1">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>巨人大语文</span>
+                        <span>“成吉思汗”草原探秘夏令营</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>思维训练精英班</span>
+                        <span>“国学大师”书法篆刻夏令营</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>巨人作文启航班</span>
+                        <span>“百变玩家”综合体验夏令营</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>思维训练培优班</span>
+                        <span>“灌篮高手”篮球训练夏令营</span>
                     </div>
-                </van-tab>
-            </van-tabs>
-            <span class="more">></span>
+                </div>
+            </div>
         </div>
         <div class="line1"></div>
-        <div class="menu_title">
-            <span class="line"></span>
-            <van-tabs v-model="active">
-                <van-tab title="国内冬令营" class="primary">
+        <div class="select">
+            <div class="select_title">
+                <span class="line"></span>
+                <ul>
+                    <li v-for="(item,index) in tabs3" :class="{active:index == num3}" @click="tab3(index)">
+                        <span class="underline" v-show="index == num3"></span>
+                        {{item}}
+                    </li>
+                </ul>  
+            </div>
+            <div class="select_content">
+                <div class="content" v-if="num3 === 0">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>巨人大语文</span>
+                        <span>“成吉思汗”草原探秘夏令营</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>思维训练精英班</span>
+                        <span>“国学大师”书法篆刻夏令营</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>巨人作文启航班</span>
+                        <span>“百变玩家”综合体验夏令营</span>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>思维训练培优班</span>
+                        <span>“灌篮高手”篮球训练夏令营</span>
                     </div>
-                </van-tab>
-                <van-tab title="国际游学" class="middle">
+                </div>
+                <div class="content" v-if="num3 === 1">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
@@ -275,13 +297,15 @@
                         </div>
                         <span>思维训练培优班</span>
                     </div>
-                </van-tab>
-            </van-tabs>
-            <span class="more">></span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p class="text">已经到底了~</p>
         </div>
         <footer class="foot">
             <div class="home">
-                <img :src="'/' === $route.path ? tabBarImgArr[0].normal : tabBarImgArr[0].selected" alt="">
+                <img src="../assets/img/icon_1.png" alt="">
             </div>
             <div class="search">
                 <img src="../assets/img/icon_2.png" alt="">
@@ -301,21 +325,49 @@ export default {
   name: "index",
   data() {
     return {
-        active: '',
-        tabBarImgArr:[   //图片切换
-        {normal: require('../assets/img/icon_1.png'), selected: require('../assets/img/icon_11.png')},
-        {normal: require('../assets/img/icon_2.png'), selected: require('../assets/img/icon_22.png')},
-        {normal: require('../assets/img/icon_3.png'), selected: require('../assets/img/icon_33.png')},
-        {normal: require('../assets/img/icon_4.png'), selected: require('../assets/img/icon_44.png')}
+        tabs1: ["小学课程", "中学课程"],
+        tabs2: ["英语学习", "特长课程"],
+        tabs3: ["国内冬令营", "国际游学"],
+        num1: 0,
+        num2: 0,
+        num3: 0,
+
+        active: "",
+        tabBarImgArr: [
+        //图片切换
+        {
+          normal: require("../assets/img/icon_1.png"),
+          selected: require("../assets/img/icon_11.png")
+        },
+        {
+          normal: require("../assets/img/icon_2.png"),
+          selected: require("../assets/img/icon_22.png")
+        },
+        {
+          normal: require("../assets/img/icon_3.png"),
+          selected: require("../assets/img/icon_33.png")
+        },
+        {
+          normal: require("../assets/img/icon_4.png"),
+          selected: require("../assets/img/icon_44.png")
+        }
       ]
     };
   },
-  methods:{
-    switchTo(path){
+  methods: {
+    switchTo(path) {
       this.$router.replace(path);
+    },
+    tab1(index) {
+            this.num1 = index;
+        },
+    tab2(index) {
+        this.num2 = index;
+    },
+    tab3(index) {
+        this.num3 = index;
     }
   }
 };
-
 </script>
 

@@ -50,7 +50,7 @@
   .subject .bottom .title {
     padding-top: 0.275rem;
   }
-  .line {
+  .line_y {
     width: 9.375rem;
     height: .175rem;
     background-color: #efefef;
@@ -102,47 +102,70 @@
     margin-top: .5rem;
     background-color: #efefef; 
   }
-  .menu_title{
-    position: relative;
-  }
-  .menu_title .primary,.menu_title .middle{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .menu_title .title{
-      position: relative;
-      padding: .275rem .15rem .275rem .25rem;
-  }
-  .menu_title .title .img img{
-    width: 4.275rem;
-    height: 2.675rem;
-  }
-  .menu_title .title span{
-      position: absolute;
-      bottom: -0.05rem;
-      left: .225rem;
-      font-size: .325rem;
-      text-align: left;
-  }
-  .menu_title .line{
-    display: inline-block;
-    width: 0.1rem;
-    height: .5rem;
-    border-radius: 3px;
-    background-color: #2bb8ee;
-    position: absolute;
-    top: .25rem;
-    left: .25rem;
-    z-index: 998;
-  }
-  .menu_title .more{
-      position: absolute;
-      top: 0.125rem;
-      right: .375rem;
-      z-index: 998;
-      font-size: .6rem;
-      color: #8C8C8C;
-  }
+
+.select{
+  margin-top: .375rem;
+}
+.select_title{
+  position: relative;
+}
+.select_title .line{
+  display: inline-block;
+  width: 0.1rem;
+  height: .5rem;
+  border-radius: 3px;
+  background-color: #2bb8ee;
+  position: absolute;
+  top: .175rem;
+  left: .25rem;
+}
+.select_title ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.select_title ul li{
+  font-size: .6rem;
+  margin-left: .325rem;
+  position: relative;
+}
+.select_title ul li:first-child{
+  margin-left: .55rem;
+}
+.select_content .content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.select_content .content .title{
+  position: relative;
+  padding-left: .275rem;
+  margin: .3rem 0;
+}
+.select_content .content .title .img img{
+  width: 4.275rem;
+  height: 2.675rem;
+}
+.select_content .content .title span{
+  position: absolute;
+  bottom: -0.4rem;
+  left: .3rem;
+  font-size: .375rem;
+}
+.select .active{
+  color: #2bb8ee;
+}
+.select_title .underline{
+  display: inline-block;
+  width: 1rem;
+  height: .06rem;
+  background-color: #2bb8ee;
+  position: absolute;
+  bottom: -0.075rem;
+  left: .7rem;
+}
+.bottom .text{
+  color: #999999;
+  font-size: .3rem;
+}
 .foot{
     display: flex;
     justify-content: space-around;
