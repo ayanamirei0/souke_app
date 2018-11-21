@@ -56,6 +56,7 @@
     width: 9.375rem;
     height: .175rem;
     background-color: #efefef;
+    margin: .275rem 0 .375rem 0; 
   }
   .hot_subject{
       margin-top: .375rem;

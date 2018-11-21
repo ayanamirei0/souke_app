@@ -102,7 +102,7 @@
                 </div>
             </div>
         </div>
-        <div class="line1"></div>
+        <div class="line_y"></div>
         <div class="select">
             <div class="select_title">
                 <span class="line"></span>
@@ -169,7 +169,7 @@
                 </div>
             </div>
         </div>
-        <div class="line1"></div>
+        <div class="line_y"></div>
         <div class="select">
             <div class="select_title">
                 <span class="line"></span>
@@ -236,7 +236,7 @@
                 </div>
             </div>
         </div>
-        <div class="line1"></div>
+        <div class="line_y"></div>
         <div class="select">
             <div class="select_title">
                 <span class="line"></span>
