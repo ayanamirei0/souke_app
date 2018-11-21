@@ -5,7 +5,7 @@
   }
   .head .title {
     font-family: "PingFang-SC-Regular";
-    font-size: 0.5rem;
+    font-size: .45rem;
     color: #333333;
     margin-left: .5rem;
     font-weight: bold;
@@ -13,7 +13,7 @@
   }
   .head .city {
     font-family: "PingFang-SC-Regular";
-    font-size: 0.25rem;
+    font-size: .275rem;
     color: #333333;
     padding: 0.075rem 0.175rem;
     background-color: #efefef;
@@ -41,7 +41,9 @@
   .subject .title {
     /* width: 2.375rem;
       height: .575rem; */
-    font-size: 0.3rem;
+    font-size: .3rem;
+    font-family: 'PingFang-SC-Regular';
+    color: #333333;
     text-align: center;
   }
   .subject .middle .title {
@@ -64,20 +66,20 @@
       flex-wrap: wrap;
       padding-left: 0.3rem;
   }
-  .hot_subject .line {
+  .hot_subject .line, .select_title .line{
     display: inline-block;
-    width: 0.1rem;
-    height: .5rem;
-    border-radius: 3px;
+    width: .1rem;
+    height: .4rem;
+    border-radius: .075rem;
     background-color: #2bb8ee;
     position: absolute;
-    top: .175rem;
+    top: .1rem;
     left: .25rem;
   }
   .hot_subject .text {
     margin-left: 0.275rem;
-    font-family: "PingFang-SC-Regular";
-    font-size: .6rem;
+    font-family: 'PingFang-SC-Regular';
+    font-size: .4rem;
   }
   .hot_subject .content {
     margin-top: .3rem;
@@ -92,8 +94,9 @@
     height: 1.7rem;
   }
   .hot_subject .content .img p {
-    font-size: 0.325rem;
+    font-size: .325rem;
     color: #333333;
+    font-family: 'PingFang-SC-Regular';
   }
   .line1{
     width: 9.125rem;
@@ -109,21 +112,9 @@
 .select_title{
   position: relative;
 }
-.select_title .line{
-  display: inline-block;
-  width: 0.1rem;
-  height: .5rem;
-  border-radius: 3px;
-  background-color: #2bb8ee;
+.select_title .go{
   position: absolute;
-  top: .175rem;
-  left: .25rem;
-}
-.select_title .more{
-  color: #8E8E8E;
-  font-size: 28px;
-  position: absolute;
-  top: -0.1rem;
+  top: .1rem;
   right: .35rem;
 }
 .select_title ul{
@@ -131,7 +122,7 @@
   flex-wrap: wrap;
 }
 .select_title ul li{
-  font-size: .6rem;
+  font-size: .4rem;
   margin-left: .325rem;
   position: relative;
 }
@@ -152,34 +143,33 @@
   height: 2.675rem;
 }
 .select_content .content .title span{
+  font-family: 'PingFang-SC-Regular';
+  color: #333333;
   position: absolute;
   bottom: -0.4rem;
   left: .3rem;
-  font-size: .3rem;
+  font-size: .325rem;
 }
 .select .active{
   color: #2bb8ee;
 }
 .select_title .underline{
+  font-family: 'PingFang-SC-Regular';
   display: inline-block;
-  width: 1rem;
-  height: .06rem;
+  width: .775rem;
+  height: .05rem;
   background-color: #2bb8ee;
   position: absolute;
   bottom: -0.075rem;
-  left: .7rem;
+  left: .4rem;
+}
+.bottom{
+  /* margin-bottom: 2rem;
+  margin-top: .55rem; */
+  margin: .55rem 0 2rem 0;
+
 }
 .bottom .text{
   color: #999999;
   font-size: .3rem;
-  margin-top: .55rem;
-}
-.foot{
-    display: flex;
-    justify-content: space-around;
-    margin-top: .375rem;
-}
-.foot img{
-    width: 1.25rem;
-    height: 1.625rem;
 }

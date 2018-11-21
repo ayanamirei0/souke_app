@@ -3,7 +3,7 @@
         <header class="head">
             <div>
                 <span class="title">搜课</span>
-                <span class="city">北京</span>
+                <span class="city" @click="Toast()">北京</span>
             </div>
         </header>
         <div class="banner">
@@ -112,7 +112,7 @@
                         {{item}}
                     </li>
                 </ul>
-                <span class="more">></span>
+                <i class="go iconfont icon-tiem-right"></i>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num1 == 0">
@@ -179,7 +179,7 @@
                         {{item}}
                     </li>
                 </ul>
-                <span class="more">></span>
+                <i class="go iconfont icon-tiem-right"></i>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num2 === 0">
@@ -246,7 +246,7 @@
                         {{item}}
                     </li>
                 </ul>
-                <span class="more">></span>
+                <i class="go iconfont icon-tiem-right"></i>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num3 === 0">
@@ -306,8 +306,6 @@
         <div class="bottom">
             <p class="text">已经到底了~</p>
         </div>
-        <footer class="foot">
-        </footer>
     </div>
 </template>
 
@@ -326,7 +324,7 @@ export default {
       active: ""
     };
   },
- 
+
   methods: {
     tabSwitch1(index) {
       this.num1 = index;
@@ -336,6 +334,9 @@ export default {
     },
     tabSwitch3(index) {
       this.num3 = index;
+    },
+    Toast(){
+        this.$toast('暂不支持城市切换');
     }
   }
 };
