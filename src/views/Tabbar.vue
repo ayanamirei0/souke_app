@@ -21,26 +21,26 @@ export default {
         {
           txt: "首页",
           page: "",
-          normalImg: require("../assets/img/icon_11.png"),
-          activeImg: require("../assets/img/icon_1.png")
+          normalImg: require("../assets/img/home_.png"),
+          activeImg: require("../assets/img/home.png")
         },
         {
           txt: "搜索",
           page: "search",
-          normalImg: require("../assets/img/icon_22.png"),
-          activeImg: require("../assets/img/icon_2.png")
+          normalImg: require("../assets/img/search_.png"),
+          activeImg: require("../assets/img/search.png")
         },
         {
           txt: "消息",
           page: "msg",
-          normalImg: require("../assets/img/icon_33.png"),
-          activeImg: require("../assets/img/icon_3.png")
+          normalImg: require("../assets/img/msg_.png"),
+          activeImg: require("../assets/img/msg.png")
         },
         {
           txt: "我的",
           page: "mine",
-          normalImg: require("../assets/img/icon_44.png"),
-          activeImg: require("../assets/img/icon_4.png")
+          normalImg: require("../assets/img/mine_.png"),
+          activeImg: require("../assets/img/mine.png")
         },
       ]
     };
@@ -55,6 +55,7 @@ export default {
 <style type="text/css">
 .warp {
   width: 100%;
+  height: 1.25rem;
   border-top: 1px solid #eee;
   background: #fff;
   display: flex;
@@ -63,8 +64,8 @@ export default {
   font-size: 0;
 }
 .warp img {
-  width: 1rem;
-  height: 1rem;
+  width: .7rem;
+  height: .7rem;
 }
 .tabberWarp {
   position: fixed;
