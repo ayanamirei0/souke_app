@@ -2,11 +2,11 @@
     <div class="itemWarp flex_mid" @click='changePage'>
         <span v-show='!bol'>
             <slot name='normalImg'></slot>
-            <span v-text='txt' class="normal position"></span>
+            <span v-text="txt" class="normal position"></span>
         </span>
         <span v-show='bol'>
             <slot name='activeImg'></slot>
-            <span v-text='txt' class="active position"></span>
+            <span v-text="txt" class="active position"></span>
         </span>   
     </div>
 </template>
