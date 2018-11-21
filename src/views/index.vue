@@ -93,12 +93,12 @@
                     <p>思维训练启智非凡班</p>
                 </div>
                 <div class="img">
-                    <img src="../assets/img/ffb.png" alt="">
-                    <p>思维训练启智非凡班</p>
+                    <img src="../assets/img/zyb.png" alt="">
+                    <p>思维训练启思卓越班</p>
                 </div>
                 <div class="img">
-                    <img src="../assets/img/ffb.png" alt="">
-                    <p>思维训练启智非凡班</p>
+                    <img src="../assets/img/jrjy.png" alt="">
+                    <p>巨人作文卓越班</p>
                 </div>
             </div>
         </div>
