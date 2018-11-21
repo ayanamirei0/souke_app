@@ -163,13 +163,10 @@
   bottom: -0.075rem;
   left: .4rem;
 }
-.bottom{
-  /* margin-bottom: 2rem;
-  margin-top: .55rem; */
+.bottom_tip{
   margin: .55rem 0 2rem 0;
-
 }
-.bottom .text{
+.bottom_tip .text{
   color: #999999;
   font-size: .3rem;
 }

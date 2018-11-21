@@ -303,7 +303,7 @@
                 </div>
             </div>
         </div>
-        <div class="bottom">
+        <div class="bottom_tip">
             <p class="text">已经到底了~</p>
         </div>
     </div>
