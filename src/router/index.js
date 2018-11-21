@@ -15,17 +15,17 @@ export default new Router({
       component: Index
     },
     {
-      path: '/',
+      path: '/views/components/mine.vue',
       name: 'Mine',
       component: Mine
     },
     {
-      path: '/',
+      path: '/views/components/msg.vue',
       name: 'Msg',
       component: Msg
     },
     {
-      path: '/',
+      path: '/views/components/search.vue',
       name: 'Search',
       component: Search
     }

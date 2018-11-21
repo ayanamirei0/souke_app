@@ -27,19 +27,19 @@ export default {
         },
         {
           txt: "搜索",
-          page: "1",
+          page: "views/components/search.vue",
           normalImg: require("../assets/img/search_.png"),
           activeImg: require("../assets/img/search.png")
         },
         {
           txt: "消息",
-          page: "2",
+          page: "views/components/msg.vue",
           normalImg: require("../assets/img/msg_.png"),
           activeImg: require("../assets/img/msg.png")
         },
         {
           txt: "我的",
-          page: "3",
+          page: "views/components/mine.vue",
           normalImg: require("../assets/img/mine_.png"),
           activeImg: require("../assets/img/mine.png")
         },
