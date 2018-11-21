@@ -9,7 +9,6 @@
     color: #333333;
     margin-left: .5rem;
     font-weight: bold;
-    /* margin-right: .2rem; */
   }
   .head .city {
     font-family: "PingFang-SC-Regular";
@@ -21,18 +20,16 @@
     font-weight: 400;
   }
   .banner {
-    margin-top: 0.3rem;
+    margin-top: .3rem;
   }
   .subject {
-    margin-top: .475rem;
-    margin-bottom: 0.6rem;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    margin: .45rem 0 .3rem 0;
+    padding: 0 .6rem;
     display: flex;
     flex-flow: wrap;
   }
   .subject .square {
-    margin-right: .525rem;
+    margin-right: .5375rem;
   }
   .subject .img {
     width: 1.2rem;
@@ -47,10 +44,10 @@
     text-align: center;
   }
   .subject .middle .title {
-    padding: 0.425rem 0;
+    padding: .2rem 0;
   }
   .subject .bottom .title {
-    padding-top: 0.275rem;
+    padding-top: 0.2rem;
   }
   .line_y {
     width: 9.375rem;
@@ -112,6 +109,7 @@
 }
 .select_title{
   position: relative;
+  margin-bottom: .525rem;
 }
 .select_title .go{
   position: absolute;
@@ -137,8 +135,18 @@
 .select_content .content .title{
   position: relative;
   padding-left: .275rem;
-  margin: .3rem 0;
+  /* margin-top: .525rem; */
+  margin-bottom: .625rem;
 }
+
+.select_content .content .title .img{
+  width: 4.275rem;
+  height: 2.675rem;
+  margin-bottom: .325rem;
+}
+/* .select_content .content .title span{
+  padding: .275rem 0 .325rem 0;
+} */
 .select_content .content .title .img img{
   width: 4.275rem;
   height: 2.675rem;
@@ -161,7 +169,7 @@
   height: .05rem;
   background-color: #2bb8ee;
   position: absolute;
-  bottom: -0.075rem;
+  bottom: -0.1rem;
   left: .4rem;
 }
 .bottom_tip{
