@@ -10,6 +10,7 @@
 </template>
 <script type="text/javascript">
 import Item from "./Item.vue";
+
 export default {
   components: {
     Item
@@ -26,19 +27,19 @@ export default {
         },
         {
           txt: "搜索",
-          page: "search",
+          page: "1",
           normalImg: require("../assets/img/search_.png"),
           activeImg: require("../assets/img/search.png")
         },
         {
           txt: "消息",
-          page: "msg",
+          page: "2",
           normalImg: require("../assets/img/msg_.png"),
           activeImg: require("../assets/img/msg.png")
         },
         {
           txt: "我的",
-          page: "mine",
+          page: "3",
           normalImg: require("../assets/img/mine_.png"),
           activeImg: require("../assets/img/mine.png")
         },
@@ -47,6 +48,7 @@ export default {
   },
   methods: {
     getVal: function(res) {
+      console.log(res);
       this.selected = res;
     }
   }

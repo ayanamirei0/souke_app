@@ -1,6 +1,6 @@
 <template>
   <div class="three">
-      <h1>我是资讯页面</h1>
+      <h1>消息页面</h1>
   </div>
 </template>
 

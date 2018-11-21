@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/views/index'
+import Index from '@/views/index.vue'
+import Mine from '@/views/components/mine.vue'
+import Msg from '@/views/components/msg.vue'
+import Search from '@/views/components/search.vue'
 
 Vue.use(Router)
 
@@ -9,29 +12,23 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: index
+      component: Index
+    },
+    {
+      path: '/',
+      name: 'Mine',
+      component: Mine
+    },
+    {
+      path: '/',
+      name: 'Msg',
+      component: Msg
+    },
+    {
+      path: '/',
+      name: 'Search',
+      component: Search
     }
-    // ,
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: home
-    // },
-    // {
-    //   path: '/',
-    //   name: 'search',
-    //   component: search
-    // },
-    // {
-    //   path: '/',
-    //   name: 'msg',
-    //   component: msg
-    // },
-    // {
-    //   path: '/',
-    //   name: 'mine',
-    //   component: mine
-    // }
   ],
   methods:{
     switchTo(path){

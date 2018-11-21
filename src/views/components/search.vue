@@ -1,6 +1,6 @@
 <template>
   <div class="two">
-      <h1>我是商城页面</h1>
+      <h1>搜索页面</h1>
   </div>
 </template>
 
