@@ -20,65 +20,69 @@
             </van-swipe>
         </div>
         <div class="subject">
-            <div class="yxkc square middle">
-                <div class="img">
-                    <img src="../assets/img/yxkc.png" alt="">
+            <div class="top_subject">
+                <div class="yxkc square middle">
+                    <div class="img">
+                        <img src="../assets/img/yxkc.png" alt="">
+                    </div>
+                    <p class="title">优选课程</p>
                 </div>
-                <p class="title">优选课程</p>
+                <div class="cn square middle">
+                    <div class="img">
+                        <img src="../assets/img/cn.png" alt="">
+                    </div>
+                    <p class="title">语文</p>
+                </div>
+                <div class="math square middle">
+                    <div class="img">
+                        <img src="../assets/img/math.png" alt="">
+                    </div>
+                    <p class="title">数学</p>
+                </div>
+                <div class="en square middle">
+                    <div class="img">
+                        <img src="../assets/img/en.png" alt="">
+                    </div>
+                    <p class="title">英语</p>
+                </div>
+                <div class="zstz middle">
+                    <div class="img">
+                        <img src="../assets/img/zstz.png" alt="">
+                    </div>
+                    <p class="title">综素拓展</p>
+                </div>
             </div>
-            <div class="cn square middle">
-                <div class="img">
-                    <img src="../assets/img/cn.png" alt="">
+            <div class="bottom_subject">
+                <div class="zxhd square bottom">
+                    <div class="img">
+                        <img src="../assets/img/zxhd.png" alt="">
+                    </div>
+                    <p class="title">专项活动</p>
                 </div>
-                <p class="title">语文</p>
-            </div>
-            <div class="math square middle">
-                <div class="img">
-                    <img src="../assets/img/math.png" alt="">
+                <div class="xjr square bottom">
+                    <div class="img">
+                        <img src="../assets/img/xjr.png" alt="">
+                    </div>
+                    <p class="title">小巨人</p>
                 </div>
-                <p class="title">数学</p>
-            </div>
-            <div class="en square middle">
-                <div class="img">
-                    <img src="../assets/img/en.png" alt="">
+                <div class="dxly square bottom">
+                    <div class="img">
+                        <img src="../assets/img/dxly.png" alt="">
+                    </div>
+                    <p class="title">冬夏令营</p>
                 </div>
-                <p class="title">英语</p>
-            </div>
-            <div class="zstz middle">
-                <div class="img">
-                    <img src="../assets/img/zstz.png" alt="">
+                <div class="gjyx square bottom">
+                    <div class="img">
+                        <img src="../assets/img/gjyx.png" alt="">
+                    </div>
+                    <p class="title">国际游学</p>
                 </div>
-                <p class="title">综素拓展</p>
-            </div>
-            <div class="zxhd square bottom">
-                <div class="img">
-                    <img src="../assets/img/zxhd.png" alt="">
+                <div class="tgb bottom">
+                    <div class="img">
+                        <img src="../assets/img/tgb.png" alt="">
+                    </div>
+                    <p class="title">托管班</p>
                 </div>
-                <p class="title">专项活动</p>
-            </div>
-            <div class="xjr square bottom">
-                <div class="img">
-                    <img src="../assets/img/xjr.png" alt="">
-                </div>
-                <p class="title">小巨人</p>
-            </div>
-            <div class="dxly square bottom">
-                <div class="img">
-                    <img src="../assets/img/dxly.png" alt="">
-                </div>
-                <p class="title">冬夏令营</p>
-            </div>
-            <div class="gjyx square bottom">
-                <div class="img">
-                    <img src="../assets/img/gjyx.png" alt="">
-                </div>
-                <p class="title">国际游学</p>
-            </div>
-            <div class="tgb bottom">
-                <div class="img">
-                    <img src="../assets/img/tgb.png" alt="">
-                </div>
-                <p class="title">托管班</p>
             </div>
         </div>
         <div class="line_y"></div>
@@ -118,53 +122,81 @@
                 <div class="content" v-if="num1 == 0">
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人大语文</span>
+                        <p>“成吉思汗”草原探秘夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练精英班</span>
+                        <p>思维训练精英班</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人作文启航班</span>
+                        <p>巨人大语文</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练培优班</span>
+                        <p>思维训练精英班</p>
                     </div>
+                    <!-- <div class="top_lesson">
+                        <div class="title">
+                            <div class="img">
+                                <img src="../assets/img/15.png" alt="">
+                            </div>
+                            <p>巨人大语文</p>
+                        </div>
+                        <div class="title">
+                            <div class="img">
+                                <img src="../assets/img/15.png" alt="">
+                            </div>
+                            <p>思维训练精英班</p>
+                        </div>
+                    </div>
+                    <div class="bottom_lesson">
+                        <div class="title">
+                            <div class="img">
+                                <img src="../assets/img/15.png" alt="">
+                            </div>
+                            <p>巨人作文启航班</p>
+                        </div>
+                        <div class="title">
+                            <div class="img">
+                                <img src="../assets/img/15.png" alt="">
+                            </div>
+                            <p>思维训练培优班</p>
+                        </div>
+                    </div> -->
                 </div>
                 <div class="content" v-if="num1 == 1">
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人大语文</span>
+                        <p>“成吉思汗”草原探秘夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练精英班</span>
+                        <p>思维训练精英班</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人作文启航班</span>
+                        <p>巨人作文启航班</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练培优班</span>
+                        <p>思维训练培优班</p>
                     </div>
                 </div>
             </div>
@@ -187,25 +219,25 @@
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>新概念英语</span>
+                        <p>新概念英语</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>THINK国际</span>
+                        <p>THINK国际</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人作文启航班</span>
+                        <p>巨人作文启航班</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练培优班</span>
+                        <p>思维训练培优班</p>
                     </div>
                 </div>
                 <div class="content" v-if="num2 === 1">
@@ -213,25 +245,25 @@
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“成吉思汗”草原探秘夏令营</span>
+                        <p>“成吉思汗”草原探秘夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“国学大师”书法篆刻夏令营</span>
+                        <p>“国学大师”书法篆刻夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“百变玩家”综合体验夏令营</span>
+                        <p>“百变玩家”综合体验夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“灌篮高手”篮球训练夏令营</span>
+                        <p>“灌篮高手”篮球训练夏令营</p>
                     </div>
                 </div>
             </div>
@@ -254,25 +286,25 @@
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“成吉思汗”草原探秘夏令营</span>
+                        <p>“成吉思汗”草原探秘夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“国学大师”书法篆刻夏令营</span>
+                        <p>“国学大师”书法篆刻夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“百变玩家”综合体验夏令营</span>
+                        <p>“百变玩家”综合体验夏令营</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
-                        <span>“灌篮高手”篮球训练夏令营</span>
+                        <p>“灌篮高手”篮球训练夏令营</p>
                     </div>
                 </div>
                 <div class="content" v-if="num3 === 1">
@@ -280,25 +312,25 @@
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人大语文</span>
+                        <p>巨人大语文</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练精英班</span>
+                        <p>思维训练精英班</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>巨人作文启航班</span>
+                        <p>巨人作文启航班</p>
                     </div>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
-                        <span>思维训练培优班</span>
+                        <p>思维训练培优班</p>
                     </div>
                 </div>
             </div>
@@ -335,8 +367,8 @@ export default {
     tabSwitch3(index) {
       this.num3 = index;
     },
-    Toast(){
-        this.$toast('暂不支持城市切换');
+    Toast() {
+      this.$toast("暂不支持城市切换");
     }
   }
 };

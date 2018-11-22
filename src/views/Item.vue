@@ -1,13 +1,13 @@
 <template>
     <div class="itemWarp flex_mid" @click='changePage'>
-        <span v-show='!bol'>
+        <div v-show='!bol'>
             <slot name='normalImg'></slot>
             <span v-text="txt" class="normal position"></span>
-        </span>
-        <span v-show='bol'>
+        </div>
+        <div v-show='bol'>
             <slot name='activeImg'></slot>
             <span v-text="txt" class="active position"></span>
-        </span>   
+        </div>   
     </div>
 </template>
 <script type="text/javascript">
@@ -43,8 +43,7 @@ export default {
 </script>
 <style type="text/css">
 .itemWarp {
-  position: relative;
-  flex-grow: 1;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,8 +59,8 @@ export default {
   color: #2FB3F1;
 }
 .itemWarp .position{
-  position: absolute;
+  position: relative;
   bottom: -.325rem;
-  left: .85rem;
+  right: .65rem;
 }
 </style>
