@@ -56,8 +56,8 @@
         <div class="my_lesson my_common">
             <img src="../../assets/img/lesson.png" alt="">
             <p>我的课程</p>
-            <i class="go iconfont icon-tiem-right"></i>  
-            <div class="line"></div> 
+            <i class="go iconfont icon-tiem-right"></i>
+            <div class="line"></div>
         </div>
         <div class="offline my_common">
             <img src="../../assets/img/order.png" alt="">
@@ -70,7 +70,6 @@
             <p>帐号管理</p>
             <i class="go iconfont icon-tiem-right"></i>
         </div>
-        <div class="bottom"></div>
     </div>
 </template>
 
