@@ -28,7 +28,7 @@
                 <div class="img">
                     <img src="../../assets/img/shop.png" alt="">
                 </div>
-                <p>购物袋</p>
+                <p>购课袋</p>
             </div>
             <div class="line"></div>
             <div class="no_pay item">
