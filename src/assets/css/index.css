@@ -1,3 +1,6 @@
 @import "./common/css.css";
 @import "./common/goole.css";
-@import "./index/index.css"
+@import "./index/index.css";
+@import "./mine/mine.css";
+@import "./msg/msg.css";
+@import "./search/search.css";

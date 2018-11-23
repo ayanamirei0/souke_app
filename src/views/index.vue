@@ -144,34 +144,6 @@
                         </div>
                         <p>思维训练精英班</p>
                     </div>
-                    <!-- <div class="top_lesson">
-                        <div class="title">
-                            <div class="img">
-                                <img src="../assets/img/15.png" alt="">
-                            </div>
-                            <p>巨人大语文</p>
-                        </div>
-                        <div class="title">
-                            <div class="img">
-                                <img src="../assets/img/15.png" alt="">
-                            </div>
-                            <p>思维训练精英班</p>
-                        </div>
-                    </div>
-                    <div class="bottom_lesson">
-                        <div class="title">
-                            <div class="img">
-                                <img src="../assets/img/15.png" alt="">
-                            </div>
-                            <p>巨人作文启航班</p>
-                        </div>
-                        <div class="title">
-                            <div class="img">
-                                <img src="../assets/img/15.png" alt="">
-                            </div>
-                            <p>思维训练培优班</p>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="content" v-if="num1 == 1">
                     <div class="title">

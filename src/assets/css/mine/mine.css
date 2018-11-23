@@ -1,0 +1,144 @@
+
+.head .background{
+    background-color: #2FB3F1;
+    width: 100%;
+    height: 2.3rem;
+}
+.head .background .menu{
+    display: flex;
+    justify-content: space-between;
+    padding: .35rem .275rem 0 .475rem;
+}
+.head .background .menu .mine{
+    color: #ffffff;
+    font-size: .45rem;
+}
+.head .background .menu .points{
+    color: #ffffff;
+    font-size: .375rem;
+}
+.head .person_data{
+    width: 95%;
+    height: 2.125rem;
+    border-radius: .575rem; 
+    margin: .3rem 3% 0 3%;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.head .person_data .data{
+    width: 94%;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .head .person_data .data{
+    display: flex;
+    justify-content: space-around;
+} */
+.head .person_data .data .img{
+    width: 1.35rem;
+    height: 1.35rem;
+    padding: .375rem .3rem .4rem .375rem;
+}
+.head .person_data .phone{
+    color: #333333;
+    font-size: .4rem;
+    padding: .625rem 0 .175rem 0;
+}
+.head .person_data .account{
+    color: #666666;
+    font-size: .3rem;
+}
+.head .person_data .account img{
+    width: .4rem;
+    height: .4rem;
+    /* vertical-align: middle; */
+}
+.head .person_data .account .num{
+    position: relative;
+    top: -0.075rem;
+    left: .05rem;
+}
+.head .person_data i{
+    position: relative;
+    top: .725rem;
+    right: 2%;
+}
+
+/* 订单部分 */
+.my_order{
+    margin-top: 1.325rem;
+    display: flex;
+    justify-content: space-around;
+}
+.my_order .line{
+    width: .025rem;
+    height: .825rem;
+    background-color: #C1C1C1;
+    margin-top: .2rem;
+}
+.my_order .item div{
+    width: 1.125rem;
+    height: 1.125rem;
+}
+.my_order .item p{
+    color: #333333;
+    font-size: .3rem;
+    margin: .125rem 0 .425rem 0;
+}
+.my_order .no_pay .img{
+    position: relative;
+}
+.my_order .no_pay .tip{
+    color: #ffffff;
+    font-size: .3rem;
+    display: inline-block;
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background-color: #F74749;
+    position: absolute;
+    top: -0.15rem;
+    right: -0.1rem;
+}
+.my_line{
+    width: 100%;
+    height: .15rem;
+    background-color: #ECECEE;
+}
+.my_common{
+    display: flex;
+    flex-wrap: wrap;
+    margin: .375rem 0 .4rem 0;
+}
+.my_common img{
+    width: .425rem;
+    height: .325rem;
+    margin: 0 .2rem 0 5%; 
+}
+.my_common p{
+    color: #333333;
+    font-size: .375rem; 
+    line-height: .325rem;
+    width: 79%;
+    text-align: left;
+}
+.my_lesson{
+    position: relative;
+}
+.my_lesson .line{
+    width: 84%;
+    height: 2px;
+    background-color: #ECECEE;
+    position: absolute;
+    top: .725rem;
+    left: 1rem;
+}
+.offline{
+    margin: .75rem 0 .4rem 0;
+}
+.set{
+    padding: .4rem 0 .4rem 0;
+    margin: 0;
+}
+
