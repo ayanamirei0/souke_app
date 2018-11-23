@@ -27,19 +27,19 @@ export default {
         },
         {
           txt: "搜索",
-          page: "views/components/search.vue",
+          page: "views/search/search.vue",
           normalImg: require("../assets/img/search_.png"),
           activeImg: require("../assets/img/search.png")
         },
         {
           txt: "消息",
-          page: "views/components/msg.vue",
+          page: "views/msg/msg.vue",
           normalImg: require("../assets/img/msg_.png"),
           activeImg: require("../assets/img/msg.png")
         },
         {
           txt: "我的",
-          page: "views/components/mine.vue",
+          page: "views/mine/mine.vue",
           normalImg: require("../assets/img/mine_.png"),
           activeImg: require("../assets/img/mine.png")
         },
@@ -57,18 +57,18 @@ export default {
 <style type="text/css">
 .warp {
   width: 100%;
-  height: 1.25rem;
+  height: 1.1rem;
   border-top: 1px solid #eee;
   background: #fff;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   font-size: 0;
+  padding-top: .15rem;
 }
-.warp img {
+/* .warp img {
   width: .7rem;
   height: .7rem;
-}
+} */
 .tabberWarp {
   position: fixed;
   bottom: 0;

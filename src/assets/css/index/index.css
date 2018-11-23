@@ -19,9 +19,9 @@
     line-height: 1rem;
     font-weight: 400;
   }
-  .banner {
+  /* .banner {
     margin-top: .3rem;
-  }
+  } */
   .subject {
     margin: .45rem 0 .3rem 0;
     padding: 0 .4rem;
@@ -46,11 +46,11 @@
     text-align: center;
   }
   .subject .middle .title {
-    padding: .2rem 0;
+    padding-bottom: .2rem;
   }
-  .subject .bottom .title {
+  /* .subject .bottom .title {
     padding-top: 0.2rem;
-  }
+  } */
   .line_y {
     width: 100%;
     height: .175rem;
@@ -116,7 +116,7 @@
 .select_title .go{
   position: absolute;
   top: .1rem;
-  right: .35rem;
+  right: .15rem;
 }
 .select_title ul{
   display: flex;

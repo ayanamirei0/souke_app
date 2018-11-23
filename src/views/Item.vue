@@ -42,15 +42,12 @@ export default {
 };
 </script>
 <style type="text/css">
-.itemWarp {
-  flex-wrap: wrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .itemWarp span {
   font-size: .275rem;
+}
+.itemWarp div{
+  width: .7rem;
+  height: .7rem;
 }
 .itemWarp .normal{
   color: #666666;
@@ -60,7 +57,7 @@ export default {
 }
 .itemWarp .position{
   position: relative;
-  bottom: -.325rem;
-  right: .65rem;
+  bottom: 0;
+  right: 0;
 }
 </style>
