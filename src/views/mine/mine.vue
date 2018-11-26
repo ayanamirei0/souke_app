@@ -19,7 +19,9 @@
                             </div>
                         </div>
                     </div>
-                    <i class="go iconfont icon-tiem-right"></i>
+                    <router-link to="/views/mine/personInfo.vue">
+                        <i class="go iconfont icon-tiem-right"></i>
+                    </router-link> 
                 </div>
             </div>
         </header>
@@ -88,3 +90,6 @@ export default {
   beforeDestroy() {}
 };
 </script>
+<style>
+@import '../../assets/css/mine/mine.css';
+</style>

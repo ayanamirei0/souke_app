@@ -4,6 +4,8 @@ import Index from '@/views/index.vue'
 import Mine from '@/views/mine/mine.vue'
 import Msg from '@/views/msg/msg.vue'
 import Search from '@/views/search/search.vue'
+import PersonInfo from '@/views/mine/personInfo.vue'
+import ChangeName from '@/views/mine/ChangeName.vue'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/views/search/search.vue',
       name: 'Search',
       component: Search
+    },
+    {
+        path: '/views/mine/personInfo.vue',
+        name: 'PersonInfo',
+        component: PersonInfo
+    },
+    {
+        path: '/views/mine/ChangeName.vue',
+        name: ChangeName,
+        component: ChangeName
     }
   ],
   methods:{

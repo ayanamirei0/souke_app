@@ -328,7 +328,7 @@ export default {
       active: ""
     };
   },
-
+  
   methods: {
     tabSwitch1(index) {
       this.num1 = index;
@@ -345,4 +345,8 @@ export default {
   }
 };
 </script>
+<style>
+@import '../assets/css/index/index.css';
+</style>
+
 

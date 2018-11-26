@@ -7,12 +7,15 @@ import router from './router'
 import 'vant/lib/index.css'
 import './assets/css/index.css'
 import './assets/iconfont/iconfont.css'
-import { Swipe, SwipeItem, Toast} from 'vant'
+import './assets/js/jquery-1.7.1.min.js'
+import { Swipe, SwipeItem, Toast, Popup } from 'vant'
 
-Vue.use(Vant)
-Vue.use(Swipe).use(SwipeItem)
-Vue.use(Toast)
-Vue.config.productionTip = false
+
+Vue.use(Vant);
+Vue.use(Swipe).use(SwipeItem);
+Vue.use(Toast);
+Vue.use(Popup);
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

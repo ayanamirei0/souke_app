@@ -29,3 +29,6 @@ export default {
   },
 };
 </script>
+<style>
+@import '../../assets/css/search/search.css';
+</style>
