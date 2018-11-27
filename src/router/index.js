@@ -6,6 +6,7 @@ import Msg from '@/views/msg/msg.vue'
 import Search from '@/views/search/search.vue'
 import PersonInfo from '@/views/mine/personInfo.vue'
 import ChangeName from '@/views/mine/ChangeName.vue'
+import GradeList from '@/views/mine/gradeList.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
         path: '/views/mine/ChangeName.vue',
         name: ChangeName,
         component: ChangeName
+    },
+    {
+        path: '/views/mine/gradeList.vue',
+        name: GradeList,
+        component: GradeList
     }
   ],
   methods:{

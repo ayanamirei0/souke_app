@@ -8,13 +8,15 @@ import 'vant/lib/index.css'
 import './assets/css/index.css'
 import './assets/iconfont/iconfont.css'
 import './assets/js/jquery-1.7.1.min.js'
-import { Swipe, SwipeItem, Toast, Popup } from 'vant'
+import { Swipe, SwipeItem, Toast, Popup, DatetimePicker, Uploader } from 'vant'
 
 
 Vue.use(Vant);
 Vue.use(Swipe).use(SwipeItem);
 Vue.use(Toast);
 Vue.use(Popup);
+Vue.use(DatetimePicker);
+Vue.use(Uploader);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

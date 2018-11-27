@@ -61,6 +61,7 @@
 .PersonInfo .line_info{
     margin: 0;
 }
+/* 弹出层_头像修改 */
 .choose_photo div{
     color: #2572E6;
     font-size: .4rem;
@@ -72,4 +73,41 @@
     height: 1.25rem;
     line-height: 1.25rem;
     border-bottom: .025rem solid rgba(153,153,153,.5);
+}
+/* 弹出层_性别选择 */
+.choose_sex{
+    width: 7.025rem;
+    padding: 0 2%;
+}
+.choose_sex .sex{
+    color: #333333;
+    font-size: .45rem;
+    border-bottom: .025rem solid #DADADA;
+    padding: .45rem 0 .4rem 0; 
+}
+.choose_sex .img{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: .025rem solid #DADADA;
+}
+.choose_sex .img img{
+    width: 1.55rem;
+    height: 1.475rem;
+    padding: .4rem 0 .35rem 0;
+}
+.choose_sex .text span{
+    color: #333333;
+    font-size: .4rem;
+}
+.choose_sex .text{
+    display: flex;
+    justify-content: space-around;
+}
+.choose_sex .text p{
+    color: #333333;
+    font-size: .4rem;
+    padding: .3rem 1.31rem .375rem 1.35rem; 
+}
+.choose_sex .text .line{
+    border-right: .025rem solid #DADADA;     
 }
