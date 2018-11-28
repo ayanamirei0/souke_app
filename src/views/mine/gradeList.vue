@@ -33,24 +33,19 @@ export default {
       this.$router.push("personInfo.vue");
     },
     addClass(index) {
-        console.log(1);
+      console.log(1);
       this.current = index;
-      console.log(this.current);
     }
   }
 };
 </script>
 <style>
 .grade .top {
-  /* position: relative; */
   margin-top: 0.625rem;
   border-bottom: 0.025rem solid #c2c2c2;
   display: flex;
 }
 .grade .top img {
-  /* position: absolute;
-  top: 0.075rem;
-  left: 4%; */
   width: 0.25rem;
   height: 0.325rem;
   margin-left: 0.425rem;
@@ -71,7 +66,6 @@ export default {
   padding-left: 0.325rem;
 }
 .grade .list li {
-  /* color: #333333; */
   font-size: 0.375rem;
   border-bottom: 0.025rem solid #c2c2c2;
   text-align: left;

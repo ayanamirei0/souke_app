@@ -76,19 +76,6 @@
 </template>
 
 <script>
-export default {
-  name: "",
-  props: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {},
-  watch: {},
-  computed: {},
-  created() {},
-  beforeDestroy() {}
-};
 </script>
 <style>
 @import '../../assets/css/mine/mine.css';
