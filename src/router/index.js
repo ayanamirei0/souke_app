@@ -29,13 +29,13 @@ export default new Router({
       path: '/views/msg/msg.vue',
       name: 'Msg',
       component: Msg,
-      meta: { navShow: false }
+      meta: { navShow: true }
     },
     {
       path: '/views/search/search.vue',
       name: 'Search',
       component: Search,
-      meta: { navShow: false }
+      meta: { navShow: true }
     },
     {
         path: '/views/mine/personInfo.vue',
