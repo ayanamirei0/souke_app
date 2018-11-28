@@ -17,7 +17,6 @@
 export default {
   data() {
     return {
-      hook: false,
       current: 0,
       list: [
         { title: "幼儿2-3岁" },
@@ -30,12 +29,13 @@ export default {
     };
   },
   methods: {
-    returnPage: function() {
+    returnPage() {
       this.$router.push("personInfo.vue");
     },
-    addClass: function(index) {
+    addClass(index) {
         console.log(1);
       this.current = index;
+      console.log(this.current);
     }
   }
 };

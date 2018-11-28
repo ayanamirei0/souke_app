@@ -25,7 +25,7 @@ export default {
     }
   },
   computed: {
-    bol: function() {
+    bol() {
       if (this.sel == this.page) {
         return true;
       }
@@ -33,7 +33,7 @@ export default {
     }
   },
   methods: {
-    changePage: function() {
+    changePage() {
       //点击跳转对应的页面
       this.$router.push("/" + this.page);
       this.$emit("change", this.page);

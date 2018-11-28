@@ -48,7 +48,7 @@ export default {
     };
   },
   methods: {
-    getVal: function(res) {
+    getVal(res) {
       console.log(res);
       this.selected = res;
     }

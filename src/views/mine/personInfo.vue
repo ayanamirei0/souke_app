@@ -20,15 +20,15 @@
                 <p>王钦<i class="go iconfont icon-tiem-right"></i></p>
             </router-link>
         </div>
-        <div class="item" @click="changeSex()">
+        <div class="item">
             <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</p>
-            <div class="change">
+            <div class="change" @click="changeSex()">
                 <p>男<i class="go iconfont icon-tiem-right"></i></p>
             </div>
         </div>
-        <div class="item" @click="chooseDate()">
+        <div class="item">
             <p>出生日期</p>
-            <div class="change">
+            <div class="change" @click="chooseDate()">
                 <p v-model="time">{{time}}<i class="go iconfont icon-tiem-right"></i></p>
             </div>
         </div>
@@ -41,16 +41,18 @@
             </div>
         </div>
         <div class="line_y line_info"></div>
-        <div class="item">
+        <div class="item" >
             <p>学校区域</p>
-            <div class="change">
-                <p>北京市海淀区<i class="go iconfont icon-tiem-right"></i></p>
+            <div class="change" @click="chooseArea()">
+                <p>{{schoolArea}}<i class="go iconfont icon-tiem-right"></i></p>
             </div>
         </div>
         <div class="item">
             <p>学校名称</p>
             <div class="change">
-                <p>清华大学附属中学上地学校<i class="go iconfont icon-tiem-right"></i></p>
+                <router-link to="/views/mine/changeSchoolName.vue">
+                    <p>清华大学附属中学上地学校<i class="go iconfont icon-tiem-right"></i></p>
+                </router-link>
             </div>
         </div>
 
@@ -80,13 +82,20 @@
                 <p>确定</p>
             </div>
         </van-popup>
-        <!-- 弹出层_日期选择 -->
+        <!-- 弹出层_生日选择 -->
         <van-popup v-model="show_date" position="bottom" :overlay="true" class="choose_date">
             <van-datetime-picker v-model="currentDate" type="date" :min-date="minDate" @confirm="switchFormat()" @cancel="closePopup()" />
+        </van-popup>
+        <!-- 弹出层_学校区域选择 -->
+        <van-popup v-model="show_area" position="bottom" :overlay="true" class="choose_area">
+            <van-picker show-toolbar :columns="columns" @change="onChange" @cancel="closePopup()" @confirm="closePopup()"/>
         </van-popup>
     </div>
 </template>
 <script>
+const citys = {
+    '北京': ['通州区','石景山区','房山区','海淀区','丰台区','西城区']
+};
 export default {
   data() {
     return {
@@ -102,36 +111,58 @@ export default {
       minDate: new Date(1990,0,1),
       
       currentDate: '',
-      time: '1994-03-28'
+      time: '1994-03-28',
+
+      schoolArea: '北京市海淀区',
+      columns: [
+        {
+            values: Object.keys(citys),
+            className: 'column1'
+        },
+        {
+            values: citys['北京'],
+            className: 'cloumn2',
+            defaultIndex: 2
+        }
+      ]
     };
   },
   methods: {
-    returnPage: function() {
+    returnPage() {
       // console.log(1111);
       this.$router.push("mine.vue");
       // this.$router.replace({path:'mine.vue'});
     },
-    changeHead: function() {
+    changeHead() {
       this.show_head = true;
     },
-    changeSex: function() {
+    changeSex() {
       this.show_sex = true;
     },
-    selectSex: function() {
+    selectSex() {
       this.show_man = !this.show_man;
       this.show_woman = !this.show_woman;
     },
-    chooseDate: function() {
+    chooseDate() {
         this.show_date = true;
     },
-    closePopup: function(){
+    chooseArea(){
+        this.show_area = true;
+    },
+    onChange(picker, values) {
+        console.log(values);
+        picker.setColumnValues(1, citys[values[0]]);
+        this.schoolArea = values[0] + values[1];
+    },
+    closePopup(){
         this.show_date = false;
         this.show_head = false;
+        this.show_area = false;
     },
     onRead(file) {
       console.log(file);
     },
-    switchFormat: function(){
+    switchFormat(){
         var year = this.currentDate.getFullYear();
         var month = this.currentDate.getMonth() + 1;
         var day = this.currentDate.getDate();

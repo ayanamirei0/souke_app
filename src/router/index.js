@@ -7,6 +7,7 @@ import Search from '@/views/search/search.vue'
 import PersonInfo from '@/views/mine/personInfo.vue'
 import ChangeName from '@/views/mine/ChangeName.vue'
 import GradeList from '@/views/mine/gradeList.vue'
+import ChangeSchoolName from '@/views/mine/changeSchoolName.vue'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
         path: '/views/mine/gradeList.vue',
         name: GradeList,
         component: GradeList
+    },
+    {
+        path: '/views/mine/changeSchoolName.vue',
+        name: ChangeSchoolName,
+        component: ChangeSchoolName
     }
   ],
   methods:{
