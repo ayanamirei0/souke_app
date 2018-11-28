@@ -6,7 +6,10 @@
             <span class="btn">保存</span>
         </div>
         <ul class="list">
-            <li v-for="(item, index) in list" @click="addClass(index)" :class="{selected: index == current}">{{item.title}}</li>
+            <li v-for="(item, index) in list" @click="addClass(index)" :class="{selected: index == current}">
+                {{item.title}}
+                <img src="../../assets/img/hook.png" v-show="index == current">
+            </li>
         </ul>
     </div>
 </template>
@@ -73,6 +76,12 @@ export default {
   border-bottom: 0.025rem solid #c2c2c2;
   text-align: left;
   padding: 0.45rem 0 0.4rem 0;
+}
+.grade .list li img{
+    width: .45rem;
+    height: .3rem;
+    float: right;
+    padding-right: .3rem;
 }
 .selected {
   color: #2fb3f1;
