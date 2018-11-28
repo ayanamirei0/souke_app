@@ -28,7 +28,7 @@
                 </li>
             </ul>
         </div>
-        <p class="nav">12BCDEGHJKLMNQRSTWXYZ</p>
+        <p class="nav">1<br>2<br>B<br>C<br>D<br>E<br>G<br>H<br>J<br>K<br>L<br>M<br>N<br>Q<br>R<br>S<br>T<br>W<br>X<br>Y<br>Z</p>
     </div>
 </template>
 
