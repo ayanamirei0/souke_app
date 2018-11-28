@@ -1,5 +1,5 @@
 <template>
-  <div class="tabberWarp" v-if="show">
+  <div class="tabberWarp" v-if="$route.meta.navShow">
     <div class="warp">
       <Item :txt='item.txt' :page='item.page' @change='getVal' v-for='item in tabbarDes' :sel='selected'>
         <img :src="item.normalImg" slot='normalImg'>
@@ -17,7 +17,7 @@ export default {
   },
   data: function() {
     return {
-      show: true,
+      navShow: true,
       selected: "",
       tabbarDes: [
         {

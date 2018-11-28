@@ -16,42 +16,50 @@ export default new Router({
     {
       path: '',
       name: 'index',
-      component: Index
+      component: Index,
+      meta: { navShow: true }
     },
     {
       path: '/views/mine/mine.vue',
       name: 'Mine',
-      component: Mine
+      component: Mine,
+      meta: { navShow: true }
     },
     {
       path: '/views/msg/msg.vue',
       name: 'Msg',
-      component: Msg
+      component: Msg,
+      meta: { navShow: false }
     },
     {
       path: '/views/search/search.vue',
       name: 'Search',
-      component: Search
+      component: Search,
+      meta: { navShow: false }
     },
     {
         path: '/views/mine/personInfo.vue',
         name: 'PersonInfo',
-        component: PersonInfo
+        component: PersonInfo,
+        meta: { navShow: false }
     },
     {
         path: '/views/mine/ChangeName.vue',
         name: ChangeName,
-        component: ChangeName
+        component: ChangeName,
+        meta: { navShow: false }
     },
     {
         path: '/views/mine/gradeList.vue',
         name: GradeList,
-        component: GradeList
+        component: GradeList,
+        meta: { navShow: false }
     },
     {
         path: '/views/mine/changeSchoolName.vue',
         name: ChangeSchoolName,
-        component: ChangeSchoolName
+        component: ChangeSchoolName,
+        meta: { navShow: false }
     }
   ],
   methods:{
