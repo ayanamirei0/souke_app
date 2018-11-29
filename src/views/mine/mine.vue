@@ -52,7 +52,9 @@
         <div class="my_coupons my_common">
             <img src="../../assets/img/coupons.png" alt="">
             <p>优惠券</p>
-            <i class="go iconfont icon-tiem-right"></i>
+            <router-link to="/views/mine/coupon.vue" class="router">
+                <i class="go iconfont icon-tiem-right"></i>
+            </router-link>
         </div>
         <div class="my_line"></div>
         <div class="my_lesson my_common">

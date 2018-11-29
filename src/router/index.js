@@ -8,6 +8,7 @@ import PersonInfo from '@/views/mine/personInfo.vue'
 import ChangeName from '@/views/mine/ChangeName.vue'
 import GradeList from '@/views/mine/gradeList.vue'
 import ChangeSchoolName from '@/views/mine/changeSchoolName.vue'
+import Coupon from '@/views/mine/coupon.vue'
 
 Vue.use(Router)
 
@@ -60,6 +61,11 @@ export default new Router({
         name: ChangeSchoolName,
         component: ChangeSchoolName,
         meta: { navShow: false }
+    },
+    {
+        path: '/views/mine/coupon.vue',
+        name: Coupon,
+        component: Coupon
     }
   ],
   methods:{

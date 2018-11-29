@@ -111,6 +111,12 @@
     flex-wrap: wrap;
     margin: .375rem 0 .4rem 0;
 }
+.my_common .router{
+    position: relative;
+    top: -0.675rem;
+    right: 0;
+    height: .425rem;
+}
 .my_common img{
     width: .425rem;
     height: .325rem;
