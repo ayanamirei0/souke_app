@@ -49,8 +49,82 @@
             </div>
           </div>
         </van-tab>
-        <van-tab title="已使用">内容 2</van-tab>
-        <van-tab title="已过期">内容 3</van-tab>
+        <van-tab title="已使用">
+            <div class="coupon used">
+                <img src="../../assets/img/grayLine.png" alt="">
+                <div class="money">
+                    <p>￥<span class="num">10</span></p>
+                    <p class="text">无金额门槛</p>
+                </div>
+                <div class="info">
+                    <p class="title">巨人学院优惠</p>
+                    <p class="text date">2018.04.11至2018.12.11</p>
+                    <img src="../../assets/img/used.png" alt="" class="imgUsed">
+                </div>
+            </div>
+            <div class="coupon used">
+                <img src="../../assets/img/grayLine.png" alt="">
+                <div class="money">
+                    <p>￥<span class="num">10</span></p>
+                    <p class="text">无金额门槛</p>
+                </div>
+                <div class="info">
+                    <p class="title">巨人学院优惠</p>
+                    <p class="text date">2018.04.11至2018.12.11</p>
+                    <img src="../../assets/img/used.png" alt="" class="imgUsed">
+                </div>
+            </div>
+            <div class="coupon used">
+                <img src="../../assets/img/grayLine.png" alt="">
+                <div class="money">
+                    <p>￥<span class="num">10</span></p>
+                    <p class="text">无金额门槛</p>
+                </div>
+                <div class="info">
+                    <p class="title">巨人学院优惠</p>
+                    <p class="text date">2018.04.11至2018.12.11</p>
+                    <img src="../../assets/img/used.png" alt="" class="imgUsed">
+                </div>
+            </div>
+        </van-tab>
+        <van-tab title="已过期">
+            <div class="coupon used">
+                <img src="../../assets/img/grayLine.png" alt="">
+                <div class="money">
+                    <p>￥<span class="num">10</span></p>
+                    <p class="text">无金额门槛</p>
+                </div>
+                <div class="info">
+                    <p class="title">巨人学院优惠</p>
+                    <p class="text date">2018.04.11至2018.12.11</p>
+                    <img src="../../assets/img/expired.png" alt="" class="imgUsed">
+                </div>
+            </div>
+            <div class="coupon used">
+                <img src="../../assets/img/grayLine.png" alt="">
+                <div class="money">
+                    <p>￥<span class="num">10</span></p>
+                    <p class="text">无金额门槛</p>
+                </div>
+                <div class="info">
+                    <p class="title">巨人学院优惠</p>
+                    <p class="text date">2018.04.11至2018.12.11</p>
+                    <img src="../../assets/img/expired.png" alt="" class="imgUsed">
+                </div>
+            </div>
+            <div class="coupon used">
+                <img src="../../assets/img/grayLine.png" alt="">
+                <div class="money">
+                    <p>￥<span class="num">10</span></p>
+                    <p class="text">无金额门槛</p>
+                </div>
+                <div class="info">
+                    <p class="title">巨人学院优惠</p>
+                    <p class="text date">2018.04.11至2018.12.11</p>
+                    <img src="../../assets/img/expired.png" alt="" class="imgUsed">
+                </div>
+            </div>
+        </van-tab>
       </van-tabs>
     </div>
   </div>
@@ -172,6 +246,25 @@ export default {
                 float: right;
             }
           }
+        }
+      }
+      .used {
+        .money {
+            background: linear-gradient(#B7B7B7, #B7B7B7);
+        }
+        .info{
+            position: relative;
+            .date{
+                border: none;
+                margin-top: .5rem;
+            }
+            .imgUsed{
+                position: absolute;
+                bottom: 1.05rem;
+                right: 0;
+                width: 1.45rem;
+                height: 1.4rem;
+            }
         }
       }
     }
