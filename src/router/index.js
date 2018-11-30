@@ -9,6 +9,7 @@ import ChangeName from '@/views/mine/ChangeName.vue'
 import GradeList from '@/views/mine/gradeList.vue'
 import ChangeSchoolName from '@/views/mine/changeSchoolName.vue'
 import Coupon from '@/views/mine/coupon.vue'
+import Exchange from '@/views/mine/exchange.vue'
 
 Vue.use(Router)
 
@@ -66,6 +67,11 @@ export default new Router({
         path: '/views/mine/coupon.vue',
         name: Coupon,
         component: Coupon
+    },
+    {
+        path: '/views/mine/exchange.vue',
+        name: Exchange,
+        component: Exchange
     }
   ],
   methods:{
