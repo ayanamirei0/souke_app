@@ -183,23 +183,28 @@ export default {
     width: 100%;
     margin-top: 0px;
 	.top {
-		display: flex;
-        padding-top: 0.625rem;
+		position: relative;
+        // padding-top: 0.625rem;
         background-color: #ffffff;
 		img {
 			width: 0.25rem;
 			height: 0.325rem;
-			margin: 0.15rem 0 .3rem 0.3rem;
+            // margin: 0.15rem 0 .3rem 0.3rem;
+            position: absolute;
+            top: 52%;
+            left: 3%;
 		}
 		.title {
 			color: #333333;
 			font-size: 0.4rem;
-			flex-grow: 2;
 		}
 		.btn {
 			color: #666666;
 			font-size: 0.35rem;
-			margin: 0.05rem 0.25rem 0 0;
+            margin: 0.05rem 0.25rem 0 0;
+            position: absolute;
+            top: 49%;
+            right: 0;
 		}
 	}
 	.content {
