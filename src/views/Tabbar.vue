@@ -58,24 +58,20 @@ export default {
 <style type="text/css">
 .warp {
   width: 100%;
-  height: 1.1rem;
+  height: 2.4rem;
   border-top: 1px solid #eee;
   background: #fff;
   display: flex;
   justify-content: space-around;
   font-size: 0;
-  padding-top: .15rem;
+  padding-top: .3rem;
 }
-/* .warp img {
-  width: .7rem;
-  height: .7rem;
-} */
 .tabberWarp {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding-bottom: 5px;
+  padding-bottom: .25rem;
   background: #fff;
 }
 </style>

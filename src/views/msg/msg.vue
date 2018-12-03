@@ -30,5 +30,5 @@ export default {
 };
 </script>
 <style>
-@import '../../assets/css/msg/msg.css';
+
 </style>

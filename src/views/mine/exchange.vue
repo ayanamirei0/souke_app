@@ -35,40 +35,40 @@ export default {
     .top{
         display: flex;
         background-color: #ffffff;
-        padding-top: .625rem;
+        padding-top: 1.25rem;
         img{
-            width: 0.25rem;
-			height: 0.325rem;
-			margin: 0.15rem 0 .3rem 0.3rem;
+            width: .5rem;
+			height: .65rem;
+			margin: .3rem 0 .6rem .6rem;
         }
         .title{
             flex-grow: 2;
             color: #333333;
-            font-size: .4rem;
+            font-size: .8rem;
         }
     }
     .content{
         .input{
-            margin-top: .25rem;
-            padding-left: .25rem;
+            margin-top: .5rem;
+            padding-left: .5rem;
             display: inline-block;
-            width: 9.375rem;
-            height: 1.05rem;
-            font-size: .35rem;
+            width: 18.75rem;
+            height: 2.1rem;
+            font-size: .7rem;
             color: #999999;
             background-color: #ffffff;
-            line-height: 1.05rem;
+            line-height: 2.1rem;
             text-align: left;
         }
         .btn{
-            width: 8.875rem;
-            height: 1rem;
-            border-radius: 1rem;
+            width: 17.75rem;
+            height: 2rem;
+            border-radius: 40px;
             background-color: #2FB3F1;
             color: #ffffff;
-            font-size: .4rem;
-            line-height: 1rem;
-            margin: .775rem 0 0 .25rem;
+            font-size: .8rem;
+            line-height: 2rem;
+            margin: 1.55rem 0 0 .5rem;
         }
     }
 }

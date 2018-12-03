@@ -2,57 +2,58 @@
     position: relative;
 }
 .schoolName .top {
-	margin-top: 0.625rem;
+	margin-top: 1.25rem;
 	display: flex;
 }
 .schoolName .top img {
-	width: 0.25rem;
-	height: 0.325rem;
-	margin-left: 0.425rem;
-	margin: 0.15rem 0 0 0.3rem;
+	width: .5rem;
+	height: .65rem;
+	margin-left: .85rem;
+	margin: .3rem 0 0 .6rem;
 }
 .schoolName .top .title {
-	font-size: 0.45rem;
+	font-size: .9rem;
 	color: #333333;
-	margin-bottom: 0.3rem;
-	flex-grow: 2;
+	margin-bottom: .6rem;
+    flex-grow: 2;
+    text-align: center;
 }
 .schoolName .top .btn {
-	font-size: 0.375rem;
+	font-size: .75rem;
 	color: #666666;
-	margin: 0.05rem 0.3rem 0 0;
+	margin: .1rem .6rem 0 0;
 }
 .schoolName .content{
     padding-right: 5%;
 }
 .schoolName .content .title{
     color: #333333;
-    font-size: .45rem;
-    width: 8.925rem;
-    height: .675rem;
+    font-size: .9rem;
+    width: 17.85rem;
+    height: 1.35rem;
     background-color: #E7E7E7;
     text-align: left;
 }
 .schoolName .content .item{
-    font-size: 0.375rem;
-    border-bottom: 0.025rem solid #c2c2c2;
+    font-size: .75rem;
+    border-bottom: .05rem solid #c2c2c2;
     text-align: left;
-    padding: 0.45rem 0 0.4rem 0;
-    margin-left: .325rem;
+    padding: .9rem 0 .8rem 0;
+    margin-left: .65rem;
 }
 .schoolName .content ul li:last-child{
     border: 0 !important;
 }
 .schoolName .content img{
-    width: .45rem;
-    height: .3rem;
+    width: .9rem;
+    height: .6rem;
     float: right;
-    padding-right: .15rem;
+    padding-right: .3rem;
 }
 .schoolName .nav{
-    width: .3rem;
-    font-size: .3rem;
-    line-height: .45rem;
+    width: .6rem;
+    font-size: .6rem;
+    line-height: .9rem;
     color: #2FB3F1;
     position: absolute;
     top: 23%;

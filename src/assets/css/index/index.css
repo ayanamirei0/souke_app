@@ -5,33 +5,33 @@
   }
   .head .title {
     font-family: "PingFang-SC-Regular";
-    font-size: .45rem;
+    font-size: .9rem;
     color: #333333;
-    margin-left: .5rem;
+    margin-left: 1rem;
     font-weight: bold;
   }
   .head .city {
     font-family: "PingFang-SC-Regular";
-    font-size: .275rem;
+    font-size: .55rem;
     color: #333333;
-    padding: 0.075rem 0.175rem;
+    padding: .15rem .35rem;
     background-color: #efefef;
-    line-height: 1rem;
+    line-height: 2rem;
     font-weight: 400;
   }
   /* .banner {
     margin-top: .3rem;
   } */
   .subject {
-    margin: .45rem 0 .3rem 0;
-    padding: 0 .4rem;
+    margin: .9rem 0 .6rem 0;
+    padding: 0 .8rem;
   }
   .subject .top_subject, .subject .bottom_subject {
     display: flex;
     justify-content: space-around;
   }
   .subject .square {
-    margin-right: .3rem;
+    margin-right: .6rem;
   }
   /* .subject .img {
     width: 1.2rem;
@@ -40,95 +40,95 @@
   .subject .title {
     /* width: 2.375rem;
       height: .575rem; */
-    font-size: .3rem;
+    font-size: .6rem;
     font-family: 'PingFang-SC-Regular';
     color: #333333;
     text-align: center;
   }
   .subject .middle .title {
-    padding-bottom: .2rem;
+    padding-bottom: .4rem;
   }
   /* .subject .bottom .title {
     padding-top: 0.2rem;
   } */
   .line_y {
     width: 100%;
-    height: .175rem;
+    height: .35rem;
     background-color: #efefef;
-    margin: .275rem 0 .375rem 0; 
+    margin: .55rem 0 .75rem 0; 
   }
   .hot_subject{
-      margin-top: .375rem;
+      margin-top: .75rem;
   }
   .hot_subject .title{
       position: relative;
       display: flex;
       flex-wrap: wrap;
-      padding-left: 0.3rem;
+      padding-left: 0.6rem;
   }
   .hot_subject .line, .select_title .line{
     display: inline-block;
-    width: .1rem;
-    height: .4rem;
-    border-radius: .075rem;
+    width: .2rem;
+    height: .8rem;
+    border-radius: .15rem;
     background-color: #2bb8ee;
     position: absolute;
-    top: .1rem;
-    left: .25rem;
+    top: .2rem;
+    left: .5rem;
   }
   .hot_subject .text {
-    margin-left: 0.275rem;
+    margin-left: 0.55rem;
     font-family: 'PingFang-SC-Regular';
-    font-size: .4rem;
+    font-size: .8rem;
   }
   .hot_subject .content {
-    margin-top: .3rem;
+    margin-top: .6rem;
     display: flex;
     flex-wrap: nowrap;
   }
   .hot_subject .content .img {
-    margin-left: 0.2rem;
+    margin-left: 0.4rem;
   }
   .hot_subject .content .img img {
-    width: 3.075rem;
-    height: 1.7rem;
+    width: 6.15rem;
+    height: 3.4rem;
   }
   .hot_subject .content .img p {
-    font-size: .325rem;
+    font-size: .65rem;
     color: #333333;
     font-family: 'PingFang-SC-Regular';
   }
   .line1{
-    width: 9.125rem;
-    height: .175rem;
-    margin-right: .475rem;
-    margin-top: .5rem;
+    width: 18.25rem;
+    height: .35rem;
+    margin-right: .95rem;
+    margin-top: 1rem;
     background-color: #efefef; 
   }
 
 .select{
-  margin-top: .375rem;
+  margin-top: .75rem;
 }
 .select_title{
   position: relative;
-  margin-bottom: .525rem;
+  margin-bottom: 1.05rem;
 }
 .select_title .go{
   position: absolute;
-  top: .1rem;
-  right: .15rem;
+  top: .2rem;
+  right: .3rem;
 }
 .select_title ul{
   display: flex;
   flex-wrap: wrap;
 }
 .select_title ul li{
-  font-size: .4rem;
-  margin-left: .325rem;
+  font-size: .8rem;
+  margin-left: .65rem;
   position: relative;
 }
 .select_title ul li:first-child{
-  margin-left: .55rem;
+  margin-left: 1.1rem;
 }
 .select_content .content .top_lesson, .select_content .bottom_lesson{
   display: flex;
@@ -140,28 +140,19 @@
 }
 .select_content .content .title{
   position: relative;
-  padding-left: .175rem;
+  padding-left: .35rem;
   /* margin-top: .525rem; */
-  margin-bottom: .3rem;
+  margin-bottom: .6rem;
   width: 47%;
 }
 
-/* .select_content .content .title .img{
-  width: 4.275rem;
-  height: 2.675rem;
-  margin-bottom: .25rem; 
-} */
-/* .select_content .content .title .img img{
-  width: 3.75rem;
-  height: 2.675rem;
-} */
 .select_content .content .title p{
   font-family: 'PingFang-SC-Regular';
   color: #333333;
   /* position: absolute;
   bottom: -0.3rem;
   left: 0; */
-  font-size: .325rem;
+  font-size: .65rem;
   text-align: left;
   overflow: hidden;
   white-space: nowrap;
@@ -173,19 +164,20 @@
 .select_title .underline{
   font-family: 'PingFang-SC-Regular';
   display: inline-block;
-  width: .775rem;
-  height: .05rem;
+  width: 1.55rem;
+  height: .1rem;
   background-color: #2bb8ee;
   position: absolute;
-  bottom: -0.1rem;
-  left: .4rem;
+  bottom: -0.2rem;
+  left: .8rem;
 }
 .bottom_tip{
-  margin: .55rem 0 1.75rem 0;
+  text-align: center;
+  margin: 1.1rem 0 3.5rem 0;
 }
 .bottom_tip .text{
   color: #999999;
-  font-size: .3rem;
+  font-size: .6rem;
 }
 
 .test{

@@ -181,29 +181,29 @@ export default {
     position: fixed;
     height: 100%;
     width: 100%;
-    margin-top: 0px;
 	.top {
 		position: relative;
-        // padding-top: 0.625rem;
+        padding-top: 0.625rem;
+        padding-bottom: .6rem;
         background-color: #ffffff;
+        text-align: center;
 		img {
-			width: 0.25rem;
-			height: 0.325rem;
-            // margin: 0.15rem 0 .3rem 0.3rem;
+			width: .5rem;
+			height: .65rem;
             position: absolute;
             top: 52%;
             left: 3%;
 		}
 		.title {
 			color: #333333;
-			font-size: 0.4rem;
+            font-size: .8rem;
 		}
 		.btn {
 			color: #666666;
-			font-size: 0.35rem;
-            margin: 0.05rem 0.25rem 0 0;
+			font-size: .7rem;
+            margin: .1rem .5rem 0 0;
             position: absolute;
-            top: 49%;
+            top: 32%;
             right: 0;
 		}
 	}
@@ -211,78 +211,83 @@ export default {
 		.exchange {
 			display: flex;
 			justify-content: space-between;
-            padding: 0.3rem 0.25rem;
+            padding: .6rem .5rem;
             background-color: #ffffff;
             .router{
                 position: relative;
                 top: -0.675rem;
 	            right: 0;
-	            height: .425rem;
+	            height: .85rem;
             }
 			span {
 				color: #333333;
-				font-size: 0.375rem;
+				font-size: .75rem;
 			}
 		}
 		.container {
-            margin: .25rem;
+            margin: .5rem;
 			.coupon {
 				display: flex;
 				img {
-					width: 0.15rem;
-					height: 2.45rem;
+					width: .3rem;
+					height: 4.9rem;
 				}
 				.money {
 					background: linear-gradient(#49c9ee, #1c95ff);
-					width: 2.225rem;
-					height: 2.45rem;
+					width: 4.45rem;
+                    height: 4.9rem;
+                    text-align: center;
 					:first-child {
-						padding-top: 0.4rem;
+						padding-top: .8rem;
 					}
 					p {
 						color: #ffffff;
-						font-size: 0.375rem;
+						font-size: .75rem;
 						.num {
-							font-size: 0.8rem;
+							font-size: 1.6rem;
 						}
 					}
 					.text {
-						font-size: 0.3rem;
+						font-size: .6rem;
 					}
 				}
 				.info {
                     flex-grow: 2;
                     background-color: #ffffff;
-					padding: .3rem .3rem .175rem .3rem;
+					padding: .6rem .6rem .35rem .6rem;
 					.title {
 						color: #333333;
-						font-size: 0.4rem;
+						font-size: .8rem;
 						text-align: left;
 					}
 					.text {
 						color: #999999;
-						font-size: 0.3rem;
-						text-align: left;
+						font-size: .6rem;
+                        text-align: left;
+                        padding: .3rem 0 .2rem 0;
+                        position: relative;
 						.btn {
 							display: inline-block;
-							width: 1.625rem;
-							height: 0.625rem;
+							width: 3.25rem;
+							height: 1.25rem;
 							background-color: #2fb3f1;
 							color: #ffffff;
-							font-size: 0.3rem;
-							line-height: 0.625rem;
-							border-radius: 0.625rem;
+							font-size: .6rem;
+							line-height: 1.25rem;
+							border-radius: 1.25rem;
 							text-align: center;
-							margin: 0 0 0.225rem 0.65rem;
+                            position: absolute;
+                            bottom: .35rem;
+                            right: 0;
 						}
 					}
 					.detail {
-                        margin-top: 0.175rem;
+                        // margin-top: .35rem;
                         position: relative;
 						.nabla_d {
 							font-size: 0;
 							line-height: 0;
-							border-width: 0.18rem;
+							border-width: 0.36rem;
 							border-color: #bababa;
 							border-bottom-width: 0;
 							border-style: dashed;
@@ -293,25 +298,25 @@ export default {
                         }
                         .line{
                             display: inline-block;
-                            width: 5.9rem;
-                            border-top: .025rem dashed #c1c1c1;
+                            width: 11.8rem;
+                            border-top: .05rem dashed #c1c1c1;
                             position: absolute;
-                            bottom: .6rem;
-                            left: .025rem;
+                            bottom: 1.2rem;
+                            left: .05rem;
                         }
 					}
 				}
 			}
             .detail_info{
                 color: #666666;
-                font-size: 12px;
-                padding: .25rem 0 .2rem 0;
+                font-size: .6rem;
+                padding: .5rem 0 .4rem 0;
                 position: relative;
                 background-color: #ffffff;
                 .nabla_t{
                     font-size: 0;
 					line-height: 0;
-					border-width: 0.18rem;
+					border-width: 0.36rem;
 					border-color: #bababa;
 					border-top-width: 0;
 					border-style: dashed;
@@ -324,8 +329,8 @@ export default {
                 }
                 .line{
                     display: inline-block;
-                    width: 6.5rem;
-                    border-top: .025rem dashed #c1c1c1;
+                    width: 13rem;
+                    border-top: .05rem dashed #c1c1c1;
                     position: absolute;
                     top: 0;
                     right: .225rem;
@@ -333,59 +338,60 @@ export default {
             }
         }
         .used {
-            padding: 0.25rem 0.25rem 0 0.25rem;
+            padding: .5rem .5rem 0 .5rem;
             display: flex;
             img{
-                width: 0.15rem;
-				height: 2.45rem; 
+                width: .3rem;
+				height: 4.9rem; 
             }
 			.money {
                 background: linear-gradient(#b7b7b7, #b7b7b7);
-                width: 2.225rem;
-				height: 2.45rem;
+                width: 4.45rem;
+                height: 4.9rem;
+                text-align: center;
 				:first-child {
-					padding-top: 0.4rem;
+					padding-top: .8rem;
 				}
 				p {
 					color: #ffffff;
-					font-size: 0.375rem;
+					font-size: .75rem;
 					.num {
-						font-size: 0.8rem;
+						font-size: 1.6rem;
 					}
 				}
 				.text {
-					font-size: 0.3rem;
+					font-size: .6rem;
 				}
 			}
 			.info {
                 flex-grow: 2;
                 position: relative;
                 background-color: #ffffff;
-                padding: .4rem .3rem .175rem .3rem;
+                padding: .8rem .6rem .35rem .6rem;
                 .title {
 					color: #333333;
-					font-size: 0.4rem;
+					font-size: .8rem;
 					text-align: left;
 				}
 				.text {
 					color: #999999;
-					font-size: 0.3rem;
+					font-size: .6rem;
 					text-align: left;
 					.btn {
 						display: inline-block;
-						width: 1.625rem;
-						height: 0.625rem;
+						width: 3.25rem;
+						height: 1.25rem;
 						background-color: #2fb3f1;
 						color: #ffffff;
-						font-size: 0.3rem;
-						line-height: 0.625rem;
-						border-radius: 0.625rem;
+						font-size: .6rem;
+						line-height: 1.25rem;
+						border-radius: 1.25rem;
 						text-align: center;
-						margin: 0 0 0.225rem 0.65rem;
+						margin: 0 0 .45rem 1.3rem;
                     }
                 }
                 .detail {
-                    margin-top: 0.175rem;
+                    margin-top: 0.35rem;
                     position: relative;
 					.nabla_d {
 						font-size: 0;
@@ -401,8 +407,8 @@ export default {
                     }
                     .line{
                         display: inline-block;
-                        width: 5.9rem;
-                        border-top: .025rem dashed #c1c1c1;
+                        width: 11.8rem;
+                        border-top: .05rem dashed #c1c1c1;
                         position: absolute;
                         bottom: .6rem;
                         left: .025rem;
@@ -412,8 +418,8 @@ export default {
 					position: absolute;
 					bottom: 1.05rem;
 					right: 0;
-					width: 1.45rem;
-					height: 1.4rem;
+					width: 2.9rem;
+					height: 2.8rem;
 				}
 			}
         }

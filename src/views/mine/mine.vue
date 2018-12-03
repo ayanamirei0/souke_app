@@ -26,12 +26,14 @@
             </div>
         </header>
         <div class="my_order">
-            <div class="shop item">
-                <div class="img">
+            <router-link to="/views/mine/lessonBag.vue">
+                <div class="shop item">
+                    <div class="img">
                     <img src="../../assets/img/shop.png" alt="">
                 </div>
                 <p>购课袋</p>
             </div>
+            </router-link>  
             <div class="line"></div>
             <div class="no_pay item">
                 <div class="img">

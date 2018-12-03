@@ -43,21 +43,17 @@ export default {
 </script>
 <style type="text/css">
 .itemWarp span {
-  font-size: .275rem;
+  font-size: .55rem;
 }
 .itemWarp div{
-  width: .7rem;
-  height: .7rem;
+  width: 1.6rem;
+  height: 1.4rem;
+  text-align: center;
 }
 .itemWarp .normal{
   color: #666666;
 }
 .itemWarp .active{
   color: #2FB3F1;
-}
-.itemWarp .position{
-  position: relative;
-  bottom: 0;
-  right: 0;
 }
 </style>

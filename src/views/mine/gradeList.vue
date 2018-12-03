@@ -2,7 +2,7 @@
     <div class="grade">
         <div class="top">
             <img src="../../assets/img/return.png" alt="" @click="returnPage()">
-            <span class="title">修改年纪</span>
+            <span class="title">修改年级</span>
             <span class="btn">保存</span>
         </div>
         <ul class="list">
@@ -41,41 +41,42 @@ export default {
 </script>
 <style>
 .grade .top {
-  margin-top: 0.625rem;
-  border-bottom: 0.025rem solid #c2c2c2;
+  margin-top: 1.25rem;
+  border-bottom: 0.05rem solid #c2c2c2;
   display: flex;
 }
 .grade .top img {
-  width: 0.25rem;
-  height: 0.325rem;
-  margin-left: 0.425rem;
-  margin: 0.15rem 0 0 0.3rem;
+  width: .5rem;
+  height: .65rem;
+  margin-left: .85rem;
+  margin: .3rem 0 0 .6rem;
 }
 .grade .top .title {
-  font-size: 0.45rem;
+  text-align: center;
+  font-size: .9rem;
   color: #333333;
-  margin-bottom: 0.3rem;
+  margin-bottom: .6rem;
   flex-grow: 2;
 }
 .grade .top .btn {
-  font-size: 0.375rem;
+  font-size: .75rem;
   color: #666666;
-  margin: 0.05rem 0.3rem 0 0;
+  margin: .1rem .6rem 0 0;
 }
 .grade .list {
-  padding-left: 0.325rem;
+  padding-left: .65rem;
 }
 .grade .list li {
-  font-size: 0.375rem;
-  border-bottom: 0.025rem solid #c2c2c2;
+  font-size: .75rem;
+  border-bottom: 0.05rem solid #c2c2c2;
   text-align: left;
-  padding: 0.45rem 0 0.4rem 0;
+  padding: .9rem 0 .8rem 0;
 }
 .grade .list li img{
-    width: .45rem;
-    height: .3rem;
+    width: .9rem;
+    height: .6rem;
     float: right;
-    padding-right: .3rem;
+    padding-right: .6rem;
 }
 .selected {
   color: #2fb3f1;
