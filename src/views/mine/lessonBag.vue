@@ -34,14 +34,17 @@
                     <span class="price">￥4100</span>
                 </div>
             </div>
-        </div>
-         <div class="tabbar">
+        </div>  
+        <div class="bottom_fill"></div>
+         <div class="bottom_tab">
             <p>
                 <span class="total">合计:</span><span class="price">￥8200</span>
             </p>
             <p>
                 <span class="select_lesson">继续选课</span>
-                <span class="pay">去结算(2)</span>
+                <router-link to="/views/mine/confirmOrder.vue">
+                    <span class="pay">去结算(2)</span>
+                </router-link>
             </p>
         </div>
         <!-- <pay-tabbar></pay-tabbar> -->
@@ -60,6 +63,7 @@ export default {
 <style lang="less" scoped>
 .lesson{
     position: fixed;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
     background-color: #EFEFEF;
@@ -87,6 +91,8 @@ export default {
         justify-content: flex-start;
         background-color: #ffffff;
         position: relative;
+        width: 100%;
+        height: 6.775rem;
         img{
             position: absolute;
             top: 45%;
@@ -127,12 +133,17 @@ export default {
                 justify-content: space-between;
                 color: #FA5118;   
                 .price{
-                    font-size: .65rem;
+                    font-size: .7rem;
                 }
             }
         }
     }
-    .tabbar{
+    .bottom_fill{
+        width: 100%;
+        height: 2.375rem;
+        margin-top: .5rem;
+    }
+    .bottom_tab{
         display: flex;
         justify-content: space-between;
         width: 100%;

@@ -45,6 +45,7 @@ export default {
             flex-grow: 2;
             color: #333333;
             font-size: .8rem;
+            text-align: center;
         }
     }
     .content{
@@ -69,6 +70,7 @@ export default {
             font-size: .8rem;
             line-height: 2rem;
             margin: 1.55rem 0 0 .5rem;
+            text-align: center;
         }
     }
 }

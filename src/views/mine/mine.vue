@@ -82,5 +82,7 @@
 <script>
 </script>
 <style>
-@import '../../assets/css/mine/mine.css';
+ @import '../../assets/css/mine/mine.css';
 </style>
+
+

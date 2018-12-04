@@ -36,10 +36,6 @@
 	flex-wrap: wrap;
 }
 
-/* .head .person_data .data{
-    display: flex;
-    justify-content: space-around;
-} */
 .head .person_data .data .img {
 	width: 2.7rem;
 	height: 2.7rem;
@@ -60,7 +56,6 @@
 .head .person_data .account img {
 	width: .8rem;
 	height: .8rem;
-	/* vertical-align: middle; */
 }
 
 .head .person_data .account .num {

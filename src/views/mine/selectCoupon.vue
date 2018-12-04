@@ -1,0 +1,225 @@
+<template>
+	<div class="selectCoupon">
+        <div class="top">
+			<img src="../../assets/img/return.png" alt="" @click="returnPage()">
+			<span class="title">优惠券</span>
+			<span class="btn">优惠规则</span>
+		</div>
+        <div class="content">
+            <div class="exchange">
+                <span>兑换优惠券</span>
+                <router-link to="/views/mine/exchange.vue" class="router">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>	
+            </div>
+            <div class="container">
+                <div class="coupon">
+                    <img src="../../assets/img/lace.png" alt="">
+                    <div class="money">
+                        <p>￥<span class="num">10</span></p>
+                        <p class="text">无金额门槛</p>
+                    </div>
+                    <div class="info">
+                        <p class="title">巨人学员优惠</p>
+                        <p class="text">2018.04.11至2018.12.11<span class="btn">立即使用</span></p>
+                        <p class="text detail" v-show="seen1"><span class="line"></span>详细信息<span class="nabla_d" @click="onShow1()"></span></p>
+                    </div>
+                </div>
+                <p class="detail_info" v-show="!seen1">
+                    <span class="line"></span>
+                    不可与其他优惠活动同时享受，限指定校区，指定课程使用 
+                    <span class="nabla_t" @click="onShow1()"></span>
+                </p>
+            </div>
+        </div>
+	</div>
+</template>
+
+<script>
+export default {
+    data() {
+		return {
+            active: 0,
+            seen1: true
+		};
+	},
+	methods: {
+		returnPage() {
+			this.$router.push("mine.vue");
+        },
+        onShow1() {
+            console.log(1);
+            this.seen1 = !this.seen1;
+        }
+	}
+}
+</script>
+
+<style lang="less" scoped>
+.selectCoupon{
+    position: fixed;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #ECECED;
+    .top {
+		position: relative;
+        padding-top: 0.625rem;
+        padding-bottom: .6rem;
+        background-color: #ffffff;
+        text-align: center;
+		img {
+			width: .5rem;
+			height: .65rem;
+            position: absolute;
+            top: 52%;
+            left: 3%;
+		}
+		.title {
+			color: #333333;
+            font-size: .8rem;
+		}
+		.btn {
+			color: #666666;
+			font-size: .7rem;
+            margin: .1rem .5rem 0 0;
+            position: absolute;
+            top: 32%;
+            right: 0;
+		}
+	}
+    .content{
+        .exchange {
+            display: flex;
+            justify-content: space-between;
+            padding: .6rem .5rem;
+            background-color: #ffffff;
+            .router{
+                position: relative;
+                top: -0.675rem;
+                right: 0;
+                height: .85rem;
+            }
+            span {
+                color: #333333;
+                font-size: .75rem;
+            }
+        }
+        .container {
+            margin: .5rem;
+            .coupon {
+                display: flex;
+                img {
+                    width: .3rem;
+                    height: 4.9rem;
+                }
+                .money {
+                    background: linear-gradient(#49c9ee, #1c95ff);
+                    width: 4.45rem;
+                    height: 4.9rem;
+                    text-align: center;
+                    :first-child {
+                        padding-top: .8rem;
+                    }
+                    p {
+                        color: #ffffff;
+                        font-size: .75rem;
+                        .num {
+                            font-size: 1.6rem;
+                        }
+                    }
+                    .text {
+                        font-size: .6rem;
+                    }
+                }
+                .info {
+                    flex-grow: 2;
+                    background-color: #ffffff;
+                    padding: .6rem .6rem .35rem .6rem;
+                    .title {
+                        color: #333333;
+                        font-size: .8rem;
+                        text-align: left;
+                    }
+                    .text {
+                        color: #999999;
+                        font-size: .6rem;
+                        text-align: left;
+                        padding: .3rem 0 .2rem 0;
+                        position: relative;
+                        .btn {
+                            display: inline-block;
+                            width: 3.25rem;
+                            height: 1.25rem;
+                            background-color: #2fb3f1;
+                            color: #ffffff;
+                            font-size: .6rem;
+                            line-height: 1.25rem;
+                            border-radius: 1.25rem;
+                            text-align: center;
+                            position: absolute;
+                            bottom: .35rem;
+                            right: 0;
+                        }
+                    }
+                    .detail {
+                        // margin-top: .35rem;
+                        position: relative;
+                        .nabla_d {
+                            font-size: 0;
+                            line-height: 0;
+                            border-width: 0.36rem;
+                            border-color: #bababa;
+                            border-bottom-width: 0;
+                            border-style: dashed;
+                            border-top-style: solid;
+                            border-left-color: transparent;
+                            border-right-color: transparent;
+                            float: right;
+                        }
+                        .line{
+                            display: inline-block;
+                            width: 11.8rem;
+                            border-top: .05rem dashed #c1c1c1;
+                            position: absolute;
+                            bottom: 1.2rem;
+                            left: .05rem;
+                        }
+                    }
+                }
+            }
+            .detail_info{
+                color: #666666;
+                font-size: .6rem;
+                padding: .5rem 0 .4rem 0;
+                position: relative;
+                background-color: #ffffff;
+                .nabla_t{
+                    font-size: 0;
+                    line-height: 0;
+                    border-width: 0.36rem;
+                    border-color: #bababa;
+                    border-top-width: 0;
+                    border-style: dashed;
+                    border-top-style: solid;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                    position: absolute;
+                    bottom: 1.05rem;
+                    right: .6rem;
+                }
+                .line{
+                    display: inline-block;
+                    width: 13rem;
+                    border-top: .05rem dashed #c1c1c1;
+                    position: absolute;
+                    top: 0;
+                    right: .225rem;
+                }
+            }
+        }
+    }
+}
+</style>
+
+

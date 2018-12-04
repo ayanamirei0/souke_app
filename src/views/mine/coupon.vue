@@ -181,6 +181,7 @@ export default {
     position: fixed;
     height: 100%;
     width: 100%;
+    overflow-y: auto;
 	.top {
 		position: relative;
         padding-top: 0.625rem;

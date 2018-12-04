@@ -12,6 +12,8 @@ import Coupon from '@/views/mine/coupon.vue'        //优惠券
 import Exchange from '@/views/mine/exchange.vue'        //兑换优惠券
 import LessonBag from '@/views/mine/lessonBag.vue'      //购课袋
 import LessonBagEdit from '@/views/mine/lessonBagEdit.vue'      //购物袋编辑跳转页
+import ConfirmOrder from '@/views/mine/confirmOrder.vue'        //购课袋-去结算页面
+import SelectCoupon from '@/views/mine/selectCoupon.vue'        //购课袋-去结算-确认订单页面使用优惠券跳转
 
 Vue.use(Router)
 
@@ -84,6 +86,16 @@ export default new Router({
         path: '/views/mine/lessonBagEdit.vue',  //2018-12-03增加
         name: 'LessonBagEdit',
         component: LessonBagEdit
+    },
+    {
+        path: '/views/mine/confirmOrder.vue',       //2018-12-04增加
+        name: 'ConfirmOrder',
+        component: ConfirmOrder
+    },
+    {
+        path: '/views/mine/selectCoupon.vue',       //2018-12-04增加
+        name: 'SelectCoupon',
+        component: SelectCoupon
     }
   ],
   methods:{
