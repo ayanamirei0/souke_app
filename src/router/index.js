@@ -49,40 +49,40 @@ export default new Router({
     },
     {
         path: '/views/mine/ChangeName.vue',
-        name: ChangeName,
+        name: 'ChangeName',
         component: ChangeName,
         meta: { navShow: false }
     },
     {
         path: '/views/mine/gradeList.vue',
-        name: GradeList,
+        name: 'GradeList',
         component: GradeList,
         meta: { navShow: false }
     },
     {
         path: '/views/mine/changeSchoolName.vue',
-        name: ChangeSchoolName,
+        name: 'ChangeSchoolName',
         component: ChangeSchoolName,
         meta: { navShow: false }
     },
     {
         path: '/views/mine/coupon.vue',
-        name: Coupon,
+        name: 'Coupon',
         component: Coupon
     },
     {
         path: '/views/mine/exchange.vue',
-        name: Exchange,
+        name: 'Exchange',
         component: Exchange
     },
     {
         path: '/views/mine/lessonBag.vue',
-        name: LessonBag,
+        name: 'LessonBag',
         component: LessonBag
     },
     {
         path: '/views/mine/lessonBagEdit.vue',  //2018-12-03增加
-        name: LessonBagEdit,
+        name: 'LessonBagEdit',
         component: LessonBagEdit
     }
   ],

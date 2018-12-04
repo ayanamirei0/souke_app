@@ -9,11 +9,11 @@
                 <router-link to="" class="complete">完成</router-link>
             </span>
         </div>
-        <div class="lesson_order">
-            <img src="../../assets/img/select.png" alt="" v-show="check1" @click="change1">
-            <img src="../../assets/img/selected.png" alt="" v-show="!check1" @click="change1">
+        <div class="lesson_order" v-for="(item, index) in titleList" :key="index">
+            <img src="../../assets/img/select.png" alt="" v-show="!checkBox.includes(index)" @click="multiSelect(index)">
+            <img src="../../assets/img/selected.png" alt="" v-show="checkBox.includes(index)" @click="multiSelect(index)">
             <div class="content">
-                <p class="title"><span class="season">秋季</span>初一数学启思·卓越班</p>
+                <p class="title"><span class="season">秋季</span>{{item}}</p>
                 <p><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
                 <p><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30  2018/05/05-2018/11/17</p>
                 <p><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="lesson_order">
+        <!-- <div class="lesson_order">
             <img src="../../assets/img/select.png" alt="" v-show="check2" @click="change2">
             <img src="../../assets/img/selected.png" alt="" v-show="!check2" @click="change2">
             <div class="content">
@@ -36,11 +36,11 @@
                     <span class="price">￥4100</span>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="tabbar">
-            <p class="check" @click="checkAll">
-                <img src="../../assets/img/select.png" alt="" v-show="check">
-                <img src="../../assets/img/selected.png" alt="" v-show="!check">
+            <p class="check" @click="letCheckAll">
+                <img src="../../assets/img/select.png" alt="" v-show="this.checkBox.length != this.titleList.length">
+                <img src="../../assets/img/selected.png" alt="" v-show="this.checkBox.length == this.titleList.length">
                 <span>全选</span>
             </p>
             <span class="pay">删除</span>
@@ -53,28 +53,50 @@
 export default {
     data() {
         return {
-            check1: true,
-            check2: true,
-            check: true
+            selectedNum: '',
+            checkBox: [],
+            titleList: ['初一数学启思·卓越班','初一语文启思·卓越班']
+        }
+    },
+    computed: { 
+        isCheckAll() {      //判断是否选中
+            if(this.checkBox.length == this.titleList.length){
+                return true;
+            }else{
+                return false;
+            }
         }
     },
     methods: {
-        change1() {
-            this.check1 = !this.check1;
+        select(i) {
+            console.log(i);
+            this.selectedNum = i;
         },
-        change2() {
-            this.check2 = !this.check2;
-        },
-        checkAll(){
-            if(this.check1 != this.check2){
-                this.check1 = false;
-                this.check2 = false;
-                this.check = false;
+        multiSelect(i) {         //多选
+            let index = this.checkBox.indexOf(i);
+            if(index > -1){     //如果已经选中，那就取消选中，如果没有，则选中
+                this.checkBox.splice(index,1);
             }else{
-                this.check1 = !this.check1;
-                this.check2 = !this.check2;
-                this.check = ! this.check;
-            }    
+                this.checkBox.push(i);
+            }
+        },
+        letCheckAll() {
+            console.log(1);
+            if(this.isCheckAll) {
+                this.clearCheckAll();
+            }else {
+                this.checkAll();
+            }
+        },
+        checkAll() {        //选中全部
+            let len = this.titleList.length;
+            this.checkBox = [];
+            for(let i = 0; i < len; i++) {
+                this.checkBox.push(i);
+            }
+        },
+        clearCheckAll() {       //清空选择
+            this.checkBox = [];
         }
     }
 }
