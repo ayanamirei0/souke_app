@@ -48,7 +48,7 @@
 export default {
     data() {
         return {
-            selectedNum: '',
+            // selectedNum: '',  //单选
             checkBox: [],
             titleList: ['初一数学启思·卓越班','初一语文启思·卓越班'],
 
@@ -65,7 +65,7 @@ export default {
         }
     },
     methods: {
-        // select(i) {    //单选互相排斥只能选择一个
+        // select(i) {    //单选互斥只能选择一个
         //     console.log(i);
         //     this.selectedNum = i;
         // },

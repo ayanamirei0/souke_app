@@ -12,7 +12,7 @@
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>	
             </div>
-            <div class="container">
+            <div class="container" v-for="(item, index) in couponList">
                 <div class="coupon">
                     <img src="../../assets/img/lace.png" alt="">
                     <div class="money">
@@ -20,15 +20,19 @@
                         <p class="text">无金额门槛</p>
                     </div>
                     <div class="info">
-                        <p class="title">巨人学员优惠</p>
-                        <p class="text">2018.04.11至2018.12.11<span class="btn">立即使用</span></p>
-                        <p class="text detail" v-show="seen1"><span class="line"></span>详细信息<span class="nabla_d" @click="onShow1()"></span></p>
+                        <p class="title">{{item}}</p>
+                        <p class="text">
+                            2018.04.11至2018.12.11
+                            <img src="../../assets/img/select.png" alt="" v-show="!checkBox.includes(index)" @click="multiSelect(index)" class="select">
+                            <img src="../../assets/img/selected.png" alt="" v-show="checkBox.includes(index)" @click="multiSelect(index)" class="select">
+                        </p>
+                        <p class="text detail" v-show="!detailArr.includes(index)"><span class="line"></span>详细信息<span class="nabla_d" @click="multiSelectDetail(index)"></span></p>
                     </div>
                 </div>
-                <p class="detail_info" v-show="!seen1">
+                <p class="detail_info" v-show="detailArr.includes(index)">
                     <span class="line"></span>
                     不可与其他优惠活动同时享受，限指定校区，指定课程使用 
-                    <span class="nabla_t" @click="onShow1()"></span>
+                    <span class="nabla_t" @click="multiSelectDetail(index)"></span>
                 </p>
             </div>
         </div>
@@ -40,16 +44,31 @@ export default {
     data() {
 		return {
             active: 0,
-            seen1: true
+            selectedNum: '',
+            checkBox: [],
+            detailArr: [],
+            couponList: ['启迪巨人学院优惠', '启迪巨人学院优惠', '启迪巨人学院优惠']
 		};
 	},
 	methods: {
 		returnPage() {
-			this.$router.push("mine.vue");
+			this.$router.push("confirmOrder.vue");
         },
-        onShow1() {
-            console.log(1);
-            this.seen1 = !this.seen1;
+        multiSelect(i) {        //多选
+            let index = this.checkBox.indexOf(i);
+            if(index > -1){     //如果选中，那就取消选中，如果没有，那就选中
+                this.checkBox.splice(index,1);
+            }else{
+                this.checkBox.push(i);
+            }
+        },
+        multiSelectDetail(i) {        //多选
+            let index = this.detailArr.indexOf(i);
+            if(index > -1){     //如果选中，那就取消选中，如果没有，那就选中
+                this.detailArr.splice(index,1);
+            }else{
+                this.detailArr.push(i);
+            }
         }
 	}
 }
@@ -145,25 +164,17 @@ export default {
                         color: #999999;
                         font-size: .6rem;
                         text-align: left;
-                        padding: .3rem 0 .2rem 0;
+                        padding: .4rem 0 .3rem 0;
                         position: relative;
-                        .btn {
-                            display: inline-block;
-                            width: 3.25rem;
-                            height: 1.25rem;
-                            background-color: #2fb3f1;
-                            color: #ffffff;
-                            font-size: .6rem;
-                            line-height: 1.25rem;
-                            border-radius: 1.25rem;
-                            text-align: center;
+                        .select {
+                            width: 1.05rem;
+                            height: 1.05rem;
                             position: absolute;
                             bottom: .35rem;
                             right: 0;
                         }
                     }
                     .detail {
-                        // margin-top: .35rem;
                         position: relative;
                         .nabla_d {
                             font-size: 0;
@@ -182,7 +193,7 @@ export default {
                             width: 11.8rem;
                             border-top: .05rem dashed #c1c1c1;
                             position: absolute;
-                            bottom: 1.2rem;
+                            bottom: 1.3rem;
                             left: .05rem;
                         }
                     }

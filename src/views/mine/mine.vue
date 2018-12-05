@@ -28,27 +28,31 @@
         <div class="my_order">
             <router-link to="/views/mine/lessonBag.vue">
                 <div class="shop item">
-                    <div class="img">
-                    <img src="../../assets/img/shop.png" alt="">
+                        <div class="img">
+                            <img src="../../assets/img/shop.png" alt="">
+                        </div>
+                    <p>购课袋</p>
                 </div>
-                <p>购课袋</p>
-            </div>
             </router-link>  
             <div class="line"></div>
-            <div class="no_pay item">
-                <div class="img">
-                    <span class="tip">1</span>
-                    <img src="../../assets/img/no_pay.png" alt="">
+            <router-link to="/views/mine/waitPay.vue">
+                <div class="no_pay item">
+                    <div class="img">
+                        <span class="tip">1</span>
+                        <img src="../../assets/img/no_pay.png" alt="">
+                    </div>
+                    <p>待付款</p>
                 </div>
-                <p>待付款</p>
-            </div>
+            </router-link>
             <div class="line"></div>
-            <div class="pay item">
-                <div>
-                    <img src="../../assets/img/pay.png" alt="">
+            <router-link to="/views/mine/paid.vue">
+                <div class="pay item">
+                    <div>
+                        <img src="../../assets/img/pay.png" alt="">
+                    </div>
+                    <p>已付款</p>
                 </div>
-                <p>已付款</p>
-            </div>
+            </router-link>
         </div>
         <div class="my_line"></div>
         <div class="my_coupons my_common">

@@ -24,23 +24,62 @@
                         <span>-￥50.00</span>
                         <router-link to="/views/mine/selectCoupon.vue">
                             <i class="go iconfont icon-tiem-right"></i>
-                        </router-link>
-                        
+                        </router-link>    
                     </div>
                 </li>
                 <li>
                     <span class="left">优惠活动</span>
-                    <div class="right">
+                    <div class="right" @click="changePopup">
                         <span>-￥550.00</span>
                         <i class="go iconfont icon-tiem-right"></i>
                     </div>
+                    <van-popup v-model="popup_show" position="bottom" class="offer_detail">
+                        <ul>
+                            <li>
+                                <p class="title">优惠详情</p>
+                            </li>
+                            <li v-for="(item, index) in radioList" :key="index" class="list">
+                                <span>{{item}}</span>
+                                <img src="../../assets/img/select.png" alt="" class="select" @click="select(index)">
+                                <img src="../../assets/img/selected.png" alt="" v-show="selectedNum==index" class="select">
+                            </li>
+                            <li>
+                                <p class="confirm" @click="closePopup">确定</p>
+                            </li>
+                        </ul>
+                    </van-popup>
                 </li>
                 <li>
                     <span class="left">选择教材</span>
-                    <div class="selected">
+                    <div class="selected" @click="changeBook">
                         <span>已选择</span>
                         <i class="go iconfont icon-tiem-right"></i>
                     </div>
+                    <van-popup v-model="showBook" position="bottom" class="textBook">
+                        <p class="title">教材详情</p>
+                        <div class="content" v-for="(item, index) in bookNum" :key="index">
+                            <div class="cost">
+                                <span class="bookCost">教材费用：</span>
+                                <span class="money">￥39.00</span>
+                            </div>
+                            <div class="detail">
+                                <div class="text">
+                                    <p>
+                                        <span>教材编号：</span>
+                                        <span>{{item}}</span>
+                                    </p>
+                                    <p>
+                                        <span>教材名称：</span>
+                                        <span>《初一数学启思·卓越班》(教材包)(2018秋季）</span>
+                                    </p>
+                                    <p class="notice">注意：此教材为校区必选教材</p>
+                                </div>
+                                <img src="../../assets/img/select.png" alt="" v-show="!checkBox.includes(index)" @click="multiSelect(index)" class="select">
+                                <img src="../../assets/img/selected.png" alt="" v-show="checkBox.includes(index)" @click="multiSelect(index)" class="select">
+                            </div>    
+                        </div> 
+                        <p class="bottomConfirm" @click="closePopup">确定</p>
+                    </van-popup>
                 </li>
             </ul>
         </div>
@@ -96,12 +135,40 @@
 export default {
     data() {
         return {
-            show: false
+            show: false,
+            popup_show: false,
+            selectedNum: '',
+            radioList: ['两科连报优惠九八折', '两科连报优惠九八折', '两科连报优惠九八折', '两科连报优惠九八折'],
+            showBook: false,
+            checkBox: [],
+            bookNum: ['1180300000201', '1180300000203']
         }
     },
     methods: {
         check() {
             this.show = !this.show;
+        },
+        changePopup() {
+            this.popup_show = true;
+        },
+        select(i) {
+            console.log(i);
+            this.selectedNum = i;
+        },
+        changeBook() {
+            this.showBook = true;
+        },
+        multiSelect(i) {         //多选
+            let index = this.checkBox.indexOf(i);
+            if(index > -1){     //如果已经选中，那就取消选中，如果没有，则选中
+                this.checkBox.splice(index,1);
+            }else{
+                this.checkBox.push(i);
+            }
+        },
+        closePopup() {
+            this.popup_show = false;
+            this.showBook = false;
         }
     }
 }
@@ -169,13 +236,13 @@ export default {
         }
         .list{
             li{
+                width: 100%;
+                height: 2.25rem;
+                line-height: 2.25rem;
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
-                height: 2.25rem;
                 border-top: 1px solid #C1C1C1;
-                line-height: 2.25rem;
                 i{
                     position: absolute;
                     top: .07rem;
@@ -187,10 +254,46 @@ export default {
                     font-size: .65rem;
                 }
                 .right{
-                    color: #FA5118;
                     font-size: .65rem;
                     span{
                         margin-right: 1.225rem;
+                        color: #FA5118;
+                    }
+                }
+                .offer_detail{
+                    ul{
+                        li{
+                            height: 2.25rem;
+                            color: #333333;
+                            font-size: .8rem;
+                            line-height: 2.25rem;
+                            .title{
+                                text-align: center;
+                            }
+                            .confirm{
+                                text-align: center;
+                                width: 100%;
+                                background-color: #2DB3F2;
+                                color: #ffffff;
+                            }   
+                        }
+                        .title{
+                            position: relative;
+                            left: 40%;
+                        }
+                        .list{
+                            span{
+                                padding-left: .525rem;
+                            }
+                            img{
+                                width: 1.05rem;
+                                height: 1.05rem;
+                                vertical-align: middle;
+                                position: absolute;
+                                top: 25%;
+                                right: .25rem;
+                            }
+                        }
                     }
                 }
                 .selected{
@@ -198,6 +301,54 @@ export default {
                         margin-right: 1.225rem;
                         color: #666666;
                         font-size: .65rem;
+                    }
+                }
+                .textBook{
+                    .title{
+                        color: #333333;
+                        font-size: .8rem;
+                        text-align: center;
+                    }
+                    .content{
+                        line-height: normal;
+                        border-top: 1px solid #CDCDCD;
+                        height: 5rem;
+                        .cost{
+                            font-size: .75rem;
+                            margin: 0;
+                            .bookCost{
+                                color: #333333;
+                            }
+                            .money{
+                                color: #FA5118;
+                            }
+                        }
+                        .detail{
+                            position: relative;
+                            .text{
+                                p{
+                                    color: #666666;
+                                    font-size: .6rem;
+                                }
+                                .notice{
+                                    color: #D02727;
+                                    font-size: .55rem;
+                                }
+                            }  
+                            .select{
+                                width: 1.05rem;
+                                height: 1.05rem;
+                                position: absolute;
+                                top: 5%;
+                                right: 1%;
+                            }
+                        }   
+                    }
+                    .bottomConfirm{
+                        text-align: center;
+                        color: #ffffff;
+                        background-color: #2FB3F1;
+                        font-size: .8rem;
                     }
                 }
             }

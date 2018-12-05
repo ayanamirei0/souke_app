@@ -14,6 +14,8 @@ import LessonBag from '@/views/mine/lessonBag.vue'      //购课袋
 import LessonBagEdit from '@/views/mine/lessonBagEdit.vue'      //购物袋编辑跳转页
 import ConfirmOrder from '@/views/mine/confirmOrder.vue'        //购课袋-去结算页面
 import SelectCoupon from '@/views/mine/selectCoupon.vue'        //购课袋-去结算-确认订单页面使用优惠券跳转
+import WaitPay from '@/views/mine/waitPay.vue'      //待付款跳转
+import Paid from '@/views/mine/paid.vue'       //已付款跳转
 
 Vue.use(Router)
 
@@ -83,19 +85,29 @@ export default new Router({
         component: LessonBag
     },
     {
-        path: '/views/mine/lessonBagEdit.vue',  //2018-12-03增加
+        path: '/views/mine/lessonBagEdit.vue',  //2018-12-03 增加
         name: 'LessonBagEdit',
         component: LessonBagEdit
     },
     {
-        path: '/views/mine/confirmOrder.vue',       //2018-12-04增加
+        path: '/views/mine/confirmOrder.vue',       //2018-12-04 增加
         name: 'ConfirmOrder',
         component: ConfirmOrder
     },
     {
-        path: '/views/mine/selectCoupon.vue',       //2018-12-04增加
+        path: '/views/mine/selectCoupon.vue',       //2018-12-04 增加
         name: 'SelectCoupon',
         component: SelectCoupon
+    },
+    {
+        path: '/views/mine/waitPay.vue',        //2018-12-05 增加
+        name: 'WaitPay',
+        component: WaitPay
+    },
+    {
+        path: '/views/mine/paid.vue',       //2018-12-05 增加
+        name: 'Paid',
+        component: Paid
     }
   ],
   methods:{

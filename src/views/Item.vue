@@ -2,11 +2,11 @@
     <div class="itemWarp flex_mid" @click='changePage'>
         <div v-show='!bol'>
             <slot name='normalImg'></slot>
-            <span v-text="txt" class="normal position"></span>
+            <span v-text="txt" class="normal"></span>
         </div>
         <div v-show='bol'>
             <slot name='activeImg'></slot>
-            <span v-text="txt" class="active position"></span>
+            <span v-text="txt" class="active"></span>
         </div>   
     </div>
 </template>
@@ -34,9 +34,9 @@ export default {
   },
   methods: {
     changePage() {
-      //点击跳转对应的页面
-      this.$router.push("/" + this.page);
-      this.$emit("change", this.page);
+        //点击跳转对应的页面
+        this.$router.push("/" + this.page);
+        this.$emit("change", this.page);
     }
   }
 };

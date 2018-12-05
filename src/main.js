@@ -8,7 +8,7 @@ import 'vant/lib/index.css'
 import './assets/css/index.css'
 import './assets/iconfont/iconfont.css'
 import './assets/js/head.js'
-import { Swipe, SwipeItem, Toast, Popup, DatetimePicker, Uploader, Picker, Tab, Tabs } from 'vant'
+import { Swipe, SwipeItem, Toast, Popup, DatetimePicker, Uploader, Picker, Tab, Tabs} from 'vant'
 
 
 Vue.use(Vant);
@@ -19,6 +19,7 @@ Vue.use(DatetimePicker);
 Vue.use(Uploader);
 Vue.use(Picker);
 Vue.use(Tab).use(Tabs);
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
