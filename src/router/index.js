@@ -26,49 +26,49 @@ export default new Router({
       path: '',
       name: 'index',
       component: Index,
-      meta: { navShow: true }
+      meta: { tabShow: true }      //控制底部导航栏的显示与隐藏
     },
     {
       path: '/views/mine/mine.vue',
       name: 'Mine',
       component: Mine,
-      meta: { navShow: true }
+      meta: { tabShow: true }
     },
     {
       path: '/views/msg/msg.vue',
       name: 'Msg',
       component: Msg,
-      meta: { navShow: true }
+      meta: { tabShow: true }
     },
     {
       path: '/views/search/search.vue',
       name: 'Search',
       component: Search,
-      meta: { navShow: true }
+      meta: { tabShow: true }
     },
     {
         path: '/views/mine/personInfo.vue',
         name: 'PersonInfo',
         component: PersonInfo,
-        meta: { navShow: false }
+        meta: { tabShow: false }
     },
     {
         path: '/views/mine/ChangeName.vue',
         name: 'ChangeName',
         component: ChangeName,
-        meta: { navShow: false }
+        meta: { tabShow: false }
     },
     {
         path: '/views/mine/gradeList.vue',
         name: 'GradeList',
         component: GradeList,
-        meta: { navShow: false }
+        meta: { tabShow: false }
     },
     {
         path: '/views/mine/changeSchoolName.vue',
         name: 'ChangeSchoolName',
         component: ChangeSchoolName,
-        meta: { navShow: false }
+        meta: { tabShow: false }
     },
     {
         path: '/views/mine/coupon.vue',
@@ -86,7 +86,7 @@ export default new Router({
         component: LessonBag
     },
     {
-        path: '/views/mine/lessonBagEdit.vue',  //2018-12-03 增加
+        path: '/views/mine/lessonBagEdit.vue',      //2018-12-03 增加
         name: 'LessonBagEdit',
         component: LessonBagEdit
     },

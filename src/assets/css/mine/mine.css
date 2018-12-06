@@ -1,3 +1,10 @@
+.container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #ECECEE;
+}
 .head .background {
 	background-color: #2FB3F1;
 	width: 100%;
@@ -72,9 +79,10 @@
 
 /* 订单部分 */
 .my_order {
-	margin-top: 2.65rem;
+	padding-top: 2.65rem;
 	display: flex;
-	justify-content: space-around;
+    justify-content: space-around;
+    background-color: #ffffff;
 }
 
 .my_order .line {
@@ -123,7 +131,8 @@
 .my_common {
 	display: flex;
 	flex-wrap: wrap;
-	margin: .75rem 0 .8rem 0;
+    padding: .75rem 0 .8rem 0;
+    background-color: #ffffff;
 }
 
 .my_common .router {

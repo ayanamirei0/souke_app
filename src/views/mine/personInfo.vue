@@ -130,7 +130,7 @@ export default {
   methods: {
     returnPage() {
       // console.log(1111);
-      this.$router.push("mine.vue");
+      this.$router.push("mine.vue");   //返回我的页面
       // this.$router.replace({path:'mine.vue'});
     },
     changeHead() {

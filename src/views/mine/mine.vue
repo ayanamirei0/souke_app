@@ -1,92 +1,299 @@
 <template>
-    <div class="container">
-        <header class="head">
-            <div class="background">
-                <div class="menu">
-                    <span class="mine">我的</span>
-                    <span class="points">积分商城</span>
-                </div>
-                <div class="person_data">
-                    <div class="data">
-                        <div class="img">
-                            <img src="../../assets/img/profile.png" alt="">
-                        </div>
-                        <div>
-                            <div class="phone">187****0721</div>
-                            <div class="account">
-                                <img src="../../assets/img/wd.png" alt="">
-                                <span class="num">S12313121</span>
-                            </div>
-                        </div>
-                    </div>
-                    <router-link to="/views/mine/personInfo.vue">
-                        <i class="go iconfont icon-tiem-right"></i>
-                    </router-link> 
-                </div>
+    <div class="mine">
+        <div class="head">
+            <div class="top">
+                <span class="menu">我的</span>
+                <span class="mall">积分商城</span>
             </div>
-        </header>
-        <div class="my_order">
+            <div class="headInfo">
+                <img src="../../assets/img/profile.png" alt="" class="img">
+                <div class="data">
+                    <p class="tel">187****0721</p>
+                    <div class="account">
+                        <img src="../../assets/img/wd.png" alt="">
+                        <span class="num">S18092700256</span>
+                    </div>
+                </div>
+                <router-link to="/views/mine/personInfo.vue">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
+            </div>
+        </div>
+        <div class="nav">
             <router-link to="/views/mine/lessonBag.vue">
-                <div class="shop item">
-                        <div class="img">
-                            <img src="../../assets/img/shop.png" alt="">
-                        </div>
+                <div class="shop">
+                    <div class="img">
+                        <img src="../../assets/img/shop.png" alt="">
+                    </div>
                     <p>购课袋</p>
                 </div>
-            </router-link>  
-            <div class="line"></div>
+            </router-link>
             <router-link to="/views/mine/waitPay.vue">
-                <div class="no_pay item">
+                <div class="waitPay">
                     <div class="img">
-                        <span class="tip">1</span>
-                        <img src="../../assets/img/no_pay.png" alt="">
+                        <span class="alert">1</span>
+                        <img src="../../assets/img/waitPay.png" alt="">
                     </div>
-                    <p>待付款</p>
+                    <p>未付款</p>
                 </div>
             </router-link>
-            <div class="line"></div>
             <router-link to="/views/mine/paid.vue">
-                <div class="pay item">
-                    <div>
-                        <img src="../../assets/img/pay.png" alt="">
+                <div class="paid">
+                    <div class="img">
+                        <img src="../../assets/img/paid.png" alt="">
                     </div>
                     <p>已付款</p>
                 </div>
-            </router-link>
+            </router-link> 
         </div>
-        <div class="my_line"></div>
-        <div class="my_coupons my_common">
-            <img src="../../assets/img/coupons.png" alt="">
-            <p>优惠券</p>
+        <div class="item">
+            <div class="coupon">
+                <img src="../../assets/img/coupons.png" alt="">
+                <span>优惠券</span>
+            </div>
             <router-link to="/views/mine/coupon.vue" class="router">
                 <i class="go iconfont icon-tiem-right"></i>
             </router-link>
         </div>
-        <div class="my_line"></div>
-        <div class="my_lesson my_common">
-            <img src="../../assets/img/lesson.png" alt="">
-            <p>我的课程</p>
-            <i class="go iconfont icon-tiem-right"></i>
+        <div class="middle">
+            <div class="myLesson">
+                <div class="left">
+                    <img src="../../assets/img/lesson.png" alt="">
+                    <span>我的课程</span>
+                </div>
+                <i class="go iconfont icon-tiem-right"></i>
+            </div>
+            <div class="offline">
+                <div class="left">
+                    <img src="../../assets/img/order.png" alt="">
+                    <span>线下订单</span>
+                </div>
+                <i class="go iconfont icon-tiem-right"></i>
+            </div>
             <div class="line"></div>
         </div>
-        <div class="offline my_common">
-            <img src="../../assets/img/order.png" alt="">
-            <p>线下订单</p>
-            <i class="go iconfont icon-tiem-right"></i>
-        </div>
-        <div class="my_line"></div>
-        <div class="set my_common">
-            <img src="../../assets/img/set.png" alt="">
-            <p>帐号管理</p>
+        <div class="set">
+            <div class="left">
+                <img src="../../assets/img/set.png" alt="">
+                <span>帐号管理</span>
+            </div>
             <i class="go iconfont icon-tiem-right"></i>
         </div>
     </div>
 </template>
 
 <script>
+export default {
+    
+}
 </script>
-<style>
- @import '../../assets/css/mine/mine.css';
+
+<style lang="less" scoped>
+.mine{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #ECECEE;
+    .head{
+        position: relative;
+        .top{
+            width: 100%;
+            height: 4.6rem;
+            background-color: #2FB3F1;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            .menu{
+                font-size: .9rem;
+                margin-top: .725rem;
+            }
+            .mall{
+                font-size: .75rem;
+                margin-top: .875rem;
+            }
+        }
+        .headInfo{
+            position: absolute;
+            top: 52%;
+            left: 3%;
+            width: 17.65rem;
+            height: 4.275rem;
+            border-radius: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            .img{
+                width: 2.675rem;
+                height: 2.7rem;
+                margin: .75rem .6rem .825rem .775rem;
+            }
+            .data{
+                padding: 1rem 0 1.025rem 0;
+                width: 69%;
+                .tel{
+                    color: #333333;
+                    font-size: .8rem;
+                }
+                .account{
+                    img{
+                        width: .8rem;
+                        height: .8rem;
+                        vertical-align: middle;
+                    }
+                    .num{
+                        color: #666666;
+                        font-size: .6rem;
+                    }
+                }
+            } 
+            .go{
+                position: relative;
+                top: 35%;
+                left: 0;
+                font-size: 1rem;
+            } 
+        }
+        .shadow{
+            width: 17.5rem;
+            height: .1rem;
+            background-color: rgba(47, 179, 241, .1);
+            position: absolute;
+            top: 1px;
+            left: 2px;
+        }
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        padding: 2.65rem 0 .825rem 0;
+        background-color: #ffffff;
+        img{
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+        p{
+            color: #333333;
+            font-size: .6rem;
+            text-align: center;
+        }
+        .waitPay{
+            .img{
+                position: relative;
+                .alert{
+                    display: inline-block;
+                    width: .9rem;
+                    height: .9rem;
+                    border-radius: 50%;
+                    background-color: #F74749;
+                    color: #ffffff;
+                    text-align: center;
+                    font-size: .6rem;
+                    position: absolute;
+                    top: -0.3rem;
+                    right: -0.2rem;
+                }
+            }
+        }
+    }
+    .item{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        margin-top: .3rem;
+        height: 2.275rem;
+        line-height: 2.275rem;
+        img{
+            width: .85rem;
+            height: .9rem;
+            vertical-align: middle;
+            margin-left: .975rem;
+        }
+        span{
+            color: #333333;
+            font-size: .75rem;
+        }
+        .go{
+           margin-right: 1.05rem;
+           font-size: 1rem;
+        }
+    }
+    .middle{
+        background-color: #ffffff;
+        margin-top: .3rem;
+        position: relative;
+        .myLesson{
+            height: 2.275rem;
+            line-height: 2.275rem;
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: .85rem;
+                height: .9rem;
+                vertical-align: middle;
+                margin-left: .975rem;
+            }
+            span{
+                color: #333333;
+                font-size: .75rem;
+            }
+            .go{
+                margin-right: 1.05rem;
+                font-size: 1rem;
+            }
+        }
+        .offline{
+            height: 2.275rem;
+            line-height: 2.275rem;
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: .85rem;
+                height: .9rem;
+                vertical-align: middle;
+                margin-left: .975rem;
+            }
+            span{
+                color: #333333;
+                font-size: .75rem;
+            }
+            .go{
+                margin-right: 1.05rem;
+                font-size: 1rem;
+            } 
+        }
+        .line{
+            width: 15.875rem;
+            height: .05rem;
+            background-color: #ECECEE;
+            position: absolute;
+            top: 53%;
+            left: 11%;
+        }
+    }
+    .set{
+        margin-top: .3rem;
+        height: 2.275rem;
+        line-height: 2.275rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        img{
+            width: .85rem;
+            height: .9rem;
+            vertical-align: middle;
+            margin-left: .975rem;
+        }
+        span{
+            color: #333333;
+            font-size: .75rem;
+        }
+        .go{
+            margin-right: 1.05rem;
+            font-size: 1rem;
+        }
+    }
+}
 </style>
 
 

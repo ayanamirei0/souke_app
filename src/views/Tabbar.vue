@@ -1,5 +1,5 @@
 <template>
-  <div class="tabberWarp" v-if="$route.meta.navShow">
+  <div class="tabberWarp" v-if="$route.meta.tabShow">
     <div class="warp">
       <Item :txt='item.txt' :page='item.page' @change='getVal' v-for='item in tabbarDes' :sel='selected'>
         <img :src="item.normalImg" slot='normalImg'>
