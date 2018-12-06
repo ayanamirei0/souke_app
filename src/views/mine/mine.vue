@@ -106,11 +106,11 @@ export default {
             justify-content: space-between;
             .menu{
                 font-size: .9rem;
-                margin-top: .725rem;
+                margin: .725rem 0 0 .975rem;
             }
             .mall{
                 font-size: .75rem;
-                margin-top: .875rem;
+                margin: .875rem .525rem 0 0; 
             }
         }
         .headInfo{
@@ -153,14 +153,6 @@ export default {
                 left: 0;
                 font-size: 1rem;
             } 
-        }
-        .shadow{
-            width: 17.5rem;
-            height: .1rem;
-            background-color: rgba(47, 179, 241, .1);
-            position: absolute;
-            top: 1px;
-            left: 2px;
         }
     }
     .nav{
