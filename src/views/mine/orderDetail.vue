@@ -61,16 +61,36 @@
                 </li>
                 <li>
                     付款时间：2018-09-28 20:03:59
-                    <span class="btn">申请退款</span>
+                    <span class="btn" @click="showPopup">申请退款</span>
                 </li>
             </ul>
+            <van-popup v-model="showTip" class="tip">
+                <p class="title">提示</p>
+                <div class="content">
+                    <p>暂未开通退款功能详询</p>
+                    <p class="tel">400-888-3456</p>
+                </div>
+                <p class="btn" @click="closeTip">确认</p>
+            </van-popup>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    
+    data() {
+        return {
+            showTip: false
+        }
+    },
+    methods: {
+        showPopup() {
+            this.showTip = true;
+        },
+        closeTip() {
+            this.showTip = false;
+        }
+    }
 }
 </script>
 
@@ -204,6 +224,33 @@ export default {
                     top: -.1rem;
                     right: -4.1rem;
                 }
+            }
+        }
+        .tip{
+            width: 14.075rem;
+            height: 9.15rem;
+            text-align: center;
+            .title{
+                color: #333333;
+                font-size: .9rem;
+                height: 2.5rem;
+                line-height: 2.5rem;   
+            }
+            .content{
+                color: #333333;
+                font-size: .7rem;
+                border-top: 1px solid #DADADA;
+                padding-top: .8rem;
+                .tel{
+                    color: #327BEA;
+                    padding-bottom: 1.6rem;
+                }
+            }
+            .btn{
+                border-top: 1px solid #DADADA;
+                color: #2372E8;
+                font-size: .8rem;
+                padding: .6rem 0 .5rem 0;
             }
         }
     }
