@@ -16,6 +16,7 @@ import ConfirmOrder from '@/views/mine/confirmOrder.vue'        //购课袋-去�
 import SelectCoupon from '@/views/mine/selectCoupon.vue'        //购课袋-去结算-确认订单页面使用优惠券跳转
 import WaitPay from '@/views/mine/waitPay.vue'      //待付款跳转
 import Paid from '@/views/mine/paid.vue'       //已付款跳转
+import OrderDetail from '@/views/mine/orderDetail.vue'      //已付款>>>查看详情>>>订单详情
 
 Vue.use(Router)
 
@@ -108,6 +109,11 @@ export default new Router({
         path: '/views/mine/paid.vue',       //2018-12-05 增加
         name: 'Paid',
         component: Paid
+    },
+    {
+        path: '/views/mine/orderDetail.vue',        //2018-12-06 增加
+        name: 'OrderDetail',
+        component: OrderDetail
     }
   ],
   methods:{

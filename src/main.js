@@ -6,7 +6,6 @@ import App from './App'
 import router from './router'
 import 'vant/lib/index.css'
 import './assets/css/index.css'
-import './assets/iconfont/iconfont.css'
 import './assets/js/head.js'
 import { Swipe, SwipeItem, Toast, Popup, DatetimePicker, Uploader, Picker, Tab, Tabs} from 'vant'
 

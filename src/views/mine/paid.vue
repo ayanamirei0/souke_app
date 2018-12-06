@@ -4,7 +4,7 @@
             <router-link to="/views/mine/mine.vue">
                 <img src="../../assets/img/return.png" alt="">
             </router-link>
-            <span>已付款</span>
+            <p class="title">已付款</p>
         </div>
         <div class="container">
             <p class="date">2018-09-24</p>
@@ -23,7 +23,9 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <span>查看详情</span>
+                    <router-link to="/views/mine/orderDetail.vue">
+                        <span>查看详情</span>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -44,7 +46,9 @@
                     </div>
                 </div>
                 <div class="bottom">
-                    <span>查看详情</span>
+                    <router-link to="/views/mine/orderDetail.vue">
+                        <span>查看详情</span>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -67,7 +71,6 @@ export default {
     background-color: #ECECED;
      .top{
         padding: 1.25rem 0 .6rem 0;
-        text-align: center;
         background-color: #ffffff;
         position: relative;
         img{
@@ -77,7 +80,7 @@ export default {
             width: .5rem;
             height: .65rem;
         }
-        span{
+        .title{
             color: #333333;
             font-size: .8rem;
             text-align: center;
@@ -133,6 +136,7 @@ export default {
                     font-size: .65rem;
                     .icon{
                         margin-right: .375rem;
+                        color: #BABABA;
                     }
                     .price{
                         color: #FA5118;   

@@ -167,6 +167,7 @@ export default {
                     font-size: .65rem;
                     .icon{
                         margin-right: .375rem;
+                        color: #BABABA;
                     }
                     .price{
                         color: #FA5118;   
