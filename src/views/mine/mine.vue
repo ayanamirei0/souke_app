@@ -66,14 +66,18 @@
                     <img src="../../assets/img/lesson.png" alt="">
                     <span>我的课程</span>
                 </div>
-                <i class="go iconfont icon-tiem-right"></i>
+                <router-link to="/MyCourse">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
             </div>
             <div class="offline">
                 <div class="left">
                     <img src="../../assets/img/order.png" alt="">
                     <span>线下订单</span>
                 </div>
-                <i class="go iconfont icon-tiem-right"></i>
+                <router-link to="/OfflineOrder">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
             </div>
             <div class="line"></div>
         </div>
@@ -82,7 +86,9 @@
                 <img src="../../assets/img/set.png" alt="">
                 <span>帐号管理</span>
             </div>
-            <i class="go iconfont icon-tiem-right"></i>
+            <router-link to="/AccountManagement">
+                <i class="go iconfont icon-tiem-right"></i>
+            </router-link>   
         </div>
     </div>
 </template>
