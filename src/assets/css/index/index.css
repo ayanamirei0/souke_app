@@ -146,6 +146,15 @@
   width: 47%;
 }
 
+/* .select_content .content .title .img{
+  width: 4.275rem;
+  height: 2.675rem;
+  margin-bottom: .25rem; 
+} */
+/* .select_content .content .title .img img{
+  width: 3.75rem;
+  height: 2.675rem;
+} */
 .select_content .content .title p{
   font-family: 'PingFang-SC-Regular';
   color: #333333;

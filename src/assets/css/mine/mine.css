@@ -1,10 +1,3 @@
-.container{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    background-color: #ECECEE;
-}
 .head .background {
 	background-color: #2FB3F1;
 	width: 100%;
@@ -43,6 +36,10 @@
 	flex-wrap: wrap;
 }
 
+/* .head .person_data .data{
+    display: flex;
+    justify-content: space-around;
+} */
 .head .person_data .data .img {
 	width: 2.7rem;
 	height: 2.7rem;
@@ -63,6 +60,7 @@
 .head .person_data .account img {
 	width: .8rem;
 	height: .8rem;
+	/* vertical-align: middle; */
 }
 
 .head .person_data .account .num {
@@ -79,10 +77,9 @@
 
 /* 订单部分 */
 .my_order {
-	padding-top: 2.65rem;
+	margin-top: 2.65rem;
 	display: flex;
-    justify-content: space-around;
-    background-color: #ffffff;
+	justify-content: space-around;
 }
 
 .my_order .line {
@@ -131,8 +128,7 @@
 .my_common {
 	display: flex;
 	flex-wrap: wrap;
-    padding: .75rem 0 .8rem 0;
-    background-color: #ffffff;
+	margin: .75rem 0 .8rem 0;
 }
 
 .my_common .router {

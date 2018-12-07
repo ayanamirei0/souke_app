@@ -21,13 +21,10 @@
     font-size: .6rem;
     text-align: center;
 }
-.ChangeName .main .input{
-    width: 97%;
-    height: 2rem;
-}
 .ChangeName .main input{
-     box-shadow: inset 0 0 10px #CCC;
+    box-shadow: inset 0 0 10px #CCC;
     padding: .725rem 0 .625rem 3%;
+    width: 97%;
 }
 .ChangeName .main input::-webkit-input-placeholder{
     color: #999999;

@@ -18,6 +18,11 @@
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>
             </div>
+            <!-- <div class="login">
+                <img src="../../assets/img/profile.png" alt="" class="img">
+                <p class="title">点击登录</p>
+                <i class="go iconfont icon-tiem-right"></i> 
+            </div> -->
         </div>
         <div class="nav">
             <router-link to="/views/mine/lessonBag.vue">
@@ -147,6 +152,35 @@ export default {
                     }
                 }
             } 
+            .go{
+                position: relative;
+                top: 35%;
+                left: 0;
+                font-size: 1rem;
+            } 
+        }
+        .login{
+            position: absolute;
+            top: 52%;
+            left: 3%;
+            width: 17.65rem;
+            height: 4.275rem;
+            border-radius: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            .img{
+                width: 2.675rem;
+                height: 2.7rem;
+                margin: .75rem .6rem .825rem .775rem;
+            }
+            .title{
+                padding: 1rem 0 1.025rem 0;
+                width: 69%;
+                line-height: 2.1rem;
+                font-size: .8rem;
+                color: #333333;
+            }
             .go{
                 position: relative;
                 top: 35%;

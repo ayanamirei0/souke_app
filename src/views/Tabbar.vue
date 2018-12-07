@@ -1,7 +1,7 @@
 <template>
   <div class="tabberWarp" v-if="$route.meta.tabShow">
     <div class="warp">
-      <Item :txt='item.txt' :page='item.page' @change='getVal' v-for='item in tabbarDes' :sel='selected'>
+      <Item :txt='item.txt' :page='item.page' @change='getVal' v-for='(item,key) in tabbarDes' :key="key" :sel='selected'>
         <img :src="item.normalImg" slot='normalImg'>
         <img :src="item.activeImg" slot='activeImg'>
       </Item>
@@ -28,13 +28,13 @@ export default {
         },
         {
           txt: "搜索",
-          page: "views/search/search.vue",
+          page: "SearchLessons",
           normalImg: require("../assets/img/search_.png"),
           activeImg: require("../assets/img/search.png")
         },
         {
           txt: "消息",
-          page: "views/msg/msg.vue",
+          page: "News",
           normalImg: require("../assets/img/msg_.png"),
           activeImg: require("../assets/img/msg.png")
         },

@@ -1,9 +1,23 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Index from '@/views/index.vue'       //首页
-import Mine from '@/views/mine/mine.vue'        //我的
-import Msg from '@/views/msg/msg.vue'       //信息
-import Search from '@/views/search/search.vue'      //搜索
+import Vue from 'vue';
+import Router from 'vue-router';
+import login from '@/login/login';  //密码登录
+import RegisterPhoneVerification from '@/login/RegisterPhoneVerification';//注册-手机验证
+import RegisteredPassword from '@/login/RegisteredPassword';//注册-设置登录密码
+import ForgetPasswordMobileVerification from '@/login/ForgetPasswordMobileVerification';//忘记密码-手机验证
+import ForgetPasswordResetPassword from '@/login/ForgetPasswordResetPassword';//忘记密码-重置密码
+import PerfectInformation from '@/login/PerfectInformation';//完善信息
+import SearchLessons from '@/web/SearchLessons';//搜课程首页
+import SearchLessonsDetails from '@/web/SearchLessonsDetails';//搜课程详情页
+import Search from '@/web/Search';//搜索页
+import News from "@/web/new"; //消息中心
+import system from "@/web/system"; //系统消息
+import AccountManagement from "@/web/AccountManagement/AccountManagement"; //账号管理
+import ModifyPhone from "@/web/AccountManagement/ModifyPhone"; //修改手机号
+import ModifyPassword from "@/web/AccountManagement/ModifyPassword"; //修改密码
+import MyCourse from "@/web/AccountManagement/MyCourse"; //我的课程
+import OfflineOrder from "@/web/AccountManagement/OfflineOrder"; //线下订单
+import Index from '@/views/index.vue';      //首页
+import Mine from '@/views/mine/mine.vue';       //我的
 import PersonInfo from '@/views/mine/personInfo.vue'        //个人信息页
 import ChangeName from '@/views/mine/ChangeName.vue'        //修改学员姓名
 import GradeList from '@/views/mine/gradeList.vue'      //修改年级
@@ -18,32 +32,107 @@ import WaitPay from '@/views/mine/waitPay.vue'      //待付款跳转
 import Paid from '@/views/mine/paid.vue'       //已付款跳转
 import OrderDetail from '@/views/mine/orderDetail.vue'      //已付款>>>查看详情>>>订单详情
 
-Vue.use(Router)
 
+Vue.use(Router)
 export default new Router({
+  mode:'history',
   routes: [
     {
-      path: '',
-      name: 'index',
-      component: Index,
-      meta: { tabShow: true }      //控制底部导航栏的显示与隐藏
+      path: '/',
+      redirect:"/Index",
+    },
+    {
+      path: '/Index',
+      name: 'Index',
+      component: Index, 
+      meta: { tabShow: true }
+    },
+    {
+      path: '/RegisterPhoneVerification',
+      name: 'RegisterPhoneVerification',
+      component: RegisterPhoneVerification, 
+    },
+    {
+      path: '/RegisteredPassword/:tel',
+      name: 'RegisteredPassword',
+      component: RegisteredPassword,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login, 
+    },
+    {
+      path: '/ForgetPasswordMobileVerification',
+      name: 'ForgetPasswordMobileVerification',
+      component: ForgetPasswordMobileVerification, 
+    },
+    {
+      path: '/ForgetPasswordResetPassword/:tel',
+      name: 'ForgetPasswordResetPassword',
+      component: ForgetPasswordResetPassword, 
+    },
+    {
+      path: '/PerfectInformation',
+      name: 'PerfectInformation',
+      component: PerfectInformation, 
+    },
+    {
+      path: '/SearchLessons',
+      name: 'SearchLessons',
+      component: SearchLessons, 
+      meta: { tabShow: true },
+    },
+    {
+      path: '/SearchLessonsDetails/:id',
+      name: 'SearchLessonsDetails',
+      component: SearchLessonsDetails, 
+    },
+    {
+      path: '/Search',
+      name: 'Search',
+      component: Search, 
+    },
+    {
+      path: '/News',
+      name: 'News',
+      component: News,
+      meta: { tabShow: true },
+    },
+    {
+      path: '/system',
+      component: system,
+      name: "system",
+    },
+    {
+      path: '/AccountManagement',
+      name: "AccountManagement",
+      component: AccountManagement,
+    },
+    {
+      path: '/ModifyPhone',
+      name: "ModifyPhone",
+      component: ModifyPhone,
+    },
+    {
+      path: '/MyCourse',
+      name: "MyCourse",
+      component: MyCourse,
+    },
+    {
+      path: '/OfflineOrder',
+      name: "OfflineOrder",
+      component: OfflineOrder,
+    },
+    {
+      path: '/ModifyPassword',
+      name: "ModifyPassword",
+      component: ModifyPassword,
     },
     {
       path: '/views/mine/mine.vue',
       name: 'Mine',
       component: Mine,
-      meta: { tabShow: true }
-    },
-    {
-      path: '/views/msg/msg.vue',
-      name: 'Msg',
-      component: Msg,
-      meta: { tabShow: true }
-    },
-    {
-      path: '/views/search/search.vue',
-      name: 'Search',
-      component: Search,
       meta: { tabShow: true }
     },
     {
@@ -54,7 +143,7 @@ export default new Router({
     },
     {
         path: '/views/mine/ChangeName.vue',
-        name: 'ChangeName',
+        name: ChangeName,
         component: ChangeName,
         meta: { tabShow: false }
     },
@@ -86,39 +175,39 @@ export default new Router({
         component: LessonBag
     },
     {
-        path: '/views/mine/lessonBagEdit.vue',      //2018-12-03 增加
+        path: '/views/mine/lessonBagEdit.vue', 
         name: 'LessonBagEdit',
         component: LessonBagEdit
     },
     {
-        path: '/views/mine/confirmOrder.vue',       //2018-12-04 增加
+        path: '/views/mine/confirmOrder.vue',  
         name: 'ConfirmOrder',
         component: ConfirmOrder
     },
     {
-        path: '/views/mine/selectCoupon.vue',       //2018-12-04 增加
+        path: '/views/mine/selectCoupon.vue',   
         name: 'SelectCoupon',
         component: SelectCoupon
     },
     {
-        path: '/views/mine/waitPay.vue',        //2018-12-05 增加
-        name: 'WaitPay',
+        path: '/views/mine/waitPay.vue',  
         component: WaitPay
     },
     {
-        path: '/views/mine/paid.vue',       //2018-12-05 增加
+        path: '/views/mine/paid.vue',   
         name: 'Paid',
         component: Paid
     },
     {
-        path: '/views/mine/orderDetail.vue',        //2018-12-06 增加
+        path: '/views/mine/orderDetail.vue', 
         name: 'OrderDetail',
         component: OrderDetail
     }
+    
   ],
-  methods:{
-    switchTo(path){
-      this.$router.replace(path);
-    }
-  }
+  // methods:{
+  //   switchTo(path){
+  //     this.$router.replace(path);
+  //   }
+  // }
 })
