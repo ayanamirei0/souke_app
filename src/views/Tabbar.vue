@@ -58,10 +58,6 @@ export default {
 		}
 	},
 	methods: {
-		getVal(res) {
-			console.log(res);
-			this.selected = res;
-		},
 		changeTab(...arg) {
 			let path = arg[0].page;
 			this.selected = arg[1];
