@@ -130,7 +130,7 @@ export default new Router({
       component: ModifyPassword,
     },
     {
-      path: '/views/mine/mine.vue',
+      path: '/mine',
       name: 'Mine',
       component: Mine,
       meta: { tabShow: true }

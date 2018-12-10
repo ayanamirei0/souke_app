@@ -1,9 +1,9 @@
 <template>
     <div class="orderDetail">
         <div class="top">
-            <router-link to="/views/mine/paid.vue">
+            <a href="javascript:history.go(-1);">
                 <img src="../../assets/img/return.png" alt="">
-            </router-link>
+            </a>
             <p class="title">订单详情</p>
         </div>
         <div class="container">

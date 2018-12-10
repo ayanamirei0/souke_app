@@ -157,7 +157,7 @@ export default {
 	},
 	methods: {
 		returnPage() {
-			this.$router.push("mine.vue");
+			this.$router.push("/mine");
         },
         onShow1() {
             console.log(1);

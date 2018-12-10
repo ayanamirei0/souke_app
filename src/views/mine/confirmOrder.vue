@@ -1,9 +1,9 @@
 <template>
     <div class="order">
         <div class="top">
-            <router-link to="/views/mine/lessonBag.vue">
+            <a href="javascript:history.go(-1);">
                 <img src="../../assets/img/return.png" alt="">
-            </router-link>
+            </a>
             <span>确认订单</span>
         </div>
         <div class="confirm_order">

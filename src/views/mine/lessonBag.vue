@@ -1,9 +1,9 @@
 <template>
     <div class="lesson">
         <div class="top">
-            <router-link to="/views/mine/mine.vue">
+            <a href="javascript:history.go(-1);">
                 <img src="../../assets/img/return.png" alt="">
-            </router-link>
+            </a>
             <span>购课袋</span>
             <span>
                 <router-link to="/views/mine/lessonBagEdit.vue" class="edit">编辑</router-link>

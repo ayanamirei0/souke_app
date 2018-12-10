@@ -1,9 +1,9 @@
 <template>
     <div class="waitPay">
         <div class="top">
-            <router-link to="/views/mine/mine.vue">
+            <a href="javascript:history.go(-1);">
                 <img src="../../assets/img/return.png" alt="">
-            </router-link>
+            </a>
             <span>待付款</span>
         </div>
         <div class="container">
