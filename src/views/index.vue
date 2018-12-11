@@ -94,24 +94,18 @@
                 <span class="text">热门课程</span>
             </div>
             <div class="content">
-                <router-link to="/web/SearchLessons.vue">
-                    <div class="img">
-                        <img src="../assets/img/ffb.png" alt="">
-                        <p>思维训练启智非凡班</p>
-                    </div>
+                <router-link to="/web/SearchLessons.vue" class="img">
+                    <img src="../assets/img/ffb.png" alt="">
+                    <p>思维训练启智非凡班</p>
                 </router-link>
-                <router-link to="/web/SearchLessons.vue">
-                    <div class="img">
-                        <img src="../assets/img/zyb.png" alt="">
-                        <p>思维训练启思卓越班</p>
-                    </div>
+                <router-link to="/web/SearchLessons.vue" class="img">
+                    <img src="../assets/img/zyb.png" alt="">
+                    <p>思维训练启思卓越班</p>
                 </router-link>
-                <router-link to="/web/SearchLessons.vue">
-                    <div class="img">
-                        <img src="../assets/img/jrjy.png" alt="">
-                        <p>巨人作文卓越班</p>
-                    </div>
-                </router-link>
+                <router-link to="/web/SearchLessons.vue" class="img">
+                    <img src="../assets/img/jrjy.png" alt="">
+                    <p>巨人作文卓越班</p>
+                </router-link>  
             </div>
         </div>
         <div class="line_y"></div>
