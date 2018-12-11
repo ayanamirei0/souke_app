@@ -11,7 +11,6 @@ export default {
 	data: function() {
 		return {
             selected: 0,
-            selectArr: [0, 1, 2, 3],
 			cache: "data",
 			tabList: [
 				{
