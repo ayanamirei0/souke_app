@@ -7,17 +7,19 @@
             </div>
         </header>
         <div class="banner">
-            <van-swipe :autoplay="3000" :show-indicators="false">
-                <van-swipe-item>
-                    <img src="../assets/img/banner.png" alt="">
-                </van-swipe-item>
-                <van-swipe-item>
-                    <img src="../assets/img/banner.png" alt="">
-                </van-swipe-item>
-                <van-swipe-item>
-                    <img src="../assets/img/banner.png" alt="">
-                </van-swipe-item>
-            </van-swipe>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                </div>
+            </div>
         </div>
         <div class="subject">
             <div class="top_subject">
@@ -314,39 +316,85 @@
 </template>
 
 <script>
-export default {
-  name: "index",
-  data() {
-    return {
-      tabs1: ["小学课程", "中学课程"],
-      tabs2: ["英语学习", "特长课程"],
-      tabs3: ["国内冬令营", "国际游学"],
-      num1: 0,
-      num2: 0,
-      num3: 0,
+import Swiper from 'swiper';
+import './../assets/css/common/swiper.min.css';
 
-      active: ""
-    };
-  },
-  
-  methods: {
-    tabSwitch1(index) {
-      this.num1 = index;
+export default {
+    name: "index",
+    data() {
+        return {
+        tabs1: ["小学课程", "中学课程"],
+        tabs2: ["英语学习", "特长课程"],
+        tabs3: ["国内冬令营", "国际游学"],
+        num1: 0,
+        num2: 0,
+        num3: 0,
+
+        active: ""
+        };
+    }, 
+    methods: {
+        tabSwitch1(index) {
+        this.num1 = index;
+        },
+        tabSwitch2(index) {
+        this.num2 = index;
+        },
+        tabSwitch3(index) {
+        this.num3 = index;
+        },
+        Toast() {
+        this.$toast("暂不支持城市切换");
+        }
     },
-    tabSwitch2(index) {
-      this.num2 = index;
-    },
-    tabSwitch3(index) {
-      this.num3 = index;
-    },
-    Toast() {
-      this.$toast("暂不支持城市切换");
+    mounted(){
+        var swiper = new Swiper('.swiper-container',{
+            autoplay: {     //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
+                delay: 2000,
+                disableOnInteraction: false
+            },
+            speed:1000,
+            autoplayDisableOnInteraction : false,       //点击后打断auto-play
+            loop:true,
+            centeredSlides : true,      //设定为true时，活动块会居中，而不是默认状态下的居左。
+            slidesPerView:'1.1',
+            // pagination : '.swiper-pagination',       //pagination分页器
+            // paginationClickable:true,
+            // prevButton:'.swiper-button-prev',
+            // nextButton:'.swiper-button-next',        //前进后退按钮
+            onInit:function(swiper){
+                swiper.slides[2].className="swiper-slide swiper-slide-active";//第一次打开不要动画
+                }
+            // breakpoints: { 
+            //         668: {
+            //             slidesPerView: 1.1,
+            //             }
+            //     }
+        })
     }
-  }
-};
+}
 </script>
 <style>
 @import '../assets/css/index/index.css';
+
+.swiper-slide {
+	-webkit-transition: transform 1.0s;
+	-moz-transition: transform 1.0s;
+	-ms-transition: transform 1.0s;
+	-o-transition: transform 1.0s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.swiper-slide a {
+	padding:0 0.15rem;
+	display: block;
+	border-radius: .35rem;
+}
+.swiper-slide img {
+	width: 100%;
+	border-radius: .35rem;
+	display: block;
+}
 </style>
 
 

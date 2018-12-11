@@ -12,9 +12,6 @@ import './assets/css/index.css'
 import { Swipe, SwipeItem, Toast, Popup, DatetimePicker, Uploader, Picker, Tab, Tabs } from 'vant'
 
 
-// import VueResource from 'vue-resource';
-// Vue.use(VueResource);
-
 Vue.use(Vant);
 Vue.use(Swipe).use(SwipeItem);
 Vue.use(Toast);

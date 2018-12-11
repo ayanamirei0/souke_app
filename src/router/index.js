@@ -39,10 +39,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect:"/Index",
+      redirect:"/index",
     },
     {
-      path: '/Index',
+      path: '/index',
       name: 'Index',
       component: Index, 
       meta: { tabShow: true }
