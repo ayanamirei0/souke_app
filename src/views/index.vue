@@ -118,7 +118,7 @@
                         {{item}}
                     </li>
                 </ul>
-                <router-link to="SearchLessons">       <!-- 跳转到搜课 -->
+                <router-link to="SearchLessons">       <!-- 跳转到搜索 -->
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>
             </div>

@@ -10,7 +10,8 @@
 export default {
 	data: function() {
 		return {
-			selected: 0,
+            selected: 0,
+            selectArr: [0, 1, 2, 3],
 			cache: "data",
 			tabList: [
 				{
@@ -43,26 +44,26 @@ export default {
 	created() {
 		let index = sessionStorage.getItem(this.cache);
 		switch (index) {
-			case "0":
+			case '0':
 				this.selected = 0;
 				break;
-			case "1":
+			case '1':
 				this.selected = 1;
 				break;
-			case "2":
+			case '2':
 				this.selected = 2;
 				break;
-			case "3":
+			case '3':
 				this.selected = 3;
 				break;
 		}
-	},
+    },
 	methods: {
 		changeTab(...arg) {
 			let path = arg[0].page;
 			this.selected = arg[1];
-			this.$router.push(path);
-			sessionStorage.setItem(this.cache, arg[1]);
+            this.$router.push(path);
+            sessionStorage.setItem(this.cache, arg[1]);	
 		}
 	}
 };
