@@ -31,7 +31,7 @@
                 </div>
                 <div class="cn square middle">
                     <div class="img">
-                        <img src="../assets/img/cn.png" alt="">
+                        <img src="../assets/img/chinese.png" alt="">
                     </div>
                     <p class="title">语文</p>
                 </div>
