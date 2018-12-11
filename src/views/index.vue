@@ -94,18 +94,24 @@
                 <span class="text">热门课程</span>
             </div>
             <div class="content">
-                <div class="img">
-                    <img src="../assets/img/ffb.png" alt="">
-                    <p>思维训练启智非凡班</p>
-                </div>
-                <div class="img">
-                    <img src="../assets/img/zyb.png" alt="">
-                    <p>思维训练启思卓越班</p>
-                </div>
-                <div class="img">
-                    <img src="../assets/img/jrjy.png" alt="">
-                    <p>巨人作文卓越班</p>
-                </div>
+                <router-link to="/web/SearchLessons.vue">
+                    <div class="img">
+                        <img src="../assets/img/ffb.png" alt="">
+                        <p>思维训练启智非凡班</p>
+                    </div>
+                </router-link>
+                <router-link to="/web/SearchLessons.vue">
+                    <div class="img">
+                        <img src="../assets/img/zyb.png" alt="">
+                        <p>思维训练启思卓越班</p>
+                    </div>
+                </router-link>
+                <router-link to="/web/SearchLessons.vue">
+                    <div class="img">
+                        <img src="../assets/img/jrjy.png" alt="">
+                        <p>巨人作文卓越班</p>
+                    </div>
+                </router-link>
             </div>
         </div>
         <div class="line_y"></div>
@@ -118,16 +124,19 @@
                         {{item}}
                     </li>
                 </ul>
-                <i class="go iconfont icon-tiem-right"></i>
+                <router-link to="/web/SearchLessons.vue">       <!-- 跳转到搜课 -->
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num1 == 0">
-                    <div class="title">
+                    <router-link to="/web/SearchLessonsDetails.vue" class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
                         <p>“成吉思汗”草原探秘夏令营</p>
-                    </div>
+                    </router-link>
+                    
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
@@ -185,16 +194,18 @@
                         {{item}}
                     </li>
                 </ul>
-                <i class="go iconfont icon-tiem-right"></i>
+                <router-link to="/web/SearchLessons.vue">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num2 === 0">
-                    <div class="title">
+                    <router-link to="/web/SearchLessonsDetails.vue" class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
                         <p>新概念英语</p>
-                    </div>
+                    </router-link>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
@@ -252,16 +263,18 @@
                         {{item}}
                     </li>
                 </ul>
-                <i class="go iconfont icon-tiem-right"></i>
+                <router-link to="/web/SearchLessons.vue">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num3 === 0">
-                    <div class="title">
+                    <router-link to="/web/SearchLessonsDetails.vue" class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
                         <p>“成吉思汗”草原探秘夏令营</p>
-                    </div>
+                    </router-link>
                     <div class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
