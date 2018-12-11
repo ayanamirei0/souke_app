@@ -31,8 +31,6 @@ import SelectCoupon from '@/views/mine/selectCoupon.vue'        //购课袋-去�
 import WaitPay from '@/views/mine/waitPay.vue'      //待付款跳转
 import Paid from '@/views/mine/paid.vue'       //已付款跳转
 import OrderDetail from '@/views/mine/orderDetail.vue'      //已付款>>>查看详情>>>订单详情
-import HotLesson from '@/web/SearchLessons.vue'     //热门课程跳转（2018-12-11）
-import LessonsDetail from '@/web/SearchLessonsDetails.vue'      //小学课程、中学课程跳转（2018-12-11）
 
 
 Vue.use(Router)
@@ -204,17 +202,6 @@ export default new Router({
         path: '/views/mine/orderDetail.vue', 
         name: 'OrderDetail',
         component: OrderDetail
-    },
-    {
-        path: '/web/SearchLessons.vue',  //热门课程跳转
-        name: 'HotLesson',
-        component: HotLesson,
-        meta: { tabShow: true }
-    },
-    {
-        path: '/web/SearchLessonsDetails.vue',       //小学课程中学课程跳转
-        name: 'LessonsDetail',
-        component: LessonsDetail
     }
   ],
   // methods:{

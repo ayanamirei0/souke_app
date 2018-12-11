@@ -94,15 +94,15 @@
                 <span class="text">热门课程</span>
             </div>
             <div class="content">
-                <router-link to="/web/SearchLessons.vue" class="img">
+                <router-link to="SearchLessons" class="img">
                     <img src="../assets/img/ffb.png" alt="">
                     <p>思维训练启智非凡班</p>
                 </router-link>
-                <router-link to="/web/SearchLessons.vue" class="img">
+                <router-link to="SearchLessons" class="img">
                     <img src="../assets/img/zyb.png" alt="">
                     <p>思维训练启思卓越班</p>
                 </router-link>
-                <router-link to="/web/SearchLessons.vue" class="img">
+                <router-link to="SearchLessons" class="img">
                     <img src="../assets/img/jrjy.png" alt="">
                     <p>巨人作文卓越班</p>
                 </router-link>  
@@ -118,13 +118,13 @@
                         {{item}}
                     </li>
                 </ul>
-                <router-link to="/web/SearchLessons.vue">       <!-- 跳转到搜课 -->
+                <router-link to="SearchLessons">       <!-- 跳转到搜课 -->
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num1 == 0">
-                    <router-link to="/web/SearchLessonsDetails.vue" class="title">
+                    <router-link to="SearchLessonsDetails/:id" class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
@@ -188,13 +188,13 @@
                         {{item}}
                     </li>
                 </ul>
-                <router-link to="/web/SearchLessons.vue">
+                <router-link to="SearchLessons">
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num2 === 0">
-                    <router-link to="/web/SearchLessonsDetails.vue" class="title">
+                    <router-link to="SearchLessonsDetails/:id" class="title">
                         <div class="img">
                             <img src="../assets/img/16.png" alt="">
                         </div>
@@ -257,13 +257,13 @@
                         {{item}}
                     </li>
                 </ul>
-                <router-link to="/web/SearchLessons.vue">
+                <router-link to="SearchLessons">
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>
             </div>
             <div class="select_content">
                 <div class="content" v-if="num3 === 0">
-                    <router-link to="/web/SearchLessonsDetails.vue" class="title">
+                    <router-link to="SearchLessonsDetails/:id" class="title">
                         <div class="img">
                             <img src="../assets/img/15.png" alt="">
                         </div>
