@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="index">
         <header class="head">
             <div>
                 <span class="title">搜课</span>

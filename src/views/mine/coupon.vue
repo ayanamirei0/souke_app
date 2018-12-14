@@ -214,9 +214,10 @@ export default {
 			justify-content: space-between;
             padding: .6rem .5rem;
             background-color: #ffffff;
+            margin-top: .325rem;
             .router{
                 position: relative;
-                top: -0.675rem;
+                top: -.3rem;
 	            right: 0;
 	            height: .85rem;
             }
