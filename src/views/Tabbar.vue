@@ -79,7 +79,7 @@ export default {
     justify-content: space-around;
     padding: .3rem 0 .25rem 0;
     .item{
-        width: 1.6rem;
+        width: 1.5rem;
         p{
             font-size: .55rem;
             text-align: center;

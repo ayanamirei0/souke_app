@@ -134,6 +134,7 @@ export default {
             display: flex;
             flex-wrap: wrap;
             background-color: #ffffff;
+            box-shadow: 0 3px 0 rgba(47, 179, 241, .1);
             .img{
                 width: 2.675rem;
                 height: 2.7rem;

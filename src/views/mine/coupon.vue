@@ -296,7 +296,8 @@ export default {
 							border-top-style: solid;
 							border-left-color: transparent;
 							border-right-color: transparent;
-							float: right;
+                            float: right;
+                            margin-top: .1rem;
                         }
                         .line{
                             display: inline-block;
