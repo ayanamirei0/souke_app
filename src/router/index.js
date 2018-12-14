@@ -31,6 +31,7 @@ import SelectCoupon from '@/views/mine/selectCoupon.vue'        //购课袋-去�
 import WaitPay from '@/views/mine/waitPay.vue'      //待付款跳转
 import Paid from '@/views/mine/paid.vue'       //已付款跳转
 import OrderDetail from '@/views/mine/orderDetail.vue'      //已付款>>>查看详情>>>订单详情
+import Pact from '@/views/mine/pact.vue'        //营销协议跳转(2018/12/14)
 
 
 Vue.use(Router)
@@ -202,6 +203,11 @@ export default new Router({
         path: '/views/mine/orderDetail.vue', 
         name: 'OrderDetail',
         component: OrderDetail
+    },
+    {
+        path: '/views/mine/pact.vue',
+        name: 'Pact',
+        component: Pact
     }
   ],
   // methods:{

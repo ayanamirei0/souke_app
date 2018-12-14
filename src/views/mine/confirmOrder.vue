@@ -114,7 +114,7 @@
             <span class="check" @click="check">
                 <img src="../../assets/img/tick.png" alt="" v-show="show">
             </span>
-            <span class="text">我已阅读并同意<span :class="show?'rule':''">《营销协议》</span></span>   
+            <span class="text">我已阅读并同意<router-link to="/views/mine/pact.vue" :class="show?'rule':''">《营销协议》</router-link></span>   
         </div>
         <div class="bottom_fill"></div>
         <div class="bottom_tab">
