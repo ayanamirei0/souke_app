@@ -123,7 +123,7 @@
             </p>
             <p>
                 <span class="select_lesson">继续选课</span>
-                <router-link to="/views/mine/confirmOrder.vue">
+                <router-link to="/views/mine/paySuccess.vue">
                     <span class="pay">立即支付</span>
                 </router-link>
             </p>
