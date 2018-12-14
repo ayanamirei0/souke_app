@@ -149,6 +149,9 @@ export default {
                 text-align: left;
                 margin-top: .25rem;
             }
+            .icon-xuesheng{
+                font-size: 1rem;
+            }
             .icon{
                 color: #BABABA;
                 margin-right: .375rem
