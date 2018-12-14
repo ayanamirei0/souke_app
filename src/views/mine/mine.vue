@@ -39,7 +39,7 @@
                         <span class="alert">1</span>
                         <img src="../../assets/img/waitPay.png" alt="">
                     </div>
-                    <p>未付款</p>
+                    <p>待付款</p>
                 </div>
             </router-link>
             <router-link to="/views/mine/paid.vue">

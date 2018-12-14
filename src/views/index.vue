@@ -354,7 +354,7 @@ export default {
         this.$toast("暂不支持城市切换");
         }
     },
-    mounted(){
+    mounted() {
         var swiper = new Swiper('.swiper-container',{
             autoplay: {     //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
                 delay: 2000,

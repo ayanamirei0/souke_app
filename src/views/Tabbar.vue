@@ -39,7 +39,7 @@ export default {
 				}
 			]
 		}
-	},
+    },
 	created() {
 		let index = sessionStorage.getItem(this.cache);
 		switch (index) {
@@ -60,6 +60,7 @@ export default {
 	methods: {
 		changeTab(...arg) {
 			let path = arg[0].page;
+            console.log(arg[0].page);
 			this.selected = arg[1];
             this.$router.push(path);
             sessionStorage.setItem(this.cache, arg[1]);	
