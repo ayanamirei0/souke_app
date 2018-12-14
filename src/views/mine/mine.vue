@@ -295,12 +295,12 @@ export default {
             } 
         }
         .line{
-            width: 15.875rem;
+            width: 17rem;
             height: .05rem;
             background-color: #ECECEE;
             position: absolute;
-            top: 53%;
-            left: 11%;
+            top: 52%;
+            left: 5%;
         }
     }
     .set{
