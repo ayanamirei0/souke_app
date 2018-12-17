@@ -10,7 +10,7 @@
 export default {
 	data: function() {
 		return {
-            selected: 0,
+            selected: "Index",
 			cache: "data",
 			tabList: [
 				{
@@ -48,13 +48,14 @@ export default {
 		let index = sessionStorage.getItem(this.cache);
 		this.selected = this.computedSelected(index);
     },
-    beforeRouteUpdate(to, from, next) {
-        console.log(to);
-        this.Selected = to.name;
-        next();
-    },
+    // beforeRouteUpdate(to, from, next) {
+    //     console.log(to);
+    //     this.selected = to.name;
+    //     next();
+    // },
 	methods: {
         computedSelected(index) {
+            console.log(index);
             switch(index) {
                 case "Index":
                 case "SearchLessons":
@@ -75,6 +76,7 @@ export default {
     },
     watch: {
         selected(newVal, oldVal) {
+            console.log(newVal, oldVal);
             this.$router.replace({
                 name: this.computedSelected(newVal)
             });
