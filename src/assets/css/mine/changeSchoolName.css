@@ -33,6 +33,7 @@
     height: 1.35rem;
     background-color: #E7E7E7;
     text-align: left;
+    line-height: 1.35rem;
 }
 .schoolName .content .item{
     font-size: .75rem;

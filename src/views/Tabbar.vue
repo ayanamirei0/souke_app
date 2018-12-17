@@ -45,7 +45,8 @@ export default {
 		}
     },
 	created() {
-		let index = sessionStorage.getItem(this.cache);
+        let index = sessionStorage.getItem(this.cache);
+        console.log(index);
 		this.selected = this.computedSelected(index);
     },
     // beforeRouteUpdate(to, from, next) {
