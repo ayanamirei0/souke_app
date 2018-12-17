@@ -74,7 +74,7 @@ export default {
             sessionStorage.setItem(this.cache, arg[0].name);	
 		}
     },
-    watch: {
+    watch: {    //当监听的数据为对象或数组时，newVal跟oldVal是想等的，因为这两个形参指的是同一个数据对象
         selected(newVal, oldVal) {
             console.log(newVal, oldVal);
             this.$router.replace({
@@ -82,6 +82,7 @@ export default {
             });
         },
         $route(to, from) {
+            console.log(to, from, 'luyou');
             sessionStorage.setItem(this.cache, to.name);
             this.selected = to.name;
         }

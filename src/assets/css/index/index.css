@@ -79,7 +79,7 @@
     border-radius: .15rem;
     background-color: #2bb8ee;
     position: absolute;
-    top: .2rem;
+    top: 20%;
     left: .5rem;
   }
   .hot_subject .text {
@@ -152,21 +152,9 @@
   width: 47%;
 }
 
-/* .select_content .content .title .img{
-  width: 4.275rem;
-  height: 2.675rem;
-  margin-bottom: .25rem; 
-} */
-/* .select_content .content .title .img img{
-  width: 3.75rem;
-  height: 2.675rem;
-} */
 .select_content .content .title p{
   font-family: 'PingFang-SC-Regular';
   color: #333333;
-  /* position: absolute;
-  bottom: -0.3rem;
-  left: 0; */
   font-size: .65rem;
   text-align: left;
   overflow: hidden;
@@ -183,7 +171,7 @@
   height: .1rem;
   background-color: #2bb8ee;
   position: absolute;
-  bottom: -0.2rem;
+  bottom: -0.3rem;
   left: .8rem;
 }
 .bottom_tip{
