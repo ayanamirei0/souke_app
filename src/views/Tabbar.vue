@@ -49,6 +49,7 @@ export default {
 		this.selected = this.computedSelected(index);
     },
     beforeRouteUpdate(to, from, next) {
+        console.log(to);
         this.Selected = to.name;
         next();
     },
