@@ -3,12 +3,12 @@
     margin-top: 1.25rem;
     border-bottom: 1px solid #ECECEE;
 }
-.ChangeName .top img{
+.ChangeName .top .icon-fanhui{
     position: absolute;
     top: .15rem;
-    left: 4%;
-    width: .5rem;
-    height: .65rem;
+    left: 1%;
+    font-size: 1.1rem;
+    color: #333333;
 }
 .ChangeName .top p{
     font-size: .9rem;

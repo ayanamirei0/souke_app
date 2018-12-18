@@ -1,7 +1,7 @@
 <template>
     <div class="lessonBag">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span>购课袋</span>
             <span>
                 <router-link to="/views/mine/lessonBagEdit.vue" class="edit">编辑</router-link>
@@ -80,13 +80,13 @@ export default {
     height: 100%;
     background-color: #EFEFEF;
     .top{
-        padding: 1.25rem .5rem .6rem .8rem;
+        padding: 1.25rem .5rem .6rem .65rem;
         background-color: #ffffff;
         display: flex;
         justify-content: space-between;
-        img{
-            width: .5rem;
-            height: .65rem;
+        .icon-fanhui{
+            font-size: 1.1rem;
+            color: #333333;
         }
         span{
             font-size: .8rem;

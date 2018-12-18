@@ -1,7 +1,7 @@
 <template>
     <div class="ChangeName">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <p>修改学院信息</p>
         </div>
         <div class="main">

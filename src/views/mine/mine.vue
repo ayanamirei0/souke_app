@@ -164,6 +164,7 @@ export default {
                 top: 35%;
                 left: 0;
                 font-size: 1rem;
+                color: #666666;
             } 
         }
         .login{
@@ -249,6 +250,7 @@ export default {
         .go{
            margin-right: 1.05rem;
            font-size: 1rem;
+           color: #666666;
         }
     }
     .middle{
@@ -273,6 +275,7 @@ export default {
             .go{
                 margin-right: 1.05rem;
                 font-size: 1rem;
+                color: #666666;
             }
         }
         .offline{
@@ -293,6 +296,7 @@ export default {
             .go{
                 margin-right: 1.05rem;
                 font-size: 1rem;
+                color: #666666;
             } 
         }
         .line{
@@ -324,6 +328,7 @@ export default {
         .go{
             margin-right: 1.05rem;
             font-size: 1rem;
+            color: #666666;
         }
     }
 }

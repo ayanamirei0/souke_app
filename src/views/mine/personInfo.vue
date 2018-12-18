@@ -1,7 +1,7 @@
 <template>
     <div class="PersonInfo">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <p>个人信息</p>
         </div>
 

@@ -5,11 +5,12 @@
 	margin-top: 1.25rem;
 	display: flex;
 }
-.schoolName .top img {
-	width: .5rem;
-	height: .65rem;
-	margin-left: .85rem;
-	margin: .3rem 0 0 .6rem;
+.schoolName .top .icon-fanhui {
+    font-size: 1.1rem;
+    color: #333333;
+	position: relative;
+    top: .1rem;
+    left: .3rem;
 }
 .schoolName .top .title {
 	font-size: .9rem;
@@ -17,6 +18,7 @@
 	margin-bottom: .6rem;
     flex-grow: 2;
     text-align: center;
+
 }
 .schoolName .top .btn {
 	font-size: .75rem;
@@ -34,6 +36,7 @@
     background-color: #E7E7E7;
     text-align: left;
     line-height: 1.35rem;
+    padding-left: .575rem;
 }
 .schoolName .content .item{
     font-size: .75rem;

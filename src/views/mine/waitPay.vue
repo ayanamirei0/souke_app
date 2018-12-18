@@ -1,7 +1,7 @@
 <template>
     <div class="waitPay">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span>待付款</span>
         </div>
         <div class="container">
@@ -111,12 +111,12 @@ export default {
         text-align: center;
         background-color: #ffffff;
         position: relative;
-        img{
+        .icon-fanhui{
             position: absolute;
-            top: 1.58rem;
+            top: 1.5rem;
             left: .8rem;
-            width: .5rem;
-            height: .65rem;
+            font-size: 1.1rem;
+            color: #333333;
         }
         span{
             color: #333333;

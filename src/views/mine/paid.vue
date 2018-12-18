@@ -1,7 +1,7 @@
 <template>
     <div class="paid">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <p class="title">已付款</p>
         </div>
         <div class="container">
@@ -77,12 +77,12 @@ export default {
         padding: 1.25rem 0 .6rem 0;
         background-color: #ffffff;
         position: relative;
-        img{
+        .icon-fanhui{
             position: absolute;
-            top: 1.58rem;
+            top: 1.2rem;
             left: .8rem;
-            width: .5rem;
-            height: .65rem;
+            font-size: 1.1rem;
+            color: #333333;
         }
         .title{
             color: #333333;

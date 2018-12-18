@@ -1,7 +1,7 @@
 <template>
 	<div class="coupons">
 		<div class="top">
-			<img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
 			<span class="title">优惠券</span>
 			<span class="btn">优惠规则</span>
 		</div>
@@ -197,12 +197,12 @@ export default {
         padding-bottom: .6rem;
         background-color: #ffffff;
         text-align: center;
-		img {
-			width: .5rem;
-			height: .65rem;
+		.icon-fanhui {
+            font-size: 1.1rem;
+            color: #333333;
             position: absolute;
-            top: 52%;
-            left: 3%;
+            top: 35%;
+            left: 2%;
 		}
 		.title {
 			color: #333333;

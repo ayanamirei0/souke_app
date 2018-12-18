@@ -1,7 +1,7 @@
 <template>
     <div class="exchange">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
 			<span class="title">兑换优惠券</span>
         </div>
         <div class="content">
@@ -33,11 +33,13 @@ export default {
     .top{
         display: flex;
         background-color: #ffffff;
-        padding-top: 1.25rem;
-        img{
-            width: .5rem;
-			height: .65rem;
-			margin: .3rem 0 .6rem .6rem;
+        padding: 1.25rem 0 .65rem 0;
+        .icon-fanhui{
+           font-size: 1.1rem;
+           color: #333333;
+           position: relative;
+            top: .1rem;
+            left: .3rem;
         }
         .title{
             flex-grow: 2;

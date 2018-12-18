@@ -1,7 +1,7 @@
 <template>
     <div class="grade">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span class="title">修改年级</span>
             <span class="btn">保存</span>
         </div>
@@ -42,11 +42,12 @@ export default {
   border-bottom: 0.05rem solid #c2c2c2;
   display: flex;
 }
-.grade .top img {
-  width: .5rem;
-  height: .65rem;
-  margin-left: .85rem;
-  margin: .3rem 0 0 .6rem;
+.grade .top .icon-fanhui {
+  font-size: 1.1rem;
+  color: #333333;
+  position: relative;
+  top: .1rem;
+  left: .3rem;
 }
 .grade .top .title {
   text-align: center;

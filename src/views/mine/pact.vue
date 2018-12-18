@@ -1,7 +1,7 @@
 <template>
     <div class="pact">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
+            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span>支付协议</span>
         </div>
         <div class="container">
@@ -23,9 +23,9 @@ export default {
         background-color: #ffffff;
         padding: 1.25rem 0.5rem 0.6rem 0.3rem;
         border-bottom: 2px solid #F8F8F8;
-        img{
-            width: 0.5rem;
-            height: 0.65rem;
+        .icon-fanhui{
+            font-size: 1.1rem;
+            color: #333333;
             position: relative;
             top: 0;
             right: 6rem;
