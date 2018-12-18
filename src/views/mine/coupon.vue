@@ -1,7 +1,7 @@
 <template>
 	<div class="coupons">
 		<div class="top">
-			<img src="../../assets/img/return.png" alt="" @click="returnPage()">
+			<img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
 			<span class="title">优惠券</span>
 			<span class="btn">优惠规则</span>
 		</div>
@@ -168,9 +168,6 @@ export default {
 		};
 	},
 	methods: {
-		returnPage() {
-			this.$router.push("/mine");
-        },
         onShow1() {
             console.log(1);
             this.seen1 = !this.seen1;

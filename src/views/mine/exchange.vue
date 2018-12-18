@@ -1,7 +1,7 @@
 <template>
     <div class="exchange">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="returnPage()">
+            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
 			<span class="title">兑换优惠券</span>
         </div>
         <div class="content">
@@ -19,9 +19,7 @@ export default {
         }
     },
     methods: {
-        returnPage() {
-			this.$router.push("coupon.vue");
-        }
+        
     }
 }
 </script>

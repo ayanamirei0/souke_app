@@ -1,9 +1,7 @@
 <template>
     <div class="lesson">
         <div class="top">
-            <a href="javascript:history.go(-1);">
-                <img src="../../assets/img/return.png" alt="">
-            </a>
+            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
             <span>购课袋</span>
             <span>
                 <router-link to="" class="complete">完成</router-link>

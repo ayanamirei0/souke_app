@@ -1,7 +1,7 @@
 <template>
     <div class="schoolName">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="returnPage()">
+            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
             <span class="title">修改学校名称</span>
             <span class="btn">保存</span>
         </div>

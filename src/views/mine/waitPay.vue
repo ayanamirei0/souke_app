@@ -1,9 +1,7 @@
 <template>
     <div class="waitPay">
         <div class="top">
-            <a href="javascript:history.go(-1);">
-                <img src="../../assets/img/return.png" alt="">
-            </a>
+            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
             <span>待付款</span>
         </div>
         <div class="container">

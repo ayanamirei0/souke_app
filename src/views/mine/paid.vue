@@ -1,9 +1,7 @@
 <template>
     <div class="paid">
         <div class="top">
-            <a href="javascript:history.go(-1);">
-                <img src="../../assets/img/return.png" alt="">
-            </a>
+            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
             <p class="title">已付款</p>
         </div>
         <div class="container">

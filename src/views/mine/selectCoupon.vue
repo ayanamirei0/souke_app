@@ -1,7 +1,7 @@
 <template>
 	<div class="selectCoupon">
         <div class="top">
-			<img src="../../assets/img/return.png" alt="" @click="returnPage()">
+			<img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
 			<span class="title">优惠券</span>
 			<span class="btn">优惠规则</span>
 		</div>
@@ -51,9 +51,6 @@ export default {
 		};
 	},
 	methods: {
-		returnPage() {
-			this.$router.push("confirmOrder.vue");
-        },
         multiSelect(i) {        //多选
             let index = this.checkBox.indexOf(i);
             if(index > -1){     //如果选中，那就取消选中，如果没有，那就选中
