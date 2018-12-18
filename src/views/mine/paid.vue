@@ -17,7 +17,10 @@
                     <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                     <div class="user">
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                        <span class="price">￥4100</span>
+                        <div class="sum">
+                            <span class="yuan">￥</span>
+                            <span class="num">4100</span>
+                        </div>
                     </div>
                 </div>
                 <div class="bottom">
@@ -40,7 +43,10 @@
                     <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                     <div class="user">
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                        <span class="price">￥4100</span>
+                        <div class="sum">
+                            <span class="yuan">￥</span>
+                            <span class="num">4100</span>
+                        </div>
                     </div>
                 </div>
                 <div class="bottom">
@@ -124,7 +130,17 @@ export default {
                     margin-top: .25rem;
                     .icon{
                         color: #BABABA;
-                        margin-right: .375rem
+                        margin-right: .375rem;
+                        position: relative;
+                        top: .025rem;
+                        left: 0;
+                    }
+                    .icon-xuesheng{
+                        font-size: 1rem;
+                        margin-right: .25rem;
+                        position: relative;
+                        top: .125rem;
+                        left: 0;
                     }
                 }
                 .user{
@@ -135,10 +151,27 @@ export default {
                     .icon{
                         margin-right: .375rem;
                         color: #BABABA;
+                        position: relative;
+                        top: .1rem;
+                        left: 0;
                     }
-                    .price{
-                        color: #FA5118;   
-                        font-size: .7rem;
+                    .icon-yonghu{
+                        font-size: .35rem;
+                        position: relative;
+                        top: .12rem;
+                        left: 0;
+                    }
+                    .sum{
+                        span{
+                            color: #FA5118;
+                        }
+                        .yuan{
+                            font-size: .65rem;
+                        }
+                        .num{
+                            font-size: .9rem;
+                            margin-left: -.2rem;
+                        }
                     }
                 }
             }

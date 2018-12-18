@@ -170,7 +170,7 @@ export default {
                         left: 0;
                     }
                     .icon-xuesheng{
-                        font-size: 20px;
+                        font-size: 1rem;
                         margin-right: .25rem;
                         position: relative;
                         top: .125rem;
@@ -187,6 +187,12 @@ export default {
                         color: #BABABA;
                         position: relative;
                         top: .1rem;
+                        left: 0;
+                    }
+                    .icon-yonghu{
+                        font-size: .35rem;
+                        position: relative;
+                        top: .12rem;
                         left: 0;
                     }
                     .sum{
