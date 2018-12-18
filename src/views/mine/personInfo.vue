@@ -1,7 +1,7 @@
 <template>
     <div class="PersonInfo">
         <div class="top">
-            <img src="../../assets/img/return.png" alt="" @click="returnPage()">
+            <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
             <p>个人信息</p>
         </div>
 
@@ -128,11 +128,6 @@ export default {
     };
   },
   methods: {
-    returnPage() {
-      // console.log(1111);
-      this.$router.push("/mine");   //返回我的页面
-      // this.$router.replace({path:'mine.vue'});
-    },
     changeHead() {
       this.show_head = true;
     },

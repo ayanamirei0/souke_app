@@ -17,7 +17,10 @@
                     <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                     <div class="user">
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                        <span class="price">￥4100</span>
+                        <div class="sum">
+                            <span class="yuan">￥</span>
+                            <span class="num">4100</span>
+                        </div>
                     </div>
                 </div>
                 <ul class="list">
@@ -27,7 +30,7 @@
                     </li>
                     <li>
                         <span class="left">优惠券</span>
-                        <span class="right">-¥50.00</span>
+                        <span class="right">-&nbsp;¥&nbsp;50.00</span>
                     </li>
                     <li>
                         <span class="left">优惠活动</span>
@@ -46,7 +49,10 @@
                     <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                     <div class="user">
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                        <span class="price">￥4100</span>
+                        <div class="sum">
+                            <span class="yuan">￥</span>
+                            <span class="num">4100</span>
+                        </div>
                     </div>
                 </div>
                 <ul class="list">
@@ -56,7 +62,7 @@
                     </li>
                     <li>
                         <span class="left">优惠券</span>
-                        <span class="right">-¥50.00</span>
+                        <span class="right">-&nbsp;¥&nbsp;50.00</span>
                     </li>
                     <li>
                         <span class="left">优惠活动</span>
@@ -67,7 +73,8 @@
             <div class="bottomBar">
                 <div class="left">
                     <span class="charge">实付款：</span>
-                    <span class="money">￥7200.00</span>
+                    <span class="yuan">￥</span>
+                    <span class="num">7200.00</span>
                 </div>
                 <div class="right">
                     <span class="unOrder">取消订单</span>
@@ -136,16 +143,18 @@ export default {
                         display: inline-block;
                         width: 1.75rem;
                         height: .85rem;
+                        line-height: .85rem;
                         color: #ffffff;
                         font-size: .55rem;
                         background-color: #F5932A;
                         text-align: center;
                         border-radius: 3px;
-                        margin-right: .55rem;
+                        margin-right: .25rem;
                     }
                     .lesson{
                         color: #333333;
                         font-size: .8rem;
+                        font-weight: 600;
                     }
                 }
                 .text{
@@ -155,7 +164,17 @@ export default {
                     margin-top: .25rem;
                     .icon{
                         color: #BABABA;
-                        margin-right: .375rem
+                        margin-right: .375rem;
+                        position: relative;
+                        top: .025rem;
+                        left: 0;
+                    }
+                    .icon-xuesheng{
+                        font-size: 20px;
+                        margin-right: .25rem;
+                        position: relative;
+                        top: .125rem;
+                        left: 0;
                     }
                 }
                 .user{
@@ -166,10 +185,21 @@ export default {
                     .icon{
                         margin-right: .375rem;
                         color: #BABABA;
+                        position: relative;
+                        top: .1rem;
+                        left: 0;
                     }
-                    .price{
-                        color: #FA5118;   
-                        font-size: .7rem;
+                    .sum{
+                        span{
+                            color: #FA5118;   
+                        }
+                        .yuan{
+                            font-size: .65rem;
+                        }
+                        .num{
+                            font-size: .9rem;
+                            margin-left: -.2rem;
+                        }
                     }
                 }
             }
@@ -205,8 +235,14 @@ export default {
                 .charge{
                     color: #333333;   
                 }
-                .money{
+                .yuan{
                     color: #FA5118;
+                    font-size: .7rem;
+                }
+                .num{
+                    color: #FA5118;
+                    font-size: .9rem;
+                    margin-left: -.2rem
                 }
             }
             .right{
@@ -227,6 +263,7 @@ export default {
                     color: #ffffff;
                     text-align: center;
                     line-height: 1.55rem;
+                    border: 1px solid #FA5118;
                 }
             }   
         }

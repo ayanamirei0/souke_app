@@ -22,11 +22,7 @@ export default {
       }
   },
   methods: {
-    returnPage() {
-      // console.log(1111);
-      this.$router.push("personInfo.vue");
-      // this.$router.replace({path:'mine.vue'});
-    }
+    
   }
 };
 </script>

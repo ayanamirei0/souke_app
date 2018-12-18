@@ -57,9 +57,6 @@ export default {
         }
     },
     methods: {
-        returnPage() {
-            this.$router.push("personInfo.vue");
-        },
         addClass1(index1){
             this.current1 = index1;
         },
