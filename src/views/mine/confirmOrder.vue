@@ -6,13 +6,19 @@
         </div>
         <div class="confirm_order">
             <div class="content">
-                <p class="title"><span class="season">秋季</span>初一数学启思·卓越班</p>
+                <p class="title">
+                    <span class="season">秋季</span>
+                    <span class="lesson">初一数学启思·卓越班</span>
+                </p>
                 <p><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
                 <p><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30  2018/05/05-2018/11/17</p>
                 <p><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                 <div class="user">
                     <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                    <span class="price">￥4100</span>
+                    <div class="sum">
+                        <span class="yuan">￥</span>
+                        <span class="num">4100</span>
+                    </div>
                 </div>
             </div>
             <ul class="list">
@@ -203,7 +209,17 @@ export default {
                 font-size: .65rem;
                 .icon{
                     color: #BABABA;
-                    margin-right: .4rem;
+                    margin-right: .375rem;
+                    position: relative;
+                    top: .025rem;
+                    left: 0;
+                }
+                .icon-xuesheng{
+                    font-size: 1rem;
+                    margin-right: .25rem;
+                    position: relative;
+                    top: .125rem;
+                    left: 0;
                 }
             }
             .title{
@@ -214,21 +230,38 @@ export default {
                     display: inline-block;
                     width: 1.75rem;
                     height: .875rem;
+                    line-height: .875rem;
                     background-color: #F5932A;
                     color: #ffffff;
                     font-size: .55rem;
                     text-align: center;
-                    line-height: .875rem;
                     border-radius: 3px;
-                    margin: 0 .575rem 0 .075rem;
+                    margin-right: .1rem;
+                }
+                .lesson{
+                    color: #333333;
+                    font-size: .8rem;
+                    font-weight: 600;
+                    position: relative;
+                    top: .1rem;
+                    left: 0;
                 }
             }
             .user{
                 display: flex;
                 justify-content: space-between;
-                color: #FA5118;   
-                .price{
-                    font-size: .7rem;
+                .sum{
+                    span{
+                        color: #FA5118;  
+                    }
+                    .yuan{
+                        font-size: .65rem;
+                    }
+                    .num{
+                        font-size: .9rem;
+                        font-weight: 600;
+                        margin-left: -.2rem;
+                    }
                 }
             }
         }

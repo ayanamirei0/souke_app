@@ -118,24 +118,47 @@ export default {
     }
     .container{
         .schedule{
-            padding: .3rem .5rem .725rem .5rem;
+            padding: .7rem .5rem .725rem .5rem;
             background-color: #ffffff;
             border-top: 1px solid #C2C2C2;
+             p{
+                color: #333333;
+                font-size: .65rem;
+                .icon{
+                    color: #BABABA;
+                    margin-right: .375rem;
+                    position: relative;
+                    top: .025rem;
+                    left: 0;
+                }
+                .icon-xuesheng{
+                    font-size: 1rem;
+                    margin-right: .25rem;
+                    position: relative;
+                    top: .125rem;
+                    left: 0;
+                }
+            }
             .title{
                 .season{
                     display: inline-block;
                     width: 1.75rem;
                     height: .85rem;
+                    line-height: .85rem;
                     color: #ffffff;
                     font-size: .55rem;
                     background-color: #F5932A;
                     text-align: center;
                     border-radius: 3px;
-                    margin-right: .55rem;
+                    margin-right: .1rem;
                 }
                 .lesson{
                     color: #333333;
                     font-size: .8rem;
+                    font-weight: 600;
+                    position: relative;
+                    top: .05rem;
+                    left: 0;
                 }
             }
             .text{
@@ -153,6 +176,7 @@ export default {
                 justify-content: space-between;
                 margin-top: .25rem;
                 font-size: .65rem;
+                position: relative;
                 .icon{
                     margin-right: .375rem;
                     color: #BABABA;
@@ -163,10 +187,13 @@ export default {
                     display: inline-block;
                     width: 3.575rem;
                     height: 1.325rem;
+                    line-height: 1.325rem;
                     border: 1px solid #2FB3F1;
                     border-radius: 5px;
-                    line-height: 1.325rem;
                     text-align: center;
+                    position: absolute;
+                    bottom: .1rem;
+                    right: 0;
                 }
             }
         }

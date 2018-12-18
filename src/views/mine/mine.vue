@@ -200,7 +200,7 @@ export default {
     .nav{
         display: flex;
         justify-content: space-around;
-        padding: 2.65rem 0 .825rem 0;
+        padding: 3rem 0 .6rem 0;
         background-color: #ffffff;
         img{
             width: 2.25rem;
@@ -304,7 +304,7 @@ export default {
             height: .05rem;
             background-color: #ECECEE;
             position: absolute;
-            top: 52%;
+            top: 51%;
             left: 5%;
         }
     }
