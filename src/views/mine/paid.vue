@@ -111,16 +111,21 @@ export default {
                         display: inline-block;
                         width: 1.75rem;
                         height: .85rem;
+                        line-height: .85rem;
                         color: #ffffff;
                         font-size: .55rem;
                         background-color: #F5932A;
                         text-align: center;
                         border-radius: 3px;
-                        margin-right: .55rem;
+                        margin-right: .1rem;
                     }
                     .lesson{
                         color: #333333;
                         font-size: .8rem;
+                        font-weight: 600;
+                        position: relative;
+                        top: .1rem;
+                        left: 0;
                     }
                 }
                 .text{
@@ -171,6 +176,7 @@ export default {
                         .num{
                             font-size: .9rem;
                             margin-left: -.2rem;
+                            font-weight: 600;
                         }
                     }
                 }

@@ -291,7 +291,7 @@ export default {
                             bottom: .35rem;
                             right: 0;
 						}
-					}
+                    }
 					.detail {
                         // margin-top: .35rem;
                         position: relative;
@@ -407,6 +407,9 @@ export default {
 						text-align: center;
 						margin: 0 0 .45rem 1.3rem;
                     }
+                }
+                .date{
+                    margin-top: .7rem;
                 }
                 .detail {
                     margin-top: 0.35rem;

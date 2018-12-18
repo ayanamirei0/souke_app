@@ -13,7 +13,7 @@
                         <span class="lesson">初一数学启思·卓越班</span>
                     </p>
                     <p class="text"><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
-                    <p class="text"><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30  2018/05/05-2018/11/17</p>
+                    <p class="text"><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30&nbsp;&nbsp;2018/05/05-2018/11/17</p>
                     <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                     <div class="user">
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
@@ -45,7 +45,7 @@
                         <span class="lesson">初一语文启思·卓越班</span>
                     </p>
                     <p class="text"><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
-                    <p class="text"><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30  2018/05/05-2018/11/17</p>
+                    <p class="text"><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30&nbsp;&nbsp;2018/05/05-2018/11/17</p>
                     <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                     <div class="user">
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
@@ -149,12 +149,15 @@ export default {
                         background-color: #F5932A;
                         text-align: center;
                         border-radius: 3px;
-                        margin-right: .25rem;
+                        margin-right: .1rem;
                     }
                     .lesson{
                         color: #333333;
                         font-size: .8rem;
                         font-weight: 600;
+                        position: relative;
+                        top: .1rem;
+                        left: 0;
                     }
                 }
                 .text{
@@ -205,6 +208,7 @@ export default {
                         .num{
                             font-size: .9rem;
                             margin-left: -.2rem;
+                            font-weight: 600;
                         }
                     }
                 }
@@ -248,7 +252,8 @@ export default {
                 .num{
                     color: #FA5118;
                     font-size: .9rem;
-                    margin-left: -.2rem
+                    margin-left: -.2rem;
+                    font-weight: 600;
                 }
             }
             .right{
@@ -259,10 +264,11 @@ export default {
                     border-radius: 5px;
                 }
                 .unOrder{
-                    border: 1px solid #666666;
+                    border: 1px solid #999999;
                     text-align: center;
                     line-height: 1.55rem;
                     color: #666666;
+                    margin-right: .3rem;
                 }
                 .pay{
                     background-color: #FA5118;

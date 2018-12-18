@@ -1,5 +1,5 @@
 <template>
-    <div class="lesson">
+    <div class="lessonBagEdit">
         <div class="top">
             <img src="../../assets/img/return.png" alt="" @click="$router.go(-1)">
             <span>购课袋</span>
@@ -11,13 +11,19 @@
             <img src="../../assets/img/select.png" alt="" v-show="!checkBox.includes(index)" @click="multiSelect(index)">
             <img src="../../assets/img/selected.png" alt="" v-show="checkBox.includes(index)" @click="multiSelect(index)">
             <div class="content">
-                <p class="title"><span class="season">秋季</span>{{item}}</p>
+                <p class="title">
+                    <span class="season">秋季</span>
+                    <span class="lesson"> {{item}}</span>   
+                </p>
                 <p><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
-                <p><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30  2018/05/05-2018/11/17</p>
+                <p><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30&nbsp;&nbsp;2018/05/05-2018/11/17</p>
                 <p><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                 <div class="user">
                     <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                    <span class="price">￥4100</span>
+                    <div class="sum">
+                        <span class="yuan">￥</span>
+                        <span class="num">4100</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,7 +107,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.lesson{
+.lessonBagEdit{
     overflow-y: auto;
     position: fixed;
     width: 100%;
@@ -139,20 +145,27 @@ export default {
             height: 1.05rem;
         }
         .content{
-            margin-left: 10%;
+            margin-left: 11%;
             padding: .5rem 0 .65rem 0;
             p{
                 color: #333333;
                 font-size: .65rem;
                 text-align: left;
                 margin-top: .25rem;
-            }
-            .icon-xuesheng{
-                font-size: 1rem;
-            }
-            .icon{
-                color: #BABABA;
-                margin-right: .375rem
+                .icon{
+                    color: #BABABA;
+                    margin-right: .375rem;
+                    position: relative;
+                    top: .025rem;
+                    left: 0;
+                }
+                .icon-xuesheng{
+                    font-size: 1rem;
+                    margin-right: .25rem;
+                    position: relative;
+                    top: .125rem;
+                    left: 0;
+                }
             }
             .title{
                 color: #333333;
@@ -163,18 +176,39 @@ export default {
                     display: inline-block;
                     width: 1.75rem;
                     height: .85rem;
+                    line-height: .85rem;
                     background-color: #F5932A;
                     text-align: center;
                     border-radius: 3px;
-                    margin-right: .55rem;
+                    margin-right: .1rem;
+                }
+                .lesson{
+                    color: #333333;
+                    font-size: .8rem;
+                    font-weight: 600;
+                    position: relative;
+                    top: .1rem;
+                    left: 0;
                 }
             }
             .user{
                 display: flex;
-                justify-content: space-between;
-                color: #FA5118;   
-                .price{
-                    font-size: .7rem;
+                justify-content: space-between; 
+                .sum{
+                    position: relative;
+                    bottom: 0;
+                    right: -1rem;
+                    span{
+                        color: #FA5118;   
+                    }
+                    .yuan{
+                        font-size: .65rem;
+                    }
+                    .num{
+                        font-size: .9rem;
+                        margin-left: -.2rem;
+                        font-weight: 600;
+                    }
                 }
             }
         }
