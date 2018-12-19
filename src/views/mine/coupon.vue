@@ -437,7 +437,7 @@ export default {
 				}
 				.imgUsed {
 					position: absolute;
-					bottom: 1.05rem;
+					bottom: 2.08rem;
 					right: 0;
 					width: 2.9rem;
 					height: 2.8rem;

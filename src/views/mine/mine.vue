@@ -24,72 +24,74 @@
                 <i class="go iconfont icon-tiem-right"></i> 
             </div> -->
         </div>
-        <div class="nav">
-            <router-link to="/views/mine/lessonBag.vue">
-                <div class="shop">
-                    <div class="img">
-                        <img src="../../assets/img/shop.png" alt="">
+        <div class="main">
+            <div class="nav">
+                <router-link to="/views/mine/lessonBag.vue">
+                    <div class="shop">
+                        <div class="img">
+                            <img src="../../assets/img/shop.png" alt="">
+                        </div>
+                        <p>购课袋</p>
                     </div>
-                    <p>购课袋</p>
-                </div>
-            </router-link>
-            <router-link to="/views/mine/waitPay.vue">
-                <div class="waitPay">
-                    <div class="img">
-                        <span class="alert">1</span>
-                        <img src="../../assets/img/waitPay.png" alt="">
+                </router-link>
+                <router-link to="/views/mine/waitPay.vue">
+                    <div class="waitPay">
+                        <div class="img">
+                            <span class="alert">1</span>
+                            <img src="../../assets/img/waitPay.png" alt="">
+                        </div>
+                        <p>待付款</p>
                     </div>
-                    <p>待付款</p>
-                </div>
-            </router-link>
-            <router-link to="/views/mine/paid.vue">
-                <div class="paid">
-                    <div class="img">
-                        <img src="../../assets/img/paid.png" alt="">
+                </router-link>
+                <router-link to="/views/mine/paid.vue">
+                    <div class="paid">
+                        <div class="img">
+                            <img src="../../assets/img/paid.png" alt="">
+                        </div>
+                        <p>已付款</p>
                     </div>
-                    <p>已付款</p>
-                </div>
-            </router-link> 
-        </div>
-        <div class="item">
-            <div class="coupon">
-                <img src="../../assets/img/coupons.png" alt="">
-                <span>优惠券</span>
+                </router-link> 
             </div>
-            <router-link to="/views/mine/coupon.vue" class="router">
-                <i class="go iconfont icon-tiem-right"></i>
-            </router-link>
-        </div>
-        <div class="middle">
-            <div class="myLesson">
-                <div class="left">
-                    <img src="../../assets/img/lesson.png" alt="">
-                    <span>我的课程</span>
+            <div class="item">
+                <div class="coupon">
+                    <img src="../../assets/img/coupons.png" alt="">
+                    <span>优惠券</span>
                 </div>
-                <router-link to="/MyCourse">
+                <router-link to="/views/mine/coupon.vue" class="router">
                     <i class="go iconfont icon-tiem-right"></i>
                 </router-link>
             </div>
-            <div class="offline">
-                <div class="left">
-                    <img src="../../assets/img/order.png" alt="">
-                    <span>线下订单</span>
+            <div class="middle">
+                <div class="myLesson">
+                    <div class="left">
+                        <img src="../../assets/img/lesson.png" alt="">
+                        <span>我的课程</span>
+                    </div>
+                    <router-link to="/MyCourse">
+                        <i class="go iconfont icon-tiem-right"></i>
+                    </router-link>
                 </div>
-                <router-link to="/OfflineOrder">
+                <div class="offline">
+                    <div class="left">
+                        <img src="../../assets/img/order.png" alt="">
+                        <span>线下订单</span>
+                    </div>
+                    <router-link to="/OfflineOrder">
+                        <i class="go iconfont icon-tiem-right"></i>
+                    </router-link>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="set">
+                <div class="left">
+                    <img src="../../assets/img/set.png" alt="">
+                    <span>帐号管理</span>
+                </div>
+                <router-link to="/AccountManagement">
                     <i class="go iconfont icon-tiem-right"></i>
-                </router-link>
+                </router-link>   
             </div>
-            <div class="line"></div>
-        </div>
-        <div class="set">
-            <div class="left">
-                <img src="../../assets/img/set.png" alt="">
-                <span>帐号管理</span>
-            </div>
-            <router-link to="/AccountManagement">
-                <i class="go iconfont icon-tiem-right"></i>
-            </router-link>   
-        </div>
+        </div>    
     </div>
 </template>
 
@@ -197,71 +199,54 @@ export default {
             } 
         }
     }
-    .nav{
-        display: flex;
-        justify-content: space-around;
-        padding: 3rem 0 .6rem 0;
-        background-color: #ffffff;
-        img{
-            width: 2.25rem;
-            height: 2.25rem;
+    .main{
+        .go{
+            font-size: 1rem;
+            color: #666666;
+            position: relative;
+            top: .1rem;
+            right: 1.05rem;
         }
-        p{
-            color: #333333;
-            font-size: .6rem;
-            text-align: center;
-        }
-        .waitPay{
-            .img{
-                position: relative;
-                .alert{
-                    display: inline-block;
-                    width: .9rem;
-                    height: .9rem;
-                    border-radius: 50%;
-                    background-color: #F74749;
-                    color: #ffffff;
-                    text-align: center;
-                    font-size: .6rem;
-                    position: absolute;
-                    top: -0.3rem;
-                    right: -0.2rem;
+        .nav{
+            display: flex;
+            justify-content: space-around;
+            padding: 3rem 0 .6rem 0;
+            background-color: #ffffff;
+            img{
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+            p{
+                color: #333333;
+                font-size: .6rem;
+                text-align: center;
+            }
+            .waitPay{
+                .img{
+                    position: relative;
+                    .alert{
+                        display: inline-block;
+                        width: .9rem;
+                        height: .9rem;
+                        border-radius: 50%;
+                        background-color: #F74749;
+                        color: #ffffff;
+                        text-align: center;
+                        font-size: .6rem;
+                        position: absolute;
+                        top: -0.3rem;
+                        right: -0.2rem;
+                    }
                 }
             }
         }
-    }
-    .item{
-        display: flex;
-        justify-content: space-between;
-        background-color: #ffffff;
-        margin-top: .3rem;
-        height: 2.275rem;
-        line-height: 2.275rem;
-        img{
-            width: .85rem;
-            height: .9rem;
-            vertical-align: middle;
-            margin-left: .975rem;
-        }
-        span{
-            color: #333333;
-            font-size: .75rem;
-        }
-        .go{
-           margin-right: 1.05rem;
-           font-size: 1rem;
-           color: #666666;
-        }
-    }
-    .middle{
-        background-color: #ffffff;
-        margin-top: .3rem;
-        position: relative;
-        .myLesson{
-            height: 2.275rem;
-            line-height: 2.275rem;
+        .item{
             display: flex;
             justify-content: space-between;
+            background-color: #ffffff;
+            margin-top: .3rem;
+            height: 2.275rem;
+            line-height: 2.275rem;
             img{
                 width: .85rem;
                 height: .9rem;
@@ -272,17 +257,59 @@ export default {
                 color: #333333;
                 font-size: .75rem;
             }
-            .go{
-                margin-right: 1.05rem;
-                font-size: 1rem;
-                color: #666666;
+        }
+        .middle{
+            background-color: #ffffff;
+            margin-top: .3rem;
+            position: relative;
+            .myLesson{
+                height: 2.275rem;
+                line-height: 2.275rem;
+                display: flex;
+                justify-content: space-between;
+                img{
+                    width: .85rem;
+                    height: .9rem;
+                    vertical-align: middle;
+                    margin-left: .975rem;
+                }
+                span{
+                    color: #333333;
+                    font-size: .75rem;
+                }
+            }
+            .offline{
+                height: 2.275rem;
+                line-height: 2.275rem;
+                display: flex;
+                justify-content: space-between;
+                img{
+                    width: .85rem;
+                    height: .9rem;
+                    vertical-align: middle;
+                    margin-left: .975rem;
+                }
+                span{
+                    color: #333333;
+                    font-size: .75rem;
+                }
+            }
+            .line{
+                width: 17rem;
+                height: .05rem;
+                background-color: #ECECEE;
+                position: absolute;
+                top: 51%;
+                left: 5%;
             }
         }
-        .offline{
+        .set{
+            margin-top: .3rem;
             height: 2.275rem;
             line-height: 2.275rem;
             display: flex;
             justify-content: space-between;
+            background-color: #ffffff;
             img{
                 width: .85rem;
                 height: .9rem;
@@ -293,44 +320,8 @@ export default {
                 color: #333333;
                 font-size: .75rem;
             }
-            .go{
-                margin-right: 1.05rem;
-                font-size: 1rem;
-                color: #666666;
-            } 
         }
-        .line{
-            width: 17rem;
-            height: .05rem;
-            background-color: #ECECEE;
-            position: absolute;
-            top: 51%;
-            left: 5%;
-        }
-    }
-    .set{
-        margin-top: .3rem;
-        height: 2.275rem;
-        line-height: 2.275rem;
-        display: flex;
-        justify-content: space-between;
-        background-color: #ffffff;
-        img{
-            width: .85rem;
-            height: .9rem;
-            vertical-align: middle;
-            margin-left: .975rem;
-        }
-        span{
-            color: #333333;
-            font-size: .75rem;
-        }
-        .go{
-            margin-right: 1.05rem;
-            font-size: 1rem;
-            color: #666666;
-        }
-    }
+    }   
 }
 </style>
 

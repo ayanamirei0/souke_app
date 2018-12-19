@@ -160,8 +160,9 @@ export default {
             .user{
                 display: flex;
                 justify-content: space-between;
+                position: relative;
                 .sum{
-                    position: relative;
+                    position: absolute;
                     bottom: 0;
                     right: -1rem;
                     span{
