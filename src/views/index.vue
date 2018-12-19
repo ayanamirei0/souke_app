@@ -342,16 +342,16 @@ export default {
     }, 
     methods: {
         tabSwitch1(index) {
-        this.num1 = index;
+            this.num1 = index;
         },
         tabSwitch2(index) {
-        this.num2 = index;
+            this.num2 = index;
         },
         tabSwitch3(index) {
-        this.num3 = index;
+            this.num3 = index;
         },
         Toast() {
-        this.$toast("暂不支持城市切换");
+            this.$toast("暂不支持城市切换");
         }
     },
     mounted() {
