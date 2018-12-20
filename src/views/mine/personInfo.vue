@@ -4,7 +4,6 @@
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <p>个人信息</p>
         </div>
-
         <div class="head" @click="changeHead()">
             <img src="../../assets/img/profile.png" alt="">
             <div class="changeHead">

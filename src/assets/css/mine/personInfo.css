@@ -36,6 +36,11 @@
     color: #999999;
     line-height: 2.65rem;   
 }
+.PersonInfo .head .changeHead .go{
+    position: relative;
+    top: .05rem;
+    left: 0;
+}
 .PersonInfo .item{
     display: flex;
     justify-content: space-between;
@@ -55,6 +60,11 @@
     font-size: .65rem;
     color: #999999;
     line-height: .85rem;
+}
+.PersonInfo .item .change .go{
+    position: relative;
+    top: .05rem;
+    left: 0;
 }
 .PersonInfo .grade{
     border: none;
