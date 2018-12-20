@@ -36,48 +36,50 @@ export default {
   }
 };
 </script>
-<style>
-.grade .top {
-  margin-top: 1.25rem;
-  border-bottom: 0.05rem solid #c2c2c2;
-  display: flex;
-}
-.grade .top .icon-fanhui {
-  font-size: 1.1rem;
-  color: #333333;
-  position: relative;
-  top: .1rem;
-  left: .3rem;
-}
-.grade .top .title {
-  text-align: center;
-  font-size: .9rem;
-  color: #333333;
-  margin-bottom: .6rem;
-  flex-grow: 2;
-}
-.grade .top .btn {
-  font-size: .75rem;
-  color: #666666;
-  margin: .1rem .6rem 0 0;
-}
-.grade .list {
-  padding-left: .65rem;
-}
-.grade .list li {
-  font-size: .75rem;
-  border-bottom: 0.05rem solid #c2c2c2;
-  text-align: left;
-  padding: .9rem 0 .8rem 0;
-}
-.grade .list li img{
-    width: .9rem;
-    height: .6rem;
-    float: right;
-    padding-right: .6rem;
-}
-.selected {
-  color: #2fb3f1;
+
+<style lang="less" scoped>
+.grade{
+    .top{
+        margin-top: 1.25rem;
+        border-bottom: 0.05rem solid #c2c2c2;
+        display: flex; 
+        .icon-fanhui{
+            font-size: 1.1rem;
+            color: #333333;
+            position: relative;
+            top: .1rem;
+            left: .3rem;
+        }
+        .title{
+            text-align: center;
+            font-size: .9rem;
+            color: #333333;
+            margin-bottom: .6rem;
+            flex-grow: 2;
+        }
+        .btn{
+            font-size: .75rem;
+            color: #666666;
+            margin: .1rem .6rem 0 0;
+        }
+    }
+    .list{
+        li{
+            font-size: .75rem;
+            border-bottom: 0.05rem solid #c2c2c2;
+            text-align: left;
+            padding: .9rem 0 .8rem .65rem;
+            img{
+                width: .9rem;
+                height: .6rem;
+                float: right;
+                padding-right: .6rem;
+            }
+        }
+        .selected{
+            color: #2fb3f1;
+        }
+    }
 }
 </style>
 
