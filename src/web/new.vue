@@ -49,6 +49,7 @@ export default {
   padding: 0.55rem;
   border-radius: 10px;
   margin-top: 0.5rem;
+  position: relative;
 }
 /* .newtime .new-imgbox {
   width: 2.2rem;
@@ -73,7 +74,10 @@ export default {
 }
 .flex {
   flex-grow: 1;
-  margin-left: 0.55rem;
+  /* margin-left: 0.55rem; */
+  position: absolute;
+  top: .65rem;
+  left: 3.3rem;
 }
 .newtime-top-right {
   font-size: 0.6rem;
