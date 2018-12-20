@@ -74,8 +74,7 @@ export default {
 }
 .flex {
   flex-grow: 1;
-  /* margin-left: 0.55rem; */
-  position: absolute;
+  position: absolute;   /* lihongliang 修改 2018-12-20 */
   top: .65rem;
   left: 3.3rem;
 }
@@ -92,7 +91,7 @@ export default {
   text-align: center;
   line-height: 0.8rem;
   font-size: 0.6rem;
-  margin-top: 0.25rem;
+  margin: .25rem 0 0 .6rem;
 }
 
 </style>
