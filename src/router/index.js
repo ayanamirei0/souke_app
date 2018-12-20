@@ -215,10 +215,5 @@ export default new Router({
         name: 'PaySuccess',
         component: PaySuccess
     }
-  ],
-  // methods:{
-  //   switchTo(path){
-  //     this.$router.replace(path);
-  //   }
-  // }
+  ]
 })
