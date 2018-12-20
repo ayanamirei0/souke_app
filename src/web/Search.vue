@@ -2,7 +2,7 @@
 <div>
     <div class="h20"></div>
     <div class="search-head">
-        <div class="Return"><a href="javascript:history.go(-1);"><img src="../assets/img/return.png"></a></div>
+        <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang 修改 2018-12-20 -->
         <div>
             <van-search  v-model="value"  placeholder="请输入课程名称或班级编号"  show-action  @search="onSearch" background="#fff">
                 <div slot="action" @click="onSearch">搜索</div>
@@ -58,6 +58,12 @@ export default {
 .van-cell{ background-color: #EFEFEF;}
 .search-head{ padding: 0 0.5rem; border-bottom: 1px solid #C2C2C2;}
 .search-head .Return{ margin-top: 0.35rem;}
+.search-head .Return .icon-fanhui{      /* lihongliang 修改 2018-12-20 */
+    font-size: 1.1rem;
+    position: relative;
+    top: .08rem;
+    right: .3rem;
+}
 .search-head-history{ padding: 0.5rem; line-height: 1rem;}
 .search-head-history-title{ color: #666; font-size: .7rem;}
 .search-head-history-empty{ color: #666; font-size: .6rem;}

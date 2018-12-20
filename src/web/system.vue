@@ -4,7 +4,7 @@
     <div class="b_white">
       <div class="margin_20 system-title">
         系统消息
-        <img src="/static/return.png" @click="goback()">
+        <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>        <!-- lihongliang 修改 2018-12-20 -->
       </div>
     </div>
     <div class="margin_20">
@@ -46,9 +46,7 @@
 export default {
   name: "system",
   methods: {
-    goback: function() {
-      this.$router.back(-1);
-    }
+    
   }
 };
 </script>
@@ -60,12 +58,11 @@ export default {
   font-size: 0.8rem;
   color: #333333;
 }
-.system-title img {
-  width: 1.5rem;
-  height: 1.5rem;
+.system-title .icon-fanhui {        /* lihongliang 修改 2018-12-20 */
+  font-size: 1.1rem;
   position: absolute;
   left: 0;
-  top: 0.25rem;
+  top: .05rem;
 }
 .news-data {
   color: #666666;

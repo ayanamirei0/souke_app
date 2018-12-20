@@ -2,7 +2,7 @@
 <div>  
   <div class="SearchLessonsDetails_head clearfix">
     <div class="h36"></div>
-    <div class="Return"><a href="javascript:history.go(-1);"><img src="../assets/img/return.png"></a></div>
+    <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang 修改 2018-12-20 -->
     <div class="column">课程详情</div>
     <div class="fr ShoppingBag iconfont icon-gouwudai"><i>{{content.ShoppingVolume}}</i></div>
     <div class="h10"></div>
@@ -190,7 +190,19 @@ export default {
 }
 </script>
 <style scoped  lang="less">
-.SearchLessonsDetails_head{ border-bottom: 1px solid #ECECEE; padding: 0 0.5rem; background: #fff;}
+.SearchLessonsDetails_head{ 
+    border-bottom: 1px solid #ECECEE; 
+    padding: 0 0.5rem; 
+    background: #fff;
+    .Return{        //lihongliang 修改 2018-12-20
+        .icon-fanhui{
+            font-size: 1.1rem;
+            position: relative;
+            bottom: .13rem;
+            left: 0;
+        }
+    }
+}
 .Grey{ background: #EDEDED;}
 .SearchLessonsDetails_resubmit{ width: 3.25rem; height: 1.35rem; line-height: 1.35rem; text-align: center; background: #2FB3F1; border-radius: .675rem; color: #FFFFFF; font-size: .65rem;}
 .SearchLessonsDetails-content{ font-size: .75rem; color: #333333; line-height: 1.35rem;}

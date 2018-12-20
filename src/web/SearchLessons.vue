@@ -139,7 +139,7 @@
   </van-popup>
   <van-popup v-model="UnlimitedShow" position="right" :overlay="true" class="MoreShow" :class="{MoreShow_top : MoreShow}">
     <div class="More_content">
-      <div class="Return"><img src="./../assets/img/return.png" @click="ClassSelectionReturn"></div>
+      <div class="Return"><i class="iconfont icon-fanhui" @click="ClassSelectionReturn"></i></div>  <!-- lihongliang 修改 2018-12-20 -->
       <div class="column">班型</div>
       <div class="h36"></div>
       <div class="SeasonList ClassType" v-for="itme in ClassTypeItems" :class="itme.id==ClassTypeActiveId ? 'SeasonList--active iconfont icon-duigou' : ''" @click="ClassType(itme.text,itme.id)">{{itme.text}}</div>
@@ -941,4 +941,12 @@ export default {
 .SeasonListBox{border-top: 1px solid #C2C2C2; height: 11rem;}
 .SeasonList--active{ color: #2FB3F1;}
 .van-tree-select__nav{ background: #E6E6E6; height: 100%;}
+
+/* lihongliang 修改 2018-12-20 */
+.MoreShow .More_content .icon-fanhui{
+    font-size: 1.1rem;
+    position: relative;
+    top: .15rem;
+    right: .3rem;
+}
 </style>
