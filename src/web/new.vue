@@ -91,7 +91,7 @@ export default {
   text-align: center;
   line-height: 0.8rem;
   font-size: 0.6rem;
-  margin: .25rem 0 0 .6rem;
+  margin: .1rem 0 0 .6rem;      /* lihongliang 修改 2018-12-20 */
 }
 
 </style>
