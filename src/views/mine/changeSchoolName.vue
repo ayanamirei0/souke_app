@@ -70,7 +70,75 @@ export default {
 };
 </script>
 
-<style>
-@import "../../assets/css/mine/changeSchoolName.css";
+<style lang="less" scoped>
+.schoolName{
+    position: relative;
+    .top{
+        margin-top: 1.25rem;
+        display: flex;
+        .icon-fanhui{
+            font-size: 1.1rem;
+            color: #333333;
+            position: relative;
+            top: .1rem;
+            left: .3rem;
+        }
+        .title{
+            font-size: .9rem;
+            color: #333333;
+            margin-bottom: .6rem;
+            flex-grow: 2;
+            text-align: center;
+        }
+        .btn{
+            font-size: .75rem;
+            color: #666666;
+            margin: .1rem .6rem 0 0;
+        }
+    }
+    .content{
+        padding-right: 5%;
+        ul{
+            img{
+                width: .9rem;
+                height: .6rem;
+                float: right;
+                padding-right: .3rem;
+            }
+            .title{
+                color: #333333;
+                font-size: .9rem;
+                width: 17.85rem;
+                height: 1.35rem;
+                background-color: #E7E7E7;
+                text-align: left;
+                line-height: 1.35rem;
+                padding-left: .575rem;
+            }
+            .item{
+                font-size: .75rem;
+                border-bottom: .05rem solid #c2c2c2;
+                text-align: left;
+                padding: .9rem 0 .8rem 0;
+                margin-left: .65rem;
+            }
+            li:last-child{
+                border: 0 !important;
+            }
+            .selected{
+                color: #2fb3f1;
+            }
+        }   
+    }
+    .nav{
+        width: .6rem;
+        font-size: .6rem;
+        line-height: .9rem;
+        color: #2FB3F1;
+        position: absolute;
+        top: 23%;
+        right: 1%;
+    }
+}
 </style>
 

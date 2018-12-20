@@ -26,7 +26,60 @@ export default {
   }
 };
 </script>
-<style>
-@import "../../assets/css/mine/ChangeName.css";
+
+<style lang="less" scoped>
+.ChangeName{
+    .top{
+        position: relative;
+        margin-top: 1.25rem;
+        border-bottom: 1px solid #ECECEE;
+        .icon-fanhui{
+            position: absolute;
+            top: .15rem;
+            left: 1%;
+            font-size: 1.1rem;
+            color: #333333;
+        }
+        P{
+            font-size: .9rem;
+            color: #333333;
+            margin-bottom: .6rem;
+            text-align: center;
+        }
+    }
+    .main{
+        p{
+            color: #666666;
+            font-size: .6rem;
+            text-align: center;
+        }
+        .top_tip{
+            margin: .8rem 0 .7rem 0;
+        }
+        .input{
+            input{
+                box-shadow: inset 0 0 10px #CCC;
+                padding: .725rem 0 .625rem 3%;
+                width: 97%;
+            }
+            input::-webkit-input-placeholder{
+                color: #999999;
+                font-size: .7rem;
+            }
+        }
+        .btn{
+            width: 15.6rem;
+            height: 2rem;
+            border-radius: 1rem;
+            background-color: #2FB3F1;
+            color: #ffffff;
+            font-size: .8rem;
+            margin: 1.35rem auto .6rem auto;
+            line-height: 2rem;
+            text-align: center;
+        }
+    }
+}
 </style>
+
 
