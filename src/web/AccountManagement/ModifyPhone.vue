@@ -3,7 +3,7 @@
         <div class="white-bg">
             <div class="SearchLessonsDetails_head clearfix">
                 <div class="h36"></div>
-                <div class="Return"><a href="javascript:history.go(-1);"><img src="./../../assets/img/return.png"></a></div>
+                <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang修改2018-12-20 -->
                 <div class="column">修改手机号</div>
                 <div class="h20"></div>
             </div>
@@ -106,7 +106,18 @@ export default {
     .form-text{ text-align: left;}
     .csrq{ text-align: right; color:#666666; box-sizing: border-box; background: none;}
     .icon-tiem-right:before{ float: right; color: #666666; font-size: 1rem;}
-    .SearchLessonsDetails_head{ padding: 0 0.5rem; background: #fff;}
+    .SearchLessonsDetails_head{ 
+        padding: 0 0.5rem; 
+        background: #fff;
+        .Return{        //lihongliang 修改 2018-12-20
+            .icon-fanhui{
+                font-size: 1.1rem;
+                position: relative;
+                bottom: .13rem;
+                left: 0;
+            }
+        }
+    }
     .input-bnt{ text-align: center;}
     .GrayLine{ height: 1px; background: #C2C2C2; overflow: hidden; clear: both;}
     .modify_ts{ 
