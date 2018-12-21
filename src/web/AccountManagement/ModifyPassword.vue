@@ -1,5 +1,5 @@
 <template>
-    <div class="ModifyPassword">
+    <div class="ModifyPassword">    <!-- lihongliang 修改 2018-12-21 -->
         <div class="white-bg">
             <div class="SearchLessonsDetails_head clearfix">
                 <div class="h36"></div>
@@ -72,7 +72,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.ModifyPassword{
+.ModifyPassword{        //lihongliang 修改 2018-12-21
     background-color: #FFFFFF;
     width: 100%;
     height: 100%;

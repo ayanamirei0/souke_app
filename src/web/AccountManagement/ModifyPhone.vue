@@ -1,5 +1,5 @@
 <template>
-    <div class="ModifyPhone">
+    <div class="ModifyPhone">       <!-- lihongliang 修改 2018-12-21 -->
         <div class="white-bg">
             <div class="SearchLessonsDetails_head clearfix">
                 <div class="h36"></div>
@@ -97,13 +97,13 @@ export default {
               }
           }
           //this.$router.push({ path: '/ForgetPasswordResetPassword/'+ this.tel})
-          
+    
       }
   } 
 }
 </script>
 <style lang="less" scoped>
-.ModifyPhone{
+.ModifyPhone{       //lihongliang 修改 2018-12-21
     .form-text{ text-align: left;}
     .csrq{ text-align: right; color:#666666; box-sizing: border-box; background: none;}
     .icon-tiem-right:before{ float: right; color: #666666; font-size: 1rem;}
