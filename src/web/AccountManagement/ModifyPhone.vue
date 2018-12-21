@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="ModifyPhone">
         <div class="white-bg">
             <div class="SearchLessonsDetails_head clearfix">
                 <div class="h36"></div>
@@ -103,6 +103,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.ModifyPhone{
     .form-text{ text-align: left;}
     .csrq{ text-align: right; color:#666666; box-sizing: border-box; background: none;}
     .icon-tiem-right:before{ float: right; color: #666666; font-size: 1rem;}
@@ -125,8 +126,8 @@ export default {
         color:#666666;
         font-size: .65rem;
         a{ color: #347CEA;}
-        }
-
+    }
+}    
 </style>
 
 
