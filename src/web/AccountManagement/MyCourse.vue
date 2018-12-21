@@ -237,7 +237,7 @@ export default {
 .MyCourse_state1{ border:1px solid #F6302F; color: #F6302F; border-radius: 0.25rem;}
 .MyCourse_state2{ border:1px solid #2FB3F1; color: #2FB3F1; border-radius: 0.25rem;}
 .MyCourse_state3{ border:1px solid #1EA906; color: #1EA906; border-radius: 0.25rem;}
-.MyCourse_state4{ border:1px solid #666666; color: #666666; border-radius: 0.25rem;}
+.MyCourse_state4{ border:1px solid #999999; color: #666666; border-radius: 0.25rem;}
 
 
 </style>
