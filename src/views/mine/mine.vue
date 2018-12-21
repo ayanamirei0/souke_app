@@ -228,6 +228,7 @@ export default {
                         display: inline-block;
                         width: .9rem;
                         height: .9rem;
+                        line-height: .9rem;
                         border-radius: 50%;
                         background-color: #F74749;
                         color: #ffffff;

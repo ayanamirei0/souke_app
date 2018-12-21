@@ -924,11 +924,11 @@ export default {
 </script>
 <style>
 .van-modal,.van-popup--top{ top: 3.8rem;}
-.van-popup.subject_hr,.van-popup.grade,.van-popup.SeasonListBox,.van-popup.campusListBox{ width: 100%; top:3.8rem; left: 0; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); height:10.5rem;}
+.van-popup.subject_hr,.van-popup.grade,.van-popup.SeasonListBox,.van-popup.campusListBox{ width: 100%; top:3.8rem; left: 0; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); height:11rem;}
 .van-popup.subject_hr{ height:8.8rem;}
 .van-popup.campusListBox{ height:100%; border-top: 1px solid #C2C2C2;}
 .gradeTips{ background:#DCF4FF; line-height: 1.75rem; height: 1.75rem; width: 100%; text-align: center; font-size: .6rem; color: #2FB3F1;}
-.van-ellipsis{ font-size: .65rem; color: #333333; height: 2.2rem; text-align: center;}
+.van-ellipsis{ font-size: .75rem; color: #333333; height: 2.2rem; text-align: center;}
 .van-tree-select__nitem{ background: #E6E6E6;}
 .van-tree-select__nitem--active, .van-tree-select__nitem:active{ background: #fff;}
 .van-tree-select__item{ border-bottom: 1px solid #dadada; box-sizing: border-box;}
