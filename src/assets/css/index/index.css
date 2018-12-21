@@ -15,6 +15,9 @@
     color: #333333;
     margin-left: 1rem;
     font-weight: bold;
+    position: relative;
+    top: .1rem;
+    left: 0;
   }
   .head .city {
     font-family: "PingFang-SC-Regular";

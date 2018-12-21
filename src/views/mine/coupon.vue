@@ -7,7 +7,7 @@
 		</div>
 		<div class="content">
 			<van-tabs v-model="active" color="#2FB3F1">
-				<van-tab title="未使用">
+				<van-tab title="未使用" ref="title">
 					<div class="exchange">
 						<span>兑换优惠券</span>
                         <router-link to="/views/mine/exchange.vue" class="router">
@@ -180,7 +180,7 @@ export default {
             console.log(3);
             this.seen3 = !this.seen3;
         }
-	}
+    }
 };
 </script>
 
