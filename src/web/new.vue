@@ -51,10 +51,10 @@ export default {
   margin-top: 0.5rem;
   position: relative;
 }
-/* .newtime .new-imgbox {
+.newtime .new-imgbox {
   width: 2.2rem;
   height: 2.2rem;
-} */
+}
 .new-imgbox img {
   width: 100%;
   height: 100%;
@@ -93,16 +93,6 @@ export default {
   font-size: 0.6rem;
   margin: .1rem 0 0 .6rem;      /* lihongliang 修改 2018-12-20 */
 }
-
-</style>
-<style lang="less" scoped>
-.newtime {
-  .new-imgbox {
-    width: 2.2rem;
-    height: 2.2rem;
-  }
-}
-
 </style>
 
 

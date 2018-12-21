@@ -105,7 +105,7 @@ export default {
         p{
             font-size: .55rem;
             text-align: center;
-            margin-top: -.2rem
+            margin-top: -.3rem
         }
         .normal{
             color: #666666;

@@ -94,7 +94,7 @@ select option:first-child{color:#999999;}
   .searchLessons-content-pic{ width: 1.45rem; height: 1.45rem; border-radius: 50%; overflow: hidden;}
   .searchLessons-content-pic img{ width: 100%; height: 100%;}
   .searchLessons-content-name{ font-size: .65rem; color: #333; line-height: 1.45rem; margin-left: .4rem;}
-  .searchLessons-content-money{ color: #FA5118; font-size: .9rem; line-height: 1.45rem}
+  .searchLessons-content-money{ color: #FA5118; font-size: .9rem; line-height: 1.45rem;}
   .searchLessons-content-money em{ font-size: .65rem;}
   .icon-duigou::before{ float: right; font-size: 1rem;}
   .searchLessons-content-sm::before{ font-size: 1rem; color: #BABABA; float: left; position: absolute; left: 0;}

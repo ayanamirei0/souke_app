@@ -7,8 +7,8 @@
     <div class="h30"></div>    
     <div class="searchLessons-head-Column">
       <van-row>
-        <van-col span="8"><span :class=" {Label : subjectShow}"  @click="subject_Show">全部课程</span></van-col>
-        <van-col span="8"><i></i><span :class=" {Label : SeasonShow}" @click="Season_Show">全部季节</span></van-col>
+        <van-col span="8" style="padding-right: 1.2rem"><span :class=" {Label : subjectShow}"  @click="subject_Show">全部课程</span></van-col>
+        <van-col span="8" style="padding-right: .4rem"><i></i><span :class=" {Label : SeasonShow}" @click="Season_Show">全部季节</span></van-col>
         <van-col span="8"><i></i><span :class=" {Label : campusShow}" @click="campus_Show">全部校区</span></van-col>
       </van-row>
     </div>
@@ -42,7 +42,7 @@
         <div class="h20"></div>
         <div class="searchLessons-content-pic fl"><img :src="itme.TeacherPic"></div>
         <div class="searchLessons-content-name fl"><a :href="itme.TeacherUrl">{{itme.TeacherName}}</a></div>
-        <div class="searchLessons-content-money fr clearfix"><em>￥</em>{{itme.money}}</div>
+        <div class="searchLessons-content-money fr clearfix" style="font-weight:600"><em>￥</em>{{itme.money}}</div>
       </div>
     </div>
     <div class="h20"></div>
