@@ -44,7 +44,7 @@
                 <p class="pay">实付款</p>
                 <div class="sum">
                     <span class="yuan">￥</span>
-                    <span class="num">4100</span>
+                    <span class="num">4100.00</span>
                 </div>
             </div>
             <ul class="bottom">
@@ -228,9 +228,6 @@ export default {
                 font-size: .7rem;
             }
             .sum{
-                // position: absolute;
-                // bottom: 0;
-                // right: -1rem;
                 span{
                     color: #FA5118;   
                 }
