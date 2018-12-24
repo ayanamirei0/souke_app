@@ -40,10 +40,13 @@
                     <span>￥4100.00</span>
                 </li>
             </ul>
-            <p class="realPay">
-                <span class="pay">实付款</span>
-                <span class="money">￥4100.00</span>
-            </p>
+            <div class="realPay">
+                <p class="pay">实付款</p>
+                <div class="sum">
+                    <span class="yuan">￥</span>
+                    <span class="num">4100</span>
+                </div>
+            </div>
             <ul class="bottom">
                 <li>
                    商户订单号：SKWP201810115BBEFD5A2C9
@@ -222,11 +225,23 @@ export default {
             border-top: 1px solid #CDCDCD;
             .pay{
                 color: #333333;
-                font-size: .75rem;
+                font-size: .7rem;
             }
-            .money{
-                color: #FA5118;
-                font-size: .65rem;
+            .sum{
+                // position: absolute;
+                // bottom: 0;
+                // right: -1rem;
+                span{
+                    color: #FA5118;   
+                }
+                .yuan{
+                    font-size: .65rem;
+                }
+                .num{
+                    font-size: .7rem;
+                    margin-left: -.2rem;
+                    font-weight: 600;
+                }
             }
         }
         .bottom{
