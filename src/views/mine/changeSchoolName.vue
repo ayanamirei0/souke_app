@@ -117,7 +117,7 @@ export default {
             }
             .item{
                 font-size: .75rem;
-                border-bottom: .05rem solid #c2c2c2;
+                border-bottom: .05rem solid #ECECEE;
                 text-align: left;
                 padding: .9rem 0 .8rem 0;
                 margin-left: .65rem;

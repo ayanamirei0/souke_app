@@ -41,7 +41,7 @@ export default {
 .grade{
     .top{
         margin-top: 1.25rem;
-        border-bottom: 0.05rem solid #c2c2c2;
+        border-bottom: 0.05rem solid #ECECEE;
         display: flex; 
         .icon-fanhui{
             font-size: 1.1rem;
@@ -66,7 +66,7 @@ export default {
     .list{
         li{
             font-size: .75rem;
-            border-bottom: 0.05rem solid #c2c2c2;
+            border-bottom: 0.05rem solid #ECECEE;
             text-align: left;
             padding: .9rem 0 .8rem .65rem;
             img{
