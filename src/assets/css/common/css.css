@@ -82,7 +82,7 @@ select option:first-child{color:#999999;}
   .searchLessons-head-Column{ text-align: center;}
   .van-col,.searchLessons-head-Column span{ position: relative; font-size: .7rem; color: #333;}
   .searchLessons-head-Column i{ height: 1rem; width: 1px; position: absolute; top: 0; left: 0; background: #BABABA;}
-  .searchLessons-content-title{ color: #333333; font-size: .8rem; }
+  .searchLessons-content-title{ color: #333333; font-size: .8rem; font-weight: 600; }
   .searchLessons-content-bnt-xk{ width: 1.75rem; height: .9rem; float: left; background: #F5932A; color:#fff; font-size: .55rem; text-align: center; line-height: .9rem; border-radius: .125rem;}
   .searchLessons-content-bnt-qj{ background: #7BD1F9;}
   .marginright20{ margin-right: .5rem;}
