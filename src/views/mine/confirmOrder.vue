@@ -184,7 +184,7 @@ export default {
     overflow-y: auto;
     width: 100%;
     height: 100%;
-    background-color: #ECECED;
+    background-color: #f4f4f4;
     .top{
         text-align: center;
         background-color: #ffffff;

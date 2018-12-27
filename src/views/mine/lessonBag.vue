@@ -78,7 +78,7 @@ export default {
     overflow-y: auto;
     width: 100%;
     height: 100%;
-    background-color: #EFEFEF;
+    background-color: #f4f4f4;
     .top{
         padding: 1.25rem .5rem .6rem .65rem;
         background-color: #ffffff;

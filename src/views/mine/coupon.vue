@@ -183,7 +183,7 @@ export default {
 
 <style lang="less" scoped>
 .coupons {
-    background-color: #ECECED;
+    background-color: #f4f4f4;
     position: fixed;
     height: 100%;
     width: 100%;

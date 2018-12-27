@@ -106,7 +106,7 @@ export default {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    background-color: #ECECEE;
+    background-color: #f4f4f4;
     .head{
         position: relative;
         .top{

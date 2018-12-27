@@ -32,7 +32,7 @@ export default {
     .top{
         position: relative;
         margin-top: 1.25rem;
-        border-bottom: 1px solid #ECECEE;
+        border-bottom: 1px solid #f4f4f4;
         .icon-fanhui{
             position: absolute;
             top: .15rem;
