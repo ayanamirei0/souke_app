@@ -3,7 +3,7 @@
         <div class="head">
             <div class="top">
                 <span class="menu">我的</span>
-                <span class="mall">积分商城</span>
+                <span class="mall" @click="Toast()">积分商城</span>
             </div>
             <div class="headInfo">
                 <img src="../../assets/img/profile.png" alt="" class="img">
@@ -52,52 +52,53 @@
                     </div>
                 </router-link> 
             </div>
-            <div class="item">
+            <router-link to="/views/mine/coupon.vue" class="item">
                 <div class="coupon">
                     <img src="../../assets/img/coupons.png" alt="">
                     <span>优惠券</span>
                 </div>
-                <router-link to="/views/mine/coupon.vue" class="router">
-                    <i class="go iconfont icon-tiem-right"></i>
-                </router-link>
-            </div>
+                <i class="go iconfont icon-tiem-right"></i>
+            </router-link>
             <div class="middle">
-                <div class="myLesson">
+                <router-link to="/MyCourse" class="myLesson">
                     <div class="left">
                         <img src="../../assets/img/lesson.png" alt="">
                         <span>我的课程</span>
                     </div>
-                    <router-link to="/MyCourse">
-                        <i class="go iconfont icon-tiem-right"></i>
-                    </router-link>
-                </div>
-                <div class="offline">
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
+                <router-link to="/OfflineOrder" class="offline">
                     <div class="left">
                         <img src="../../assets/img/order.png" alt="">
                         <span>线下订单</span>
                     </div>
-                    <router-link to="/OfflineOrder">
-                        <i class="go iconfont icon-tiem-right"></i>
-                    </router-link>
-                </div>
+                    <i class="go iconfont icon-tiem-right"></i>
+                </router-link>
                 <div class="line"></div>
             </div>
-            <div class="set">
+            <router-link to="/AccountManagement" class="set">
                 <div class="left">
                     <img src="../../assets/img/set.png" alt="">
                     <span>帐号管理</span>
                 </div>
-                <router-link to="/AccountManagement">
-                    <i class="go iconfont icon-tiem-right"></i>
-                </router-link>   
-            </div>
+                <i class="go iconfont icon-tiem-right"></i>   
+            </router-link>
         </div>    
     </div>
 </template>
 
 <script>
 export default {
-    
+    data(){
+        return{
+            show_mall: false
+        }
+    },
+    methods: {
+        Toast() {
+            this.$toast("积分商城等待上线，敬请期待");
+        }
+    }
 }
 </script>
 
@@ -148,6 +149,7 @@ export default {
                 .tel{
                     color: #333333;
                     font-size: .8rem;
+                    font-family: 'PingFang-SC-Regular';
                 }
                 .account{
                     img{
