@@ -74,12 +74,12 @@ export default {
     height: 100%;
     background-color: #f4f4f4;
      .top{
-        padding: 1.25rem 0 .6rem 0;
+        padding: .65rem 0 .6rem 0;
         background-color: #ffffff;
         position: relative;
         .icon-fanhui{
             position: absolute;
-            top: 1.2rem;
+            top: .65rem;
             left: .8rem;
             font-size: 1.1rem;
             color: #333333;

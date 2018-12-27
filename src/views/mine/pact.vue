@@ -21,7 +21,7 @@ export default {
     .top{
         text-align: center;
         background-color: #ffffff;
-        padding: 1.25rem 0.5rem 0.6rem 0.3rem;
+        padding: .65rem 0.5rem 0.6rem 0.3rem;
         border-bottom: 2px solid #F8F8F8;
         .icon-fanhui{
             font-size: 1.1rem;

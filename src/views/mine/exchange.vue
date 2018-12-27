@@ -33,7 +33,7 @@ export default {
     .top{
         display: flex;
         background-color: #ffffff;
-        padding: 1.25rem 0 .65rem 0;
+        padding: .65rem 0 .6rem 0;
         .icon-fanhui{
            font-size: 1.1rem;
            color: #333333;

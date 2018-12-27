@@ -74,19 +74,18 @@ export default {
 .schoolName{
     position: relative;
     .top{
-        margin-top: 1.25rem;
+        padding: .65rem 0 .6rem 0;
         display: flex;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
             position: relative;
-            top: .1rem;
+            top: 0;
             left: .3rem;
         }
         .title{
             font-size: .9rem;
             color: #333333;
-            margin-bottom: .6rem;
             flex-grow: 2;
             text-align: center;
         }

@@ -31,11 +31,11 @@ export default {
 .ChangeName{
     .top{
         position: relative;
-        margin-top: 1.25rem;
+        padding: .65rem 0 .6rem;
         border-bottom: 1px solid #f4f4f4;
         .icon-fanhui{
             position: absolute;
-            top: .15rem;
+            top: .65rem;
             left: 1%;
             font-size: 1.1rem;
             color: #333333;
@@ -43,7 +43,6 @@ export default {
         P{
             font-size: .9rem;
             color: #333333;
-            margin-bottom: .6rem;
             text-align: center;
         }
     }

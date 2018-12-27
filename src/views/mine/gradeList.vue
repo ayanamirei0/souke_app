@@ -40,21 +40,20 @@ export default {
 <style lang="less" scoped>
 .grade{
     .top{
-        margin-top: 1.25rem;
+        padding: .65rem 0 .6rem 0;
         border-bottom: 0.05rem solid #ECECEE;
         display: flex; 
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
             position: relative;
-            top: .1rem;
+            top: 0;
             left: .3rem;
         }
         .title{
             text-align: center;
             font-size: .9rem;
             color: #333333;
-            margin-bottom: .6rem;
             flex-grow: 2;
         }
         .btn{
