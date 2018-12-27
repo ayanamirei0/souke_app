@@ -5,7 +5,7 @@
                 <span class="menu">我的</span>
                 <span class="mall" @click="Toast()">积分商城</span>
             </div>
-            <div class="headInfo">
+            <router-link to="/views/mine/personInfo.vue" class="headInfo">
                 <img src="../../assets/img/profile.png" alt="" class="img">
                 <div class="data">
                     <p class="tel">187****0721</p>
@@ -14,10 +14,8 @@
                         <span class="num">S18092700256</span>
                     </div>
                 </div>
-                <router-link to="/views/mine/personInfo.vue">
-                    <i class="go iconfont icon-tiem-right"></i>
-                </router-link>
-            </div>
+                <i class="go iconfont icon-tiem-right"></i>
+            </router-link>
             <!-- <div class="login">
                 <img src="../../assets/img/profile.png" alt="" class="img">
                 <p class="title">点击登录</p>
@@ -251,7 +249,7 @@ export default {
             height: 2.275rem;
             line-height: 2.275rem;
             img{
-                width: .85rem;
+                width: .95rem;
                 height: .9rem;
                 vertical-align: middle;
                 margin-left: .975rem;
@@ -259,6 +257,7 @@ export default {
             span{
                 color: #333333;
                 font-size: .75rem;
+                margin-left: .1rem;
             }
         }
         .middle{
@@ -271,14 +270,15 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 img{
-                    width: .85rem;
-                    height: .9rem;
+                    width: .95rem;
+                    height: .8rem;
                     vertical-align: middle;
                     margin-left: .975rem;
                 }
                 span{
                     color: #333333;
                     font-size: .75rem;
+                    margin-left: .1rem;
                 }
             }
             .offline{
@@ -288,13 +288,14 @@ export default {
                 justify-content: space-between;
                 img{
                     width: .85rem;
-                    height: .9rem;
+                    height: .85rem;
                     vertical-align: middle;
                     margin-left: .975rem;
                 }
                 span{
                     color: #333333;
                     font-size: .75rem;
+                    margin-left: .1rem;
                 }
             }
             .line{
@@ -314,14 +315,15 @@ export default {
             justify-content: space-between;
             background-color: #ffffff;
             img{
-                width: .85rem;
-                height: .9rem;
+                width: .9rem;
+                height: .85rem;
                 vertical-align: middle;
                 margin-left: .975rem;
             }
             span{
                 color: #333333;
                 font-size: .75rem;
+                margin-left: .1rem;
             }
         }
     }   

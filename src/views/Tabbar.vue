@@ -99,7 +99,8 @@ export default {
     background-color: #ffffff;
     display: flex;
     justify-content: space-around;
-    padding: .2rem 0 .2rem 0;
+    padding: .1rem 0 .1rem 0;
+    border-top: 2px solid #e5e5e5; 
     .item{
         width: 1.5rem;
         p{
