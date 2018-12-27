@@ -85,6 +85,7 @@
     margin-left: 0.55rem;
     font-family: 'PingFang-SC-Regular';
     font-size: .8rem;
+    color: #333333;
   }
   .hot_subject .content {
     margin-top: .6rem;
@@ -131,6 +132,7 @@
   font-size: .8rem;
   margin-left: .65rem;
   position: relative;
+  color: #333333;
 }
 .select_title ul li:first-child{
   margin-left: 1.1rem;

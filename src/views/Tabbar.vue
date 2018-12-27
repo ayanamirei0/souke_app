@@ -99,11 +99,11 @@ export default {
     background-color: #ffffff;
     display: flex;
     justify-content: space-around;
-    padding: .3rem 0 .25rem 0;
+    padding: .2rem 0 .2rem 0;
     .item{
         width: 1.5rem;
         p{
-            font-size: .55rem;
+            font-size: .5rem;
             text-align: center;
             margin-top: -.3rem
         }

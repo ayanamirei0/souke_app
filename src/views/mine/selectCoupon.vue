@@ -14,7 +14,7 @@
             </div>
             <div class="container" v-for="(item, index) in couponList">
                 <div class="coupon">
-                    <img src="../../assets/img/lace.png" alt="">
+                    <img src="../../assets/img/lace.jpg" alt="">
                     <div class="money">
                         <p>￥<span class="num">10</span></p>
                         <p class="text">无金额门槛</p>
@@ -127,8 +127,8 @@ export default {
             .coupon {
                 display: flex;
                 img {
-                    width: .3rem;
-                    height: 4.9rem;
+                    width: 4.75rem;
+                    height: 4.925rem;
                 }
                 .money {
                     background: linear-gradient(#49c9ee, #1c95ff);
