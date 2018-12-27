@@ -29,7 +29,7 @@ export default {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #f4f4f4;
+    background-color: @common_bg_color;
     .top{
         display: flex;
         background-color: #ffffff;

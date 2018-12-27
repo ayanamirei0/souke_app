@@ -112,7 +112,7 @@ export default {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #f4f4f4;
+    background-color: @common_bg_color;
     .top{
         padding: .65rem .5rem .6rem .65rem;
         background-color: #ffffff;

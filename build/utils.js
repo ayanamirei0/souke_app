@@ -29,6 +29,29 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  function lessResourceLoader() {       //定义less全局变量
+    var loaders = [
+        cssLoader,
+        'less-loader',
+        {
+            loader: 'sass-resources-loader',
+            options: {
+                resources: [
+                    path.resolve(__dirname, '../src/assets/common.less'),    //路劲更改为自己对应的公共less文件
+                ]
+            }
+        }
+    ];
+    if (options.extract) {
+        return ExtractTextPlugin.extract({
+            use: loaders,
+            fallback: 'vue-style-loader'
+        })
+    } else {
+        return ['vue-style-loader'].concat(loaders)
+    }
+}
+
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
@@ -58,7 +81,7 @@ exports.cssLoaders = function (options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less'),
+    less: lessResourceLoader(),     //      return{} 块中的 less: generateLoaders('less') 替换成上面自定义的函数 less: lessResourceLoader()
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),

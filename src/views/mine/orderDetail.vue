@@ -101,7 +101,7 @@ export default {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    background-color: #f4f4f4;
+    background-color: @common_bg_color;
     .top{
         padding: .65rem 0 .6rem 0;
         background-color: #ffffff;
