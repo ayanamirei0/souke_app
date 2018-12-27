@@ -41,14 +41,14 @@
 							<div class="info">
 								<p class="title">巨人学员优惠</p>
 								<p class="text">2018.04.11至2018.12.11<span class="btn">立即使用</span></p>
-								<p class="text detail" v-show="seen1">
+								<p class="text detail" v-show="seen2">
                                     <span class="line"></span>
                                     <span class="tip">详细信息</span>
                                     <span class="nabla_d" @click="onShow2()"></span>
                                 </p>
 							</div>
 						</div>
-						<p class="detail_info" v-show="!seen1"><span class="line"></span>不可与其他优惠活动同时享受，限指定校区，指定课程使用 <span class="nabla_t" @click="onShow2()"></span></p>
+						<p class="detail_info" v-show="!seen2"><span class="line"></span>不可与其他优惠活动同时享受，限指定校区，指定课程使用 <span class="nabla_t" @click="onShow2()"></span></p>
 					</div>
                     <div class="container">
 						<div class="coupon">
@@ -59,14 +59,14 @@
 							<div class="info">
 								<p class="title">巨人学员优惠</p>
 								<p class="text">2018.04.11至2018.12.11<span class="btn">立即使用</span></p>
-								<p class="text detail" v-show="seen1">
+								<p class="text detail" v-show="seen3">
                                     <span class="line"></span>
                                     <span class="tip">详细信息</span>
                                     <span class="nabla_d" @click="onShow3()"></span>
                                 </p>
 							</div>
 						</div>
-						<p class="detail_info" v-show="!seen1"><span class="line"></span>不可与其他优惠活动同时享受，限指定校区，指定课程使用 <span class="nabla_t" @click="onShow3()"></span></p>
+						<p class="detail_info" v-show="!seen3"><span class="line"></span>不可与其他优惠活动同时享受，限指定校区，指定课程使用 <span class="nabla_t" @click="onShow3()"></span></p>
 					</div>
 				</van-tab>
 				<van-tab title="已使用">
