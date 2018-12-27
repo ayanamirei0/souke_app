@@ -189,9 +189,8 @@ export default {
     width: 100%;
     overflow-y: auto;
 	.top {
-		position: relative;
-        padding-top: 0.625rem;
-        padding-bottom: .6rem;
+        position: relative;
+        padding: .65rem 0 .6rem 0;
         background-color: #ffffff;
         text-align: center;
 		.icon-fanhui {

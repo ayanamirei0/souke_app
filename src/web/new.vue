@@ -1,38 +1,39 @@
 <template>
 <div class="searchLessons-box">
-  <div class="margin_20">
-    <div class="newtime flex-box b_white" onclick="doyoo.util.openChat('g=10078688');return false;">
-      <div class="new-imgbox">
-        <img src="/static/Customer.png">
-      </div>
-
-      <div class="flex">
-        <div class="userinfo newtime-top">
-          <p>巨人在线客服</p>
-          <p class="newtime-top-right">9-28</p>
+    <p class="title_top">   <!-- lihongliang 添加 2018-12-27 -->
+        消息
+    </p>       
+    <div class="margin_20">
+        <div class="newtime flex-box b_white" onclick="doyoo.util.openChat('g=10078688');return false;">
+            <div class="new-imgbox">
+                <img src="/static/Customer.png">
+            </div>
+            <div class="flex">
+                <div class="userinfo newtime-top">
+                    <p>巨人在线客服</p>
+                    <p class="newtime-top-right">9-28</p>
+                </div>
+                <div class="userinfo newtime-bottom">
+                    <p>你好，我是值班客服李老师，请问你有...</p>
+                    <p class="newtime-bottom-right">1</p>
+                </div>
+            </div>
         </div>
-        <div class="userinfo newtime-bottom">
-          <p>你好，我是值班客服李老师，请问你有...</p>
-          <p class="newtime-bottom-right">1</p>
+        <div class="newtime flex-box b_white" @click="gosystem">
+            <div class="new-imgbox">
+                <img src="/static/system.png">
+            </div>
+            <div class="flex">
+                <div class="userinfo newtime-top">
+                    <p>系统消息</p>
+                    <p class="newtime-top-right">10:26</p>
+                </div>
+                <div class="userinfo newtime-bottom">
+                    <p>王钦同学，您已成功购买课程E概念英语作...</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="newtime flex-box b_white" @click="gosystem">
-      <div class="new-imgbox">
-        <img src="/static/system.png">
-      </div>
-
-      <div class="flex">
-        <div class="userinfo newtime-top">
-          <p>系统消息</p>
-          <p class="newtime-top-right">10:26</p>
-        </div>
-        <div class="userinfo newtime-bottom">
-          <p>王钦同学，您已成功购买课程E概念英语作...</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 </template>
 <script>
@@ -45,6 +46,14 @@ export default {
 };
 </script>
 <style >
+.searchLessons-box .title_top{      /* lihongliang 添加 2018-12-27 */
+    color: #333333;
+    font-size: .9rem;
+    background-color: #ffffff;
+    font-weight: 600;
+    padding: .625rem 0 .6rem 1rem;
+}
+
 .newtime {
   padding: 0.55rem;
   border-radius: 10px;
