@@ -102,12 +102,15 @@
   .hot_subject .content .list li:first-child{
       margin-left: .4rem;
   }
+  .hot_subject .content .list li:last-child{
+    margin-right: .4rem;
+}
   .hot_subject .content .list .item{
     display: inline-block;
     width: 6.175rem;
     height: 4.55rem;
     list-style: none;
-    margin-left: .15rem;
+    margin-left: .1rem;
   }
   .hot_subject .content .list .item img{
     width: 6.15rem;
