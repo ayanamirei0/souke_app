@@ -19,7 +19,7 @@
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
                         <div class="sum">
                             <span class="yuan">￥</span>
-                            <span class="num">4100</span>
+                            <span class="num">4100.00</span>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
                         <div class="sum">
                             <span class="yuan">￥</span>
-                            <span class="num">4100</span>
+                            <span class="num">4100.00</span>
                         </div>
                     </div>
                 </div>

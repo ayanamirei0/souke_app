@@ -17,25 +17,27 @@
                     <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
                     <div class="sum">
                         <span class="yuan">￥</span>
-                        <span class="num">4100</span>
+                        <span class="num">4100.00</span>
                     </div>
                 </div>
             </div>
             <ul class="list">
                 <li>
-                    <span class="left">使用优惠券</span>
-                    <div class="right">
-                        <span>-￥50.00</span>
-                        <router-link to="/views/mine/selectCoupon.vue">
-                            <i class="go iconfont icon-tiem-right"></i>
-                        </router-link>    
-                    </div>
+                    <router-link to="/views/mine/selectCoupon.vue" class="item">
+                        <span class="left">使用优惠券</span>
+                        <div class="right">
+                            <span>-￥50.00</span>
+                            <i class="go iconfont icon-tiem-right"></i>    
+                        </div>
+                    </router-link>
                 </li>
                 <li>
-                    <span class="left">优惠活动</span>
-                    <div class="right" @click="changePopup">
-                        <span>-￥550.00</span>
-                        <i class="go iconfont icon-tiem-right"></i>
+                    <div class="item" @click="changePopup">
+                        <span class="left">优惠活动</span>
+                        <div class="right">
+                            <span>-￥550.00</span>
+                            <i class="go iconfont icon-tiem-right"></i>
+                        </div>
                     </div>
                     <van-popup v-model="popup_show" position="bottom" class="offer_detail">
                         <ul>
@@ -54,10 +56,12 @@
                     </van-popup>
                 </li>
                 <li>
-                    <span class="left">选择教材</span>
-                    <div class="selected" @click="changeBook">
-                        <span>已选择</span>
-                        <i class="go iconfont icon-tiem-right"></i>
+                    <div class="item" @click="changeBook">
+                        <span class="left">选择教材</span>
+                        <div class="selected"  >
+                            <span>已选择</span>
+                            <i class="go iconfont icon-tiem-right"></i>
+                        </div>
                     </div>
                     <van-popup v-model="showBook" position="bottom" class="textBook">
                         <p class="title">教材详情</p>
@@ -123,7 +127,7 @@
         <div class="bottom_fill"></div>
         <div class="bottom_tab">
             <p>
-                <span class="total">实付款:</span><span class="price">￥8200</span>
+                <span class="total">实付款:</span><span class="price">￥8200.00</span>
             </p>
             <p>
                 <span class="select_lesson">继续选课</span>
@@ -271,9 +275,20 @@ export default {
                 height: 2.25rem;
                 line-height: 2.25rem;
                 position: relative;
-                display: flex;
-                justify-content: space-between;
                 border-top: 1px solid #C1C1C1;
+                .item{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .selected{
+                        position: relative;
+                        .go{
+                            position: absolute;
+                            top: 0.13rem;
+                            right: 0.48rem;
+                        }
+                    }
+                }
                 i{
                     position: absolute;
                     top: .07rem;
@@ -393,6 +408,7 @@ export default {
             color: #333333;
             font-size: .75rem;
             padding: .575rem 0 .325rem .525rem;
+            font-weight: 500;
         }
         ul{
             li{
@@ -412,6 +428,8 @@ export default {
         p{
             border-bottom: 1px solid #CDCDCD;
             padding: .5rem 0 .55rem .525rem;
+            font-size: .75rem;
+            font-weight: 500;
         }
         .detail{
             display: flex;

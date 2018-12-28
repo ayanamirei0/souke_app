@@ -2,15 +2,15 @@
     <div class="ChangeName">
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
-            <p>修改学院信息</p>
+            <p>修改学员信息</p>
         </div>
         <div class="main">
             <p class="top_tip">为了让老师更好的了解你，请输入真是姓名</p>
             <div class="input">
-                <input type="text" placeholder="请输入学院姓名">
+                <input type="text" placeholder="请输入学员姓名">
             </div>
             <p class="btn">提交</p>
-            <p>注意：学院姓名一个月只可修改一次</p>
+            <p>注意：学员姓名一个月只可修改一次</p>
         </div>
     </div>
 </template>

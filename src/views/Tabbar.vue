@@ -28,7 +28,7 @@ export default {
 					imgActive: require("../assets/img/search_.png")
 				},
 				{
-					text: "信息",
+					text: "消息",
 					page: "/News",
                     name: "News",
 					img: require("../assets/img/msg.png"),

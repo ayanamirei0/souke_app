@@ -316,7 +316,7 @@ export default {
             justify-content: space-between;
             background-color: #ffffff;
             img{
-                width: .9rem;
+                width: .95rem;
                 height: .85rem;
                 vertical-align: middle;
                 margin-left: .975rem;
