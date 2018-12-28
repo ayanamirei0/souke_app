@@ -89,17 +89,31 @@
   }
   .hot_subject .content {
     margin-top: .6rem;
-    display: flex;
-    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 4.55rem;
   }
-  .hot_subject .content .img {
-    margin-left: 0.4rem;
+  .hot_subject .content .list{
+    width: 100%;
+    height: 4.85rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
   }
-  .hot_subject .content .img img {
+  .hot_subject .content .list li:first-child{
+      margin-left: .4rem;
+  }
+  .hot_subject .content .list .item{
+    display: inline-block;
+    width: 6.175rem;
+    height: 4.55rem;
+    list-style: none;
+    margin-left: .15rem;
+  }
+  .hot_subject .content .list .item img{
     width: 6.15rem;
     height: 3.4rem;
   }
-  .hot_subject .content .img p {
+  .hot_subject .content .list .item p {
     font-size: .65rem;
     color: #333333;
     font-family: 'PingFang-SC-Regular';

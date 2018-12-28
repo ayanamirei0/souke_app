@@ -94,18 +94,38 @@
                 <span class="text">热门课程</span>
             </div>
             <div class="content">
-                <router-link to="SearchLessons" class="img">
-                    <img src="../assets/img/ffb.png" alt="">
-                    <p>思维训练启智非凡班</p>
-                </router-link>
-                <router-link to="SearchLessons" class="img">
-                    <img src="../assets/img/zyb.png" alt="">
-                    <p>思维训练启思卓越班</p>
-                </router-link>
-                <router-link to="SearchLessons" class="img">
-                    <img src="../assets/img/jrjy.png" alt="">
-                    <p>巨人作文卓越班</p>
-                </router-link>  
+                <ul class="list">
+                    <li class="item">
+                        <router-link to="SearchLessons">
+                            <img src="../assets/img/ffb.png" alt="">
+                            <p>思维训练启智非凡班</p>
+                        </router-link>
+                    </li>
+                    <li class="item">
+                        <router-link to="SearchLessons">
+                            <img src="../assets/img/zyb.png" alt="">
+                            <p>思维训练启思卓越班</p>
+                        </router-link>
+                    </li>
+                    <li class="item">
+                        <router-link to="SearchLessons">
+                            <img src="../assets/img/jrjy.png" alt="">
+                            <p>巨人作文卓越班</p>
+                        </router-link>
+                    </li>
+                    <li class="item">
+                        <router-link to="SearchLessons">
+                            <img src="../assets/img/ffb.png" alt="">
+                            <p>思维训练启智非凡班</p>
+                        </router-link>
+                    </li>
+                    <li class="item">
+                        <router-link to="SearchLessons">
+                            <img src="../assets/img/ffb.png" alt="">
+                            <p>思维训练启智非凡班</p>
+                        </router-link>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="line_y"></div>
