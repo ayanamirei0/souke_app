@@ -118,11 +118,12 @@ export default {
             justify-content: space-between;
             .menu{
                 font-size: .9rem;
-                margin: .725rem 0 0 .975rem;
+                font-weight: bold;
+                margin: .75rem 0 .6rem 1rem;
             }
             .mall{
                 font-size: .75rem;
-                margin: .875rem .525rem 0 0; 
+                margin: .875rem .55rem 0 0; 
             }
         }
         .headInfo{

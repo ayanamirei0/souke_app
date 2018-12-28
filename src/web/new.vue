@@ -51,7 +51,7 @@ export default {
     font-size: .9rem;
     background-color: #ffffff;
     font-weight: 600;
-    padding: .625rem 0 .6rem 1rem;
+    padding: .75rem 0 .6rem 1rem;
 }
 
 .newtime {
