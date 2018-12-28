@@ -122,7 +122,7 @@
             <span class="check" @click="check">
                 <img src="../../assets/img/tick.png" alt="" v-show="show">
             </span>
-            <span class="text">我已阅读并同意<router-link to="/views/mine/pact.vue" :class="show?'rule':''">《营销协议》</router-link></span>   
+            <span class="text">我已阅读并同意<router-link to="/views/mine/pact.vue" class="rule">《营销协议》</router-link></span>   
         </div>
         <div class="bottom_fill"></div>
         <div class="bottom_tab">
@@ -130,7 +130,7 @@
                 <span class="total">实付款:</span><span class="price">￥8200.00</span>
             </p>
             <p>
-                <span class="select_lesson">继续选课</span>
+                <router-link to="" class="select_lesson">继续选课</router-link>
                 <router-link to="/views/mine/paySuccess.vue">
                     <span class="pay">立即支付</span>
                 </router-link>
@@ -323,10 +323,6 @@ export default {
                                 color: #ffffff;
                             }   
                         }
-                        .title{
-                            position: relative;
-                            left: 40%;
-                        }
                         .list{
                             span{
                                 padding-left: .525rem;
@@ -434,6 +430,7 @@ export default {
         .detail{
             display: flex;
             justify-content: space-between;
+            padding: .1rem 0 .1rem 0;
             .wx{
                 img{
                     width: 1.55rem;
@@ -458,6 +455,7 @@ export default {
         margin-top: .5rem;
         padding: .475rem 0 .5rem .6rem;
         position: relative;
+        border-bottom: 1px solid #CDCDCD;
         .check{
             display: inline-block;
             width: .55rem;
@@ -486,7 +484,6 @@ export default {
     .bottom_fill{
         width: 100%;
         height: 2.375rem;
-        margin-top: .2rem; 
     }
     .bottom_tab{
         display: flex;
@@ -527,6 +524,7 @@ export default {
             font-size: .8rem;
             text-align: center;
             letter-spacing: .05rem;
+            font-weight: 600;
         }
     }
 }
