@@ -53,7 +53,7 @@
                 <span class="num">8200</span>
             </p>
             <p>
-                <span class="select_lesson">继续选课</span>
+                <router-link to="/SearchLessons" class="select_lesson">继续选课</router-link>
                 <router-link to="/views/mine/confirmOrder.vue">
                     <span class="pay">去结算(2)</span>
                 </router-link>

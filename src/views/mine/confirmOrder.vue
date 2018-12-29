@@ -130,7 +130,7 @@
                 <span class="total">实付款:</span><span class="price">￥8200.00</span>
             </p>
             <p>
-                <router-link to="" class="select_lesson">继续选课</router-link>
+                <router-link class="select_lesson" to="/SearchLessons">继续选课</router-link>
                 <router-link to="/views/mine/paySuccess.vue">
                     <span class="pay">立即支付</span>
                 </router-link>
@@ -177,6 +177,9 @@ export default {
         closePopup() {
             this.popup_show = false;
             this.showBook = false;
+        },
+        goSearch() {
+            this.$router.push('/SearchLessons')
         }
     }
 }
