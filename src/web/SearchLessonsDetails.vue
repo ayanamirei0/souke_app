@@ -72,6 +72,7 @@
 
 <script>
 import Vue from 'vue';
+import Cookies from 'js-cookie'
 import { Row, Col,Toast , TreeSelect , Popup , Switch } from 'vant';
 Vue.use(Row).use(Col).use(Toast).use(TreeSelect).use(Popup).use(Switch);
 export default {
@@ -80,7 +81,8 @@ export default {
         content:'',
     }
   },
-  mounted(){
+  mounted(){  
+  
     this.content={
         ShoppingVolume:'1',
         title:'初一数学启思·卓越班',

@@ -18,7 +18,7 @@
                         <div class="h20"></div>
                         <div class="input_text ico2 clearfix">
                             <input type="tel" v-model="code" name="" class="Code" placeholder="请输入验证码">
-                            <div class="ObtainCode"><button type="button" @click="CountDown">获取验证码</button></div>
+                            <div class="ObtainCode"><button type="button" @click="CountDown" :class=" {on : ObtainCodeShow}">获取验证码</button></div>
                         </div>
                         <div class="h50"></div>
                         <div class="input-bnt"><button type="submit">确认修改</button></div>
@@ -41,6 +41,7 @@ export default {
         show: false,
         tel:'',
         code:'',
+        ObtainCodeShow:false,
     }
     },
     mounted(){
@@ -70,10 +71,12 @@ export default {
                     window.clearInterval(this.timer);
                     this.timer = null;
                     el.target.disabled = '';
+                    this.ObtainCodeShow=false;
                 }else{                    
                     --time;
                     el.target.innerHTML = '等待'+time+'s';
                     el.target.disabled = ' disabled';
+                    this.ObtainCodeShow=true;
                 }
             },1000);
         },
@@ -97,13 +100,17 @@ export default {
               }
           }
           //this.$router.push({ path: '/ForgetPasswordResetPassword/'+ this.tel})
-    
+          
       }
   } 
 }
 </script>
 <style lang="less" scoped>
 .ModifyPhone{       //lihongliang 修改 2018-12-21
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
     .form-text{ text-align: left;}
     .csrq{ text-align: right; color:#666666; box-sizing: border-box; background: none;}
     .icon-tiem-right:before{ float: right; color: #666666; font-size: 1rem;}
@@ -127,7 +134,7 @@ export default {
         font-size: .65rem;
         a{ color: #347CEA;}
     }
-}    
+}
 </style>
 
 

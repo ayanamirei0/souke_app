@@ -23,12 +23,12 @@
         </div>
         <div class="subject">
             <div class="top_subject">
-                <div class="yxkc square middle">
+                <router-link to="/SearchLessons" class="yxkc square middle">
                     <div class="img">
                         <img src="../assets/img/yxkc.png" alt="">
                     </div>
                     <p class="title">优选课程</p>
-                </div>
+                </router-link>
                 <div class="cn square middle">
                     <div class="img">
                         <img src="../assets/img/chinese.png" alt="">

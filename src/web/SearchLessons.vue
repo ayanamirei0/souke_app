@@ -1,5 +1,6 @@
 <template>
 <div class="searchLessons-box">
+  <div class="searchLessons-head-h160"></div>
   <div class="searchLessons-head">
     <router-link to="Search" class="searchLessons-head-search iconfont icon-sousuo"></router-link>
     <div class="searchLessons-head-center"><span :class=" {Label : gradeShow}"  @click="grade_show">初一年级</span></div>
@@ -14,11 +15,11 @@
     </div>
   </div>
   <div class="h20"></div>
-
+<van-list  v-model="loading"  :finished="finished"  finished-text="已经到底了~"  @load="onLoad">
   <div v-for="itme in content">
     <div class="searchLessons-content">
       <div class="clearfix">
-        <div class="searchLessons-content-title fl"><router-link :to='itme.url'>{{itme.title}}</router-link></div>
+        <div class="searchLessons-content-title fl"><router-link :to='"SearchLessonsDetails/"+itme.id'>{{itme.title}}</router-link></div>
         <div class="fr clearfix">
           <div class="searchLessons-content-bnt-xk searchLessons-content-bnt-qj marginright20">{{itme.ContinuationClass}}</div>
           <div class="searchLessons-content-bnt-xk">{{itme.type}}</div>
@@ -47,7 +48,7 @@
     </div>
     <div class="h20"></div>
   </div>
-
+</van-list>
 
 
 
@@ -149,7 +150,11 @@
 </template>
 
 <script>
+
+
+
 import Vue from 'vue';
+import Cookies from 'js-cookie'
 import { Row, Col,Toast , TreeSelect , Popup , Switch , List  } from 'vant';
 Vue.use(Row).use(Col).use(Toast).use(TreeSelect).use(Popup).use(Switch).use(List);
 export default {
@@ -166,93 +171,7 @@ export default {
       checkedShowFullClass: true,
       checkedHiddenCampus: true,
       // 年级筛选数据
-      items: [
-              {
-                text: '幼儿',               
-                children: [
-                  {
-                    text: '初一年级',
-                    id: 1001
-                  },
-                  {
-                    text: '初二年级',
-                    id: 1002
-                  },
-                  {
-                    text: '初三年级',
-                    id: 1003
-                  },
-                  {
-                    text: '全部初中',
-                    id: 1004
-                  }
-                ]
-              },
-               {
-                text: '小学',               
-                children: [
-                  {
-                    text: '初一年级',
-                    id: 1005
-                  },
-                  {
-                    text: '初二年级',
-                    id: 1006
-                  },
-                  {
-                    text: '初三年级',
-                    id: 1007
-                  },
-                  {
-                    text: '全部初中',
-                    id: 1008
-                  }
-                ]
-              },
-               {
-                text: '初中',               
-                children: [
-                  {
-                    text: '初一年级',
-                    id: 1009
-                  },
-                  {
-                    text: '初二年级',
-                    id: 1010
-                  },
-                  {
-                    text: '初三年级',
-                    id: 1011
-                  },
-                  {
-                    text: '全部初中',
-                    id: 1012
-                  }
-                ]
-              }
-              ,
-               {
-                text: '高中',               
-                children: [
-                  {
-                    text: '高一年级',
-                    id: 1013
-                  },
-                  {
-                    text: '高二年级',
-                    id: 1014
-                  },
-                  {
-                    text: '高三年级',
-                    id: 1015
-                  },
-                  {
-                    text: '全部高中',
-                    id: 1016
-                  }
-                ]
-              }
-            ],
+      items: [],
       mainActiveIndex: 0,
       activeId: 1001,
       // 学科筛选数据
@@ -711,89 +630,106 @@ export default {
 
       // 页面默认加载数据
       content:[],
-
+      loading: false,
+      finished: false
 
     }
   },
-  mounted(){    
+
+  mounted(){
+
+//Cookies.set('CardNo', '2', {expires: 7});//cookie保存7天
+//get
+// let CardNo = Cookies.get("CardNo");
+// console.log(CardNo)
+var windowTop = 0; //初始话可视区域距离页面顶端的距离
+    $('.searchLessons-box').scroll(function() {
+        var scrolls = $(this).scrollTop(); //获取当前可视区域距离页面顶端的距离
+
+        if(scrolls <= 0) { // 处理回弹
+            return
+        } else {
+            if(scrolls >= windowTop) {
+                windowTop = scrolls;
+                $(".tabberWarp").css({"bottom": "-100%"}) /*隐藏  第一部分 导航*/
+               // $(".footer_height").hide()
+            } else {
+                windowTop = scrolls;
+                $(".tabberWarp").css({"bottom": "0px"}) /*显示  第一部分 导航*/
+                //$(".footer_height").show()
+            }
+        } 
+        // console.log($(document).height() )
+        // if ($('.index').scrollTop() + $('.index').height() == $(document).height()) {
+            
+        // }
+
+
+    });
+
     $(".searchLessons-head").height();
     var campusListBox_height = $(document).height()-$(".searchLessons-head").height()-$(".searchLessons-head ~ .h20").height()*2.5;
     this.campusListBox_height=campusListBox_height; 
     this.height=$(".subject_hr").height();
-    this.content=[
-      {
-        title:'初一数学启思·卓越班',
-        url:'SearchLessonsDetails/15',
-        ClassNumber:'1800511776',
-        ClassTime:'周六上午09:00-10:30',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        OpeningHours:'2018/05/05-2018/11/17',
-        ContinuationClass:'续课',
-        type:'秋季',
-        ClassType:'增开',
-        TeacherPic:'./static/pic1.jpg',
-        TeacherName:'李向阳',
-        TeacherUrl:'https://www.juren.com',
-        money:'4100',
 
-      },
-      {
-        title:'初一数学启思·卓越班',        
-        url:'SearchLessonsDetails/16',
-        ClassNumber:'1800511776',
-        ClassTime:'周六上午09:00-10:30',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        OpeningHours:'2018/05/05-2018/11/17',
-        ContinuationClass:'续课',
-        type:'秋季',
-        ClassType:'增开',
-        TeacherPic:'./static/pic1.jpg',
-        TeacherName:'李向阳',
-        TeacherUrl:'https://www.juren.com',
-        money:'4200',
 
-      },
-      {
-        title:'初一数学启思·卓越班',        
-        url:'SearchLessonsDetails/16',
-        ClassNumber:'1800511776',
-        ClassTime:'周六上午09:00-10:30',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        OpeningHours:'2018/05/05-2018/11/17',
-        ContinuationClass:'续课',
-        type:'秋季',
-        ClassType:'增开',
-        TeacherPic:'./static/pic1.jpg',
-        TeacherName:'李向阳',
-        TeacherUrl:'https://www.juren.com',
-        money:'4200',
 
-      },
-      {
-        title:'初一数学启思·卓越班',        
-        url:'SearchLessonsDetails/16',
-        ClassNumber:'1800511776',
-        ClassTime:'周六上午09:00-10:30',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        OpeningHours:'2018/05/05-2018/11/17',
-        ContinuationClass:'续课',
-        type:'秋季',
-        ClassType:'增开',
-        TeacherPic:'./static/pic1.jpg',
-        TeacherName:'李向阳',
-        TeacherUrl:'https://www.juren.com',
-        money:'4200',
+// 数据列表
+        this.$axios.get('/user')
+        .then((res)=>{
+          //console.log(res.data.data)
+          this.content = res.data.data
+        })
+        .catch((err)=>{
+          console.log('调用失败',err)
+        })
+    
 
-      }
-      ];
+
+  //年级选择
+      this.$axios.get('/items')
+      .then((res)=>{
+        //console.log(res.data.data)
+        this.items = res.data.data
+      })
+      .catch((err)=>{
+        console.log('调用失败',err)
+      })
        
   }, 
   methods:{
-   
+   onLoad() {
+      // 异步更新数据
+    //   setTimeout(() => {
+    //     for (let i = 0; i < 10; i++) {
+    //       this.content.push();
+    //     }
+    //     // 加载状态结束
+    //     this.loading = false;
+
+    //     // 数据全部加载完成
+    //     if (this.content.length >= 40) {
+    //       this.finished = true;
+    //     }
+    //   }, 500);
+
+      this.$axios.get('/user')
+        .then((res)=>{
+          //console.log(res.data.data)
+          for (let i = 0; i < res.data.data.length; i++) {
+          this.content.push(res.data.data[i])
+           }
+          console.log(this.content.length)
+        })
+        .catch((err)=>{
+          console.log('调用失败',err)
+        })
+      this.loading = false;
+      if (this.content.length >= 10) {
+           this.finished = true;
+        }
+     
+    },
     grade_show(){
       this.gradeShow=!this.gradeShow;      
       this.subjectShow = false ;
@@ -838,15 +774,17 @@ export default {
       this.activeId = data.id;
       this.gradeShow=!this.gradeShow;
       // 点击右侧执行请求
-      //   this.$http.post('http://localhost:8088',{
-      //       a:"a"
-      //   }).then(response => {
-
-      //     console.log(response.data);
-
-      //     }, response => {
-      //             console.log("error"); 
-      //     });
+      this.$axios({
+          method: 'post',
+          url:'/user',
+          params: {
+              mainActiveIndex:this.mainActiveIndex,
+              activeId:this.activeId
+          }
+      }).then((res)=>{
+          //console.log(res.data.data)
+          this.content = res.data.data
+      })
     },
 
     // 学科筛选
@@ -857,12 +795,37 @@ export default {
       this.subjectActiveId = data.id;
       this.subjectShow=!this.subjectShow;
       // 点击右侧执行请求
+
+      this.$axios({
+          method: 'post',
+          url:'/user',
+          params: {
+              subjectMainActiveIndex:this.subjectActiveId,
+              subjectActiveId:this.subjectActiveId
+          }
+      }).then((res)=>{
+          console.log(res.data.data)
+          this.content = res.data.data
+      })
+      
     },
 
     //季节筛选
     SeasonId(index,SeasonText){
     this.SeasonActiveId = index;
     this.SeasonShow=!this.SeasonShow;
+
+    this.$axios({
+          method: 'post',
+          url:'/user',
+          params: {
+              SeasonActiveId:this.SeasonActiveId
+          }
+      }).then((res)=>{
+          console.log(res.data.data)
+          this.content = res.data.data
+      })
+
     },
 
 
@@ -874,6 +837,19 @@ export default {
       this.campusActiveId = data.id;
       this.campusShow=!this.campusShow;
       // 点击右侧执行请求
+      this.$axios({
+          method: 'post',
+          url:'/user',
+          params: {
+              campusMainActiveIndex:this.campusMainActiveIndex,
+              campusActiveId:this.campusActiveId
+          }
+      }).then((res)=>{
+          console.log(res.data.data)
+          this.content = res.data.data
+      })
+
+
     },
     //更多筛选
     moreClick(id){
@@ -892,18 +868,20 @@ export default {
     // 更多筛选完成
     complete(){
       this.MoreShow=!this.MoreShow;
-      //   this.$http.post('http://localhost:8088',{
-      //       moreActiveId:"this.moreActiveId",
-      //       checkedShowFullClass:"this.checkedShowFullClass",
-      //       checkedHiddenCampus:"this.checkedHiddenCampus",
-      //       ClassTypetext:"this.ClassTypetext"
-      //   }).then(response => {
 
-      //     console.log(response.data);
-
-      //     }, response => {
-      //             console.log("error"); 
-      //     });
+      this.$axios({
+          method: 'post',
+          url:'/user',
+          params: {
+              ClassTypetext:this.ClassTypetext,
+              moreActiveId:this.moreActiveId,
+              checkedShowFullClass:this.checkedShowFullClass,
+              checkedHiddenCampus:this.checkedHiddenCampus,
+          }
+      }).then((res)=>{
+          console.log(res.data.data)
+          this.content = res.data.data
+      })
 
     },
 
@@ -922,13 +900,13 @@ export default {
   }
 }
 </script>
-<style>
+<style scope>
 .van-modal,.van-popup--top{ top: 3.8rem;}
-.van-popup.subject_hr,.van-popup.grade,.van-popup.SeasonListBox,.van-popup.campusListBox{ width: 100%; top:3.8rem; left: 0; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); height:11rem;}
+.van-popup.subject_hr,.van-popup.grade,.van-popup.SeasonListBox,.van-popup.campusListBox{ width: 100%; top:3.8rem; left: 0; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0);}
 .van-popup.subject_hr{ height:8.8rem;}
 .van-popup.campusListBox{ height:100%; border-top: 1px solid #C2C2C2;}
 .gradeTips{ background:#DCF4FF; line-height: 1.75rem; height: 1.75rem; width: 100%; text-align: center; font-size: .6rem; color: #2FB3F1;}
-.van-ellipsis{ font-size: .75rem; color: #333333; height: 2.2rem; text-align: center;}
+.van-ellipsis{ font-size: .7rem; height: 2.2rem; text-align: center;}
 .van-tree-select__nitem{ background: #E6E6E6;}
 .van-tree-select__nitem--active, .van-tree-select__nitem:active{ background: #fff;}
 .van-tree-select__item{ border-bottom: 1px solid #dadada; box-sizing: border-box;}
@@ -937,7 +915,7 @@ export default {
 .van-tree-select__item--active i{ display: none;}
 .van-tree-select__item--active, .van-tree-select__item:active{color: #2FB3F1;}
 .subject_hr{ border-top: 1px solid #C2C2C2;}
-.SeasonList{ height: 2.2rem; box-sizing: border-box; text-align: center; line-height: 2.2rem; color: #333333;  font-size: .7rem; border-bottom: 1px solid #DADADA;}
+.SeasonList{ height: 2.2rem; box-sizing: border-box; text-align: center; line-height: 2.2rem; color: #333333;  font-size:.7rem; border-bottom: 1px solid #DADADA;}
 .SeasonListBox{border-top: 1px solid #C2C2C2; height: 11rem;}
 .SeasonList--active{ color: #2FB3F1;}
 .van-tree-select__nav{ background: #E6E6E6; height: 100%;}
@@ -949,4 +927,7 @@ export default {
     top: .15rem;
     right: .3rem;
 }
+
+
+
 </style>

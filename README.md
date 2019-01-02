@@ -1,4 +1,4 @@
-# souke_vue
+# souke
 
 > A Vue.js project
 

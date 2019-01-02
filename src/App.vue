@@ -30,6 +30,4 @@ export default {
 <style>
 @import "./assets/css/common/goole.css";
 @import "./assets/css/common/css.css";
-
-
 </style>

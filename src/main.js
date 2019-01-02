@@ -5,11 +5,14 @@ import Vant from 'vant'
 import  './assets/js/rem'
 import App from './App'
 import router from './router'
+import axios from './axios'
+import  './mock/mock.js'
 
 
 import 'vant/lib/index.css'
 import './assets/css/index.css'
 import { Swipe, SwipeItem, Toast, Popup, DatetimePicker, Uploader, Picker, Tab, Tabs } from 'vant'
+
 
 
 Vue.use(Vant);
@@ -29,9 +32,20 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
+  axios,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  
 })
+//Cookies.set('CardNo', '1', {expires: 7});//cookie保存7天
+//get
+//let CardNo = Cookies.get("CardNo");
+//console.log(CardNo)
+//remove
+// Cookies.remove('HMcart');
+
+
+    
 $(function () {
   var unSelected = "#999999";
   var selected = "#333";
@@ -48,3 +62,5 @@ $(function () {
       });
   })
 })
+
+    

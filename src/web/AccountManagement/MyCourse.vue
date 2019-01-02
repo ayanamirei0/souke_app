@@ -12,7 +12,8 @@
       <div class="clearfix">
         <div class="searchLessons-content-title fl">
             <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{time.type}}</div>
-            {{time.title}}
+            <router-link :to='"SearchLessonsDetails/"+time.id' v-if="time.state_text=='未结课' || time.state_text=='未开班'">{{time.title}}</router-link>
+            <em v-else-if="time.state_text=='已停班' || time.state_text=='已结课'">{{time.title}}</em>
         </div>
       </div>
       <div class="h20"></div>
@@ -23,82 +24,22 @@
       <div class="h20"></div>
       <div class="clearfix searchLessons-content-bottom-top">
         <div class="h20"></div>
-        <div class="MyCourse_zc fl" :class="time.MyCourse_state==1 ? 'MyCourse_Stop' : time.MyCourse_state==4 ? 'MyCourse_end' :''">
-            <i class="iconfont icon-tanhao" v-show="time.MyCourse_state==1"></i>
-            <i class="iconfont icon-xuanze" v-show="time.MyCourse_state==4"></i>
+        <div class="MyCourse_zc fl" :class="time.state_text=='已停班' ? 'MyCourse_Stop' : time.state_text=='已结课' ? 'MyCourse_end' :''">
+            <i class="iconfont icon-tanhao" v-show="time.state_text=='已停班'"></i>
+            <i class="iconfont icon-xuanze" v-show="time.state_text=='已结课'"></i>  
             {{time.Explain}}
         </div>
-        <div class="MyCourse_yc fr" :class=" time.MyCourse_state==1 ? 'MyCourse_state1' : time.MyCourse_state==2 ? 'MyCourse_state2' : time.MyCourse_state==3 ? 'MyCourse_state3': time.MyCourse_state==4 ? 'MyCourse_state4' : ''">{{time.state_text}}</div>
+        <div class="MyCourse_yc fr" :class=" time.state_text=='已停班' ? 'MyCourse_state1' : time.state_text=='未结课' ? 'MyCourse_state2' : time.state_text=='未开班' ? 'MyCourse_state3': time.state_text=='已结课' ? 'MyCourse_state4' : ''">
+           <router-link :to='"SearchLessonsDetails/"+time.id' v-if="time.state_text=='未结课' || time.state_text=='未开班'">{{time.state_text}}</router-link>
+            <em v-else-if="time.state_text=='已停班' || time.state_text=='已结课'">{{time.state_text}}</em>
+          
+          </div>
       </div>
     </div>    
     <div class="h20"></div>
   </div>
 </van-list>
-  <!-- <div>
-    <div class="searchLessons-content">
-      <div class="clearfix">
-        <div class="searchLessons-content-title fl">
-            <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{content.type}}</div>
-            {{content.title}}
-        </div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix">
-        <div class="searchLessons-content-sm iconfont icon-xuesheng">{{content.ClassNumber}}</div>
-        <div class="searchLessons-content-sm iconfont icon-dingwei"><a :href="content.addressUrl">{{content.address}}</a></div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix searchLessons-content-bottom-top">
-        <div class="h20"></div>
-        <div class="MyCourse_zc fl">第6课：5月5日 周六上午09:00-10:30</div>
-        <div class="MyCourse_yc fr MyCourse_state2">未结课</div>
-      </div>
-    </div>
-  </div>
-  <div class="h20"></div>
-  <div>
-    <div class="searchLessons-content">
-      <div class="clearfix">
-        <div class="searchLessons-content-title fl">
-            <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{content.type}}</div>
-            {{content.title}}
-        </div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix">
-        <div class="searchLessons-content-sm iconfont icon-xuesheng">{{content.ClassNumber}}</div>
-        <div class="searchLessons-content-sm iconfont icon-dingwei"><a :href="content.addressUrl">{{content.address}}</a></div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix searchLessons-content-bottom-top">
-        <div class="h20"></div>
-        <div class="MyCourse_zc fl">第1课：12月28日 周六上午09:00-10:30</div>
-        <div class="MyCourse_yc fr MyCourse_state3">未开班</div>
-      </div>
-    </div>
-  </div>
-  <div class="h20"></div>
-  <div>
-    <div class="searchLessons-content">
-      <div class="clearfix">
-        <div class="searchLessons-content-title fl">
-            <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{content.type}}</div>
-            {{content.title}}
-        </div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix">
-        <div class="searchLessons-content-sm iconfont icon-xuesheng">{{content.ClassNumber}}</div>
-        <div class="searchLessons-content-sm iconfont icon-dingwei"><a :href="content.addressUrl">{{content.address}}</a></div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix searchLessons-content-bottom-top">
-        <div class="h20"></div>
-        <div class="MyCourse_zc fl MyCourse_end"><i class="iconfont icon-xuanze"></i>课程学习结束</div>
-        <div class="MyCourse_yc fr MyCourse_state4">已结课</div>
-      </div>
-    </div>
-  </div> -->
+  
 
 </div>
 </template>
@@ -106,6 +47,7 @@
 <script>
 import Vue from 'vue';
 import { List } from 'vant';
+
 Vue.use(List);
 const loadNumUp = 5;
 export default {
@@ -119,51 +61,62 @@ export default {
     }
   },
   mounted(){
-    this.content=[{
-        title:'初一数学启思·卓越班',
-        url:'SearchLessonsDetails/15',
-        ClassNumber:'1800511776',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        type:'秋季', 
-        Explain:'请联系所在校区线下转班', 
-        state_text:'已停班',     
-        MyCourse_state:1,
-      },
-      {
-        title:'初一数学启思·卓越班2',
-        url:'SearchLessonsDetails/15',
-        ClassNumber:'1800511776',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        type:'秋季',   
-        Explain:'第6课：5月5日 周六上午09:00-10:30',
-        state_text:'未结课',    
-        MyCourse_state:2,
-      },
-      {
-        title:'初一数学启思·卓越班3',
-        url:'SearchLessonsDetails/15',
-        ClassNumber:'1800511776',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        type:'秋季', 
-        Explain:'第1课：12月28日 周六上午09:00-10:30',  
-        state_text:'未开班',      
-        MyCourse_state:3,
-      },
-      {
-        title:'初一数学启思·卓越班4',
-        url:'SearchLessonsDetails/15',
-        ClassNumber:'1800511776',
-        address:'东城区广渠门鼎新',
-        addressUrl:'https://www.juren.com',
-        type:'秋季',    
-        Explain:'课程学习结束',
-        state_text:'已结课', 
-        MyCourse_state:4,
-      }
-      ]
+// 数据列表
+        this.$axios.get('/MyCourse')
+        .then((res)=>{
+          console.log(res.data.data)
+          this.content = res.data.data
+        })
+        .catch((err)=>{
+          console.log('调用失败',err)
+        })
+
+
+    // this.content=[{
+    //     title:'初一数学启思·卓越班',
+    //     url:'SearchLessonsDetails/15',
+    //     ClassNumber:'1800511776',
+    //     address:'东城区广渠门鼎新',
+    //     addressUrl:'https://www.juren.com',
+    //     type:'秋季', 
+    //     Explain:'请联系所在校区线下转班', 
+    //     state_text:'已停班',     
+    //     MyCourse_state:1,
+    //   },
+    //   {
+    //     title:'初一数学启思·卓越班2',
+    //     url:'SearchLessonsDetails/15',
+    //     ClassNumber:'1800511776',
+    //     address:'东城区广渠门鼎新',
+    //     addressUrl:'https://www.juren.com',
+    //     type:'秋季',   
+    //     Explain:'第6课：5月5日 周六上午09:00-10:30',
+    //     state_text:'未结课',    
+    //     MyCourse_state:2,
+    //   },
+    //   {
+    //     title:'初一数学启思·卓越班3',
+    //     url:'SearchLessonsDetails/15',
+    //     ClassNumber:'1800511776',
+    //     address:'东城区广渠门鼎新',
+    //     addressUrl:'https://www.juren.com',
+    //     type:'秋季', 
+    //     Explain:'第1课：12月28日 周六上午09:00-10:30',  
+    //     state_text:'未开班',      
+    //     MyCourse_state:3,
+    //   },
+    //   {
+    //     title:'初一数学启思·卓越班4',
+    //     url:'SearchLessonsDetails/15',
+    //     ClassNumber:'1800511776',
+    //     address:'东城区广渠门鼎新',
+    //     addressUrl:'https://www.juren.com',
+    //     type:'秋季',    
+    //     Explain:'课程学习结束',
+    //     state_text:'已结课', 
+    //     MyCourse_state:4,
+    //   }
+    //   ]
   }, 
   methods:{
      onLoad() {
@@ -180,30 +133,32 @@ export default {
     //       this.finished = true;
     //     }
     //   }, 500);
-     this.content.push(
-          {
-                title:'初一数学启思·卓越班4',
-                url:'SearchLessonsDetails/15',
-                ClassNumber:'1800511776',
-                address:'东城区广渠门鼎新',
-                addressUrl:'https://www.juren.com',
-                type:'秋季',    
-                Explain:'课程学习结束',
-                state_text:'已结课1', 
-                MyCourse_state:4,
-            },
-            {
-                title:'初一数学启思·卓越班4',
-                url:'SearchLessonsDetails/15',
-                ClassNumber:'1800511776',
-                address:'东城区广渠门鼎新',
-                addressUrl:'https://www.juren.com',
-                type:'秋季',    
-                Explain:'课程学习结束',
-                state_text:'已结课2', 
-                MyCourse_state:4,
-            },
-     );
+
+
+    //  this.content.push(
+    //       {
+    //             title:'初一数学启思·卓越班4',
+    //             url:'SearchLessonsDetails/15',
+    //             ClassNumber:'1800511776',
+    //             address:'东城区广渠门鼎新',
+    //             addressUrl:'https://www.juren.com',
+    //             type:'秋季',    
+    //             Explain:'课程学习结束',
+    //             state_text:'已结课1', 
+    //             MyCourse_state:4,
+    //         },
+    //         {
+    //             title:'初一数学启思·卓越班4',
+    //             url:'SearchLessonsDetails/15',
+    //             ClassNumber:'1800511776',
+    //             address:'东城区广渠门鼎新',
+    //             addressUrl:'https://www.juren.com',
+    //             type:'秋季',    
+    //             Explain:'课程学习结束',
+    //             state_text:'已结课2', 
+    //             MyCourse_state:4,
+    //         },
+    //  );
     this.loading = false;
       if (this.content.length >= 6) {
            this.finished = true;
@@ -234,12 +189,24 @@ export default {
 .MyCourse_Stop i{ font-size: 0.8rem; float: left; margin-right: 0.25rem;}
 
 .MyCourse_end i{ font-size: 0.8rem; float: left; margin-right: 0.25rem; color: #999999;}
-.MyCourse_state1{ border:1px solid #F6302F; color: #F6302F; border-radius: 0.25rem;}
-.MyCourse_state2{ border:1px solid #2FB3F1; color: #2FB3F1; border-radius: 0.25rem;}
-.MyCourse_state3{ border:1px solid #1EA906; color: #1EA906; border-radius: 0.25rem;}
-.MyCourse_state4{ border:1px solid #999999; color: #666666; border-radius: 0.25rem;}
+.MyCourse_state1{ 
+  border:1px solid #F6302F; color: #F6302F; border-radius: 0.25rem;
+  a{color: #F6302F;}
+}
+.MyCourse_state2{ 
+  border:1px solid #2FB3F1; color: #2FB3F1; border-radius: 0.25rem;
+  a{color: #2FB3F1;}
+}
+.MyCourse_state3{ 
+  border:1px solid #1EA906; color: #1EA906; border-radius: 0.25rem;
+  a{color: #1EA906;}
+}
+.MyCourse_state4{ 
+  border:1px solid #999999; color: #666666; border-radius: 0.25rem;
+  a{color: #666666;}
+}
+
 .searchLessons-content .clearfix .searchLessons-content-sm a{
     color: #333333;
 }
-
 </style>
