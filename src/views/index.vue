@@ -9,15 +9,15 @@
         <div class="banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" ></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png"></a></div>
+                    <!-- <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" style="opacity: 1;"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" style="opacity: 1;"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" style="opacity: 1;"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" style="opacity: 1;"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" style="opacity: 1;"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="../assets/img/banner.png" style="opacity: 1;"></a></div> -->
                 </div>
             </div>
         </div>
@@ -384,6 +384,7 @@ export default {
             autoplayDisableOnInteraction : false,       //点击后打断auto-play
             loop:true,
             centeredSlides : true,      //设定为true时，活动块会居中，而不是默认状态下的居左。
+            loopAdditionalSlides: 100,      //解决swiper中同时开启loop和centeredSlides后,轮播到最后一张出现空白的问题
             slidesPerView:'1.1',
             // pagination : '.swiper-pagination',       //pagination分页器
             // paginationClickable:true,

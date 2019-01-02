@@ -35,9 +35,9 @@ export default {
         background-color: #ffffff;
         padding: .65rem 0 .6rem 0;
         .icon-fanhui{
-           font-size: 1.1rem;
-           color: #333333;
-           position: relative;
+            font-size: 1.1rem;
+            color: #333333;
+            position: relative;
             top: .1rem;
             left: .3rem;
         }
@@ -62,14 +62,14 @@ export default {
             text-align: left;
         }
         .btn{
-            width: 17.75rem;
+            width: 15.6rem;
             height: 2rem;
             border-radius: 40px;
             background-color: #2FB3F1;
             color: #ffffff;
             font-size: .8rem;
             line-height: 2rem;
-            margin: 1.55rem 0 0 .5rem;
+            margin: 1.55rem 0 0 1.6rem;
             text-align: center;
         }
     }
