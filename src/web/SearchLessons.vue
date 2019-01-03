@@ -35,7 +35,10 @@
       <div class="clearfix">
         <div class="searchLessons-content-time fl">{{itme.OpeningHours}}</div>
         <div class="fr clearfix">
-          <div class="searchLessons-content-bnt-zk">{{itme.ClassType}}</div>
+          <div class="searchLessons-content-bnt-zk" v-if="itme.ClassType == '增开'">{{itme.ClassType}}</div>
+          <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-rb" v-else-if="itme.ClassType == '热报'">{{itme.ClassType}}</div>
+          <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-mb" v-else-if="itme.ClassType == '满班'">{{itme.ClassType}}</div>
+          <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-other" v-else>{{itme.ClassType}}</div>
         </div>
       </div>
       <div class="h20"></div>
@@ -927,7 +930,17 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
     top: .15rem;
     right: .3rem;
 }
-
-
+.searchLessons-content-bnt-rb{
+    color: #ed5604;
+    border: 1px solid #ed5604; 
+}
+.searchLessons-content-bnt-mb{
+    color: #b0b0b0;
+    border: 1px solid #b0b0b0;
+}
+.searchLessons-content-bnt-other{
+    color: #0de482;
+    border: 1px solid #0de482;
+}
 
 </style>

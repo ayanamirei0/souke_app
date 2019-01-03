@@ -4,7 +4,7 @@
     <div class="search-head">
         <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang 修改 2018-12-20 -->
         <div>
-            <van-search  v-model="value"  placeholder="请输入课程名称或班级编号"  show-action  @search="onSearch" background="#fff">
+            <van-search  v-model="value"  placeholder="请输入课程名称或班级编号"  show-action  @search="onSearch" background="#fff" class="input">
                 <div slot="action" @click="onSearch" class="search-bnt-size" :class="value!='' ? 'search-bnt-color' : ''">搜索</div>
             </van-search>
         </div>
@@ -75,8 +75,11 @@ export default {
 .search-head-history-list{ padding: 0.5rem 0.5rem 0.5rem 0;}
 .search-head-history-list span{ float: left; display: block; height: 1.35rem; text-align: center; line-height: 1.35rem; border-radius: .125rem; background: #EFEFEF; color:#333333; font-size: .7rem; padding: 0 .5rem; margin-left: .5rem;}
 .search-head-history-tips{ padding: 2.5rem 0 0 0; text-align: center; font-size: .7rem; color: #999;}
-.search-bnt-size{ font-size: .7rem;}
-.search-head-history-list{
-    a{ color: #333;}
+.search-bnt-size{ font-size: .75rem;}
+.search-head-history-list{      /* lihongliang 修改 2018-1-2*/
+    a{ 
+        color: #666666;
+        font-size: .7rem;
+    }
 }
 </style>
