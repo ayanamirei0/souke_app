@@ -64,7 +64,7 @@
             </div>
         </van-popup>
         <!-- 弹出层_性别选择 -->
-        <van-popup v-model="show_sex" :overlay="true" class="choose_sex">
+        <!-- <van-popup v-model="show_sex" :overlay="true" class="choose_sex">
             <p class="sex">请选择您的性别</p>
             <div class="img">
                 <div @click="selectSex()">
@@ -80,6 +80,10 @@
                 <p class="line">取消</p>
                 <p>确定</p>
             </div>
+        </van-popup> -->
+
+        <van-popup v-model="show_sex" position="bottom" :overlay="true">
+            <van-picker show-toolbar :columns="sex_arr" @cancel="onCancel" @confirm="onConfirm"/>
         </van-popup>
         <!-- 弹出层_生日选择 -->
         <van-popup v-model="show_date" position="bottom" :overlay="true" class="choose_date">
@@ -108,8 +112,7 @@ export default {
       show_school: false,
 
       minDate: new Date(1990,0,1),
-      
-      currentDate: '',
+      currentDate: new Date(2001,0,1),
       time: '1994-03-28',
 
       schoolArea: '北京市海淀区',
@@ -123,7 +126,8 @@ export default {
             className: 'cloumn2',
             defaultIndex: 2
         }
-      ]
+      ],
+      sex_arr: ['男', '女']
     };
   },
   methods: {
@@ -133,10 +137,10 @@ export default {
     changeSex() {
       this.show_sex = true;
     },
-    selectSex() {
-      this.show_man = !this.show_man;
-      this.show_woman = !this.show_woman;
-    },
+    // selectSex() {
+    //   this.show_man = !this.show_man;
+    //   this.show_woman = !this.show_woman;
+    // },
     chooseDate() {
         this.show_date = true;
     },
@@ -168,6 +172,12 @@ export default {
         }
         this.time = year + "-" + month + "-" + day;
         this.show_date = false;
+    },
+    onConfirm(value, index) {  //性别选择确定按钮
+      console.log(`当前值：${value}, 当前索引：${index}`);
+    },
+    onCancel() {       //性别选择取消按钮
+      console.log('取消');
     }
   }
 };

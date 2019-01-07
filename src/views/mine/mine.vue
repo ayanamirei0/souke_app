@@ -128,7 +128,7 @@ export default {
         }
         .headInfo{
             position: absolute;
-            top: 52%;
+            top: 53%;
             left: 3%;
             width: 17.65rem;
             height: 4.275rem;

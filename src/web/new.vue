@@ -51,7 +51,7 @@ export default {
   }
 };
 </script>
-<style >
+<style scoped>
 .searchLessons-box .title_top{      /* lihongliang 添加 2018-12-27 */
     color: #333333;
     font-size: .9rem;
@@ -61,7 +61,7 @@ export default {
 
 .newtime {
   padding: 0.55rem;
-  border-radius: 10px;
+  border-radius: 16px;
   position: relative;
   margin-bottom: .5rem;
 }
