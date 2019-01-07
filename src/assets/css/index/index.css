@@ -113,6 +113,7 @@
   .hot_subject .content .list .item img{
     width: 6.15rem;
     height: 3.4rem;
+    border-radius: .35rem;
   }
   .hot_subject .content .list .item p {
     font-size: .65rem;

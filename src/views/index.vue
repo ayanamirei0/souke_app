@@ -97,31 +97,31 @@
                 <ul class="list">
                     <li class="item">
                         <router-link to="SearchLessons">
-                            <img src="../assets/img/ffb.png" alt="">
+                            <img src="../assets/img/ffb.jpg" alt="">
                             <p>思维训练启智非凡班</p>
                         </router-link>
                     </li>
                     <li class="item">
                         <router-link to="SearchLessons">
-                            <img src="../assets/img/zyb.png" alt="">
+                            <img src="../assets/img/zyb.jpg" alt="">
                             <p>思维训练启思卓越班</p>
                         </router-link>
                     </li>
                     <li class="item">
                         <router-link to="SearchLessons">
-                            <img src="../assets/img/jrjy.png" alt="">
+                            <img src="../assets/img/jrjy.jpg" alt="">
                             <p>巨人作文卓越班</p>
                         </router-link>
                     </li>
                     <li class="item">
                         <router-link to="SearchLessons">
-                            <img src="../assets/img/ffb.png" alt="">
+                            <img src="../assets/img/childEng.jpg" alt="">
                             <p>思维训练启智非凡班</p>
                         </router-link>
                     </li>
                     <li class="item">
                         <router-link to="SearchLessons">
-                            <img src="../assets/img/ffb.png" alt="">
+                            <img src="../assets/img/ffb.jpg" alt="">
                             <p>思维训练启智非凡班</p>
                         </router-link>
                     </li>

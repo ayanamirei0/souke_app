@@ -16,7 +16,7 @@
   </div>
   <div class="h20"></div>
 <van-list  v-model="loading"  :finished="finished"  finished-text="已经到底了~"  @load="onLoad">
-  <div v-for="itme in content">
+  <div class="searchLessons_item" v-for="itme in content">
     <div class="searchLessons-content">
       <div class="clearfix">
         <div class="searchLessons-content-title fl"><router-link :to='"SearchLessonsDetails/"+itme.id'>{{itme.title}}</router-link></div>
@@ -944,5 +944,8 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
 }
 .searchLessons-content{
     border-radius: 10px;
+}
+.searchLessons_item{
+    padding: 0 .2rem;
 }
 </style>

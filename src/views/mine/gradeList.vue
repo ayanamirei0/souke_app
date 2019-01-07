@@ -3,7 +3,7 @@
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span class="title">修改年级</span>
-            <span class="btn">保存</span>
+            <span class="btn" @click="$router.go(-1)">保存</span>
         </div>
         <ul class="list">
             <li v-for="(item, index) in list" @click="addClass(index)" :class="{selected: index == current}">
@@ -58,7 +58,7 @@ export default {
         }
         .btn{
             font-size: .75rem;
-            color: #666666;
+            color: #2fb3f1;
             margin: .1rem .6rem 0 0;
         }
     }
