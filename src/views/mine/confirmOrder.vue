@@ -146,7 +146,7 @@ export default {
             show: false,
             popup_show: false,
             selectedNum: '',
-            radioList: ['两科连报优惠九八折', '两科连报优惠九八折', '两科连报优惠九八折', '两科连报优惠九八折'],
+            radioList: ['两科连报优惠九八折', '两科连报优惠九八折', '两科连报优惠九八折', '两科连报优惠九八折', '不使用'],
             showBook: false,
             checkBox: [],
             bookNum: ['1180300000201', '1180300000203']
@@ -318,6 +318,7 @@ export default {
                             line-height: 2.25rem;
                             .title{
                                 text-align: center;
+                                font-size: .8rem;
                             }
                             .confirm{
                                 text-align: center;
@@ -329,6 +330,7 @@ export default {
                         .list{
                             span{
                                 padding-left: .525rem;
+                                font-size: .75rem;
                             }
                             img{
                                 width: 1.05rem;
