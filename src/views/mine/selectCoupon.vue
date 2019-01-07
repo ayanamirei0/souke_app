@@ -2,7 +2,7 @@
 	<div class="selectCoupon">
         <div class="top">
 			<i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
-			<span class="title">优惠券</span>
+			<span class="title">使用优惠券</span>
 			<span class="btn">优惠规则</span>
 		</div>
         <div class="content">
@@ -15,7 +15,10 @@
             <div class="container" v-for="(item, index) in couponList">
                 <div class="coupon">
                     <div class="money">
-                        <p>￥<span class="num">10</span></p>
+                        <p>
+                            <span class="yuan">￥</span>
+                            <span class="num">10</span>
+                        </p>
                         <p class="text">无金额门槛</p>
                     </div>
                     <div class="info">
@@ -143,6 +146,9 @@ export default {
                         font-size: .75rem;
                         .num {
                             font-size: 1.6rem;
+                            position: relative;
+                            top: 0;
+                            left: -.2rem;
                         }
                     }
                     .text {
