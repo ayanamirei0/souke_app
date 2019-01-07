@@ -41,7 +41,7 @@ export default {
             color: #333333;
         }
         P{
-            font-size: .9rem;
+            font-size: .8rem;
             color: #333333;
             text-align: center;
         }

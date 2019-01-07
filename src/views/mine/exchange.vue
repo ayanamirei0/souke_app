@@ -49,8 +49,8 @@ export default {
         }
     }
     .content{
+        margin-top: .1rem;
         .input{
-            margin-top: .5rem;
             padding-left: .5rem;
             display: inline-block;
             width: 18.75rem;

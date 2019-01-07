@@ -2,7 +2,7 @@
     <div class="paySuccess">
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
-            <span>支付成功</span>
+            <span class="title">支付成功</span>
         </div>
         <div class="container">
             <div class="tip">
@@ -66,6 +66,9 @@ export default {
             position: relative;
             top: 0;
             right: 6rem;
+        }
+        .title{
+            font-size: .8rem;
         }
     }
     .container{

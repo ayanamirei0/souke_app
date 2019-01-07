@@ -2,7 +2,7 @@
     <div class="order">
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
-            <span>确认订单</span>
+            <span class="title">确认订单</span>
         </div>
         <div class="confirm_order">
             <div class="content">
@@ -202,6 +202,9 @@ export default {
             position: relative;
             top: 0;
             right: 6rem;
+        }
+        .title{
+            font-size: .8rem;
         }
     }
     .confirm_order{

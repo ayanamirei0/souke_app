@@ -84,7 +84,7 @@ export default {
             left: .3rem;
         }
         .title{
-            font-size: .9rem;
+            font-size: .8rem;
             color: #333333;
             flex-grow: 2;
             text-align: center;

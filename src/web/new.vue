@@ -55,7 +55,6 @@ export default {
 .searchLessons-box .title_top{      /* lihongliang 添加 2018-12-27 */
     color: #333333;
     font-size: .9rem;
-    background-color: #ffffff;
     font-weight: 600;
     padding: .75rem 0 .6rem 1rem;
 }
@@ -63,8 +62,8 @@ export default {
 .newtime {
   padding: 0.55rem;
   border-radius: 10px;
-  margin-top: 0.5rem;
   position: relative;
+  margin-bottom: .5rem;
 }
 .newtime .new-imgbox {
   width: 2.2rem;
