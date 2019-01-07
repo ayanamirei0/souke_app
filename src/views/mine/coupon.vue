@@ -17,7 +17,10 @@
 					<div class="container">
 						<div class="coupon">
 							<div class="money">
-								<p>￥<span class="num">10</span></p>
+								<p>
+                                    <span class="yuan">￥</span>
+                                    <span class="num">10</span>
+                                </p>
 								<p class="text">无金额门槛</p>
 							</div>
 							<div class="info">
@@ -53,7 +56,10 @@
                     <div class="container">
 						<div class="coupon">
 							<div class="money">
-								<p>￥<span class="num">10</span></p>
+								<p>
+                                    <span class="yuan">￥</span>
+                                    <span class="num">10</span>
+                                </p>
 								<p class="text">无金额门槛</p>
 							</div>
 							<div class="info">
@@ -73,7 +79,10 @@
 					<div class="used">
 						<img src="../../assets/img/grayLine.png" alt="">
 						<div class="money">
-							<p>￥<span class="num">10</span></p>
+							<p>
+                                <span class="yuan">￥</span>
+                                <span class="num">10</span>
+                            </p>
 							<p class="text">无金额门槛</p>
 						</div>
 						<div class="info">
@@ -89,7 +98,10 @@
 					<div class="used">
 						<img src="../../assets/img/grayLine.png" alt="">
 						<div class="money">
-							<p>￥<span class="num">10</span></p>
+							<p>
+                                <span class="yuan">￥</span>
+                                <span class="num">10</span>
+                            </p>
 							<p class="text">无金额门槛</p>
 						</div>
 						<div class="info">
@@ -101,7 +113,10 @@
 					<div class="used">
 						<img src="../../assets/img/grayLine.png" alt="">
 						<div class="money">
-							<p>￥<span class="num">10</span></p>
+							<p>
+                                <span class="yuan">￥</span>
+                                <span class="num">10</span>
+                            </p>
 							<p class="text">无金额门槛</p>
 						</div>
 						<div class="info">
@@ -115,7 +130,10 @@
 					<div class="coupon used">
 						<img src="../../assets/img/grayLine.png" alt="">
 						<div class="money">
-							<p>￥<span class="num">10</span></p>
+							<p>
+                                <span class="yuan">￥</span>
+                                <span class="num">10</span>
+                            </p>
 							<p class="text">无金额门槛</p>
 						</div>
 						<div class="info">
@@ -127,7 +145,10 @@
 					<div class="coupon used">
 						<img src="../../assets/img/grayLine.png" alt="">
 						<div class="money">
-							<p>￥<span class="num">10</span></p>
+							<p>
+                                <span class="yuan">￥</span>
+                                <span class="num">10</span>
+                            </p>
 							<p class="text">无金额门槛</p>
 						</div>
 						<div class="info">
@@ -139,7 +160,10 @@
 					<div class="coupon used">
 						<img src="../../assets/img/grayLine.png" alt="">
 						<div class="money">
-							<p>￥<span class="num">10</span></p>
+							<p>
+                                <span class="yuan">￥</span>
+                                <span class="num">10</span>
+                            </p>
 							<p class="text">无金额门槛</p>
 						</div>
 						<div class="info">
@@ -252,7 +276,10 @@ export default {
 						color: #ffffff;
 						font-size: .75rem;
 						.num {
-							font-size: 1.6rem;
+                            font-size: 1.6rem;
+                            position: relative;
+                            top: 0;
+                            left: -.2rem;
 						}
 					}
 					.text {
@@ -371,7 +398,10 @@ export default {
 					color: #ffffff;
 					font-size: .75rem;
 					.num {
-						font-size: 1.6rem;
+                        font-size: 1.6rem;
+                        position: relative;
+                        top: 0;
+                        left: -.2rem;
 					}
 				}
 				.text {
