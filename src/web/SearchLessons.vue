@@ -942,5 +942,7 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
     color: #0de482;
     border: 1px solid #0de482;
 }
-
+.searchLessons-content{
+    border-radius: 10px;
+}
 </style>
