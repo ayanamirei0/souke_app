@@ -28,7 +28,10 @@
                             <img src="../../assets/img/select.png" alt="" v-show="!checkBox.includes(index)" @click="multiSelect(index)" class="select">
                             <img src="../../assets/img/selected.png" alt="" v-show="checkBox.includes(index)" @click="multiSelect(index)" class="select">
                         </p>
-                        <p class="text detail" v-show="!detailArr.includes(index)"><span class="line"></span>详细信息<span class="nabla_d" @click="multiSelectDetail(index)"></span></p>
+                        <p class="text detail" v-show="!detailArr.includes(index)">
+                            <span class="line"></span>
+                            <span class="tip">详细信息</span>
+                            <span class="nabla_d" @click="multiSelectDetail(index)"></span></p>
                     </div>
                 </div>
                 <p class="detail_info" v-show="detailArr.includes(index)">
@@ -180,6 +183,19 @@ export default {
                     }
                     .detail {
                         position: relative;
+                        .line{
+                            display: inline-block;
+                            width: 11.8rem;
+                            border-top: .05rem dashed #c1c1c1;
+                            position: absolute;
+                            bottom: .5rem;
+                            left: .05rem;
+                        }
+                        .tip{
+                            position: absolute;
+                            top: .55rem;
+                            left: 0;
+                        }
                         .nabla_d {
                             font-size: 0;
                             line-height: 0;
@@ -191,14 +207,7 @@ export default {
                             border-left-color: transparent;
                             border-right-color: transparent;
                             float: right;
-                        }
-                        .line{
-                            display: inline-block;
-                            width: 11.8rem;
-                            border-top: .05rem dashed #c1c1c1;
-                            position: absolute;
-                            bottom: 1.3rem;
-                            left: .05rem;
+                            margin-top: .3rem;
                         }
                     }
                 }
