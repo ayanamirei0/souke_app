@@ -18,44 +18,42 @@
 <van-list  v-model="loading"  :finished="finished"  finished-text="已经到底了~"  @load="onLoad">
   <div class="searchLessons_item" v-for="itme in content">
     <div class="searchLessons-content">
-      <div class="clearfix">
-        <div class="searchLessons-content-title fl"><router-link :to='"SearchLessonsDetails/"+itme.id'>{{itme.title}}</router-link></div>
-        <div class="fr clearfix">
-          <div class="searchLessons-content-bnt-xk searchLessons-content-bnt-qj marginright20">{{itme.ContinuationClass}}</div>
-          <div class="searchLessons-content-bnt-xk">{{itme.type}}</div>
-        </div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix">
-        <div class="searchLessons-content-sm iconfont icon-xuesheng">{{itme.ClassNumber}}</div>
-        <div class="searchLessons-content-sm iconfont icon-shijian">{{itme.ClassTime}}</div>
-        <div class="searchLessons-content-sm iconfont icon-dingwei"><a :href="itme.addressUrl">{{itme.address}}</a></div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix">
-        <div class="searchLessons-content-time fl">{{itme.OpeningHours}}</div>
-        <div class="fr clearfix">
-          <div class="searchLessons-content-bnt-zk" v-if="itme.ClassType == '增开'">{{itme.ClassType}}</div>
-          <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-rb" v-else-if="itme.ClassType == '热报'">{{itme.ClassType}}</div>
-          <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-mb" v-else-if="itme.ClassType == '满班'">{{itme.ClassType}}</div>
-          <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-other" v-else>{{itme.ClassType}}</div>
-        </div>
-      </div>
-      <div class="h20"></div>
-      <div class="clearfix searchLessons-content-bottom-top">
-        <div class="h20"></div>
-        <div class="searchLessons-content-pic fl"><img :src="itme.TeacherPic"></div>
-        <div class="searchLessons-content-name fl"><a :href="itme.TeacherUrl">{{itme.TeacherName}}</a></div>
-        <div class="searchLessons-content-money fr clearfix" style="font-weight:600"><em>￥</em>{{itme.money}}</div>
-      </div>
+        <router-link :to="'SearchLessonsDetails/' + itme.id">
+            <div class="clearfix">
+                <div class="searchLessons-content-title fl">{{itme.title}}</div>
+                <div class="fr clearfix">
+                <div class="searchLessons-content-bnt-xk searchLessons-content-bnt-qj marginright20">{{itme.ContinuationClass}}</div>
+                <div class="searchLessons-content-bnt-xk">{{itme.type}}</div>
+                </div>
+            </div>
+            <div class="h20"></div>
+            <div class="clearfix">
+                <div class="searchLessons-content-sm iconfont icon-xuesheng">{{itme.ClassNumber}}</div>
+                <div class="searchLessons-content-sm iconfont icon-shijian">{{itme.ClassTime}}</div>
+                <div class="searchLessons-content-sm iconfont icon-dingwei"><a :href="itme.addressUrl">{{itme.address}}</a></div>
+            </div>
+            <div class="h20"></div>
+            <div class="clearfix">
+                <div class="searchLessons-content-time fl">{{itme.OpeningHours}}</div>
+                <div class="fr clearfix">
+                <div class="searchLessons-content-bnt-zk" v-if="itme.ClassType == '增开'">{{itme.ClassType}}</div>
+                <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-rb" v-else-if="itme.ClassType == '热报'">{{itme.ClassType}}</div>
+                <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-mb" v-else-if="itme.ClassType == '满班'">{{itme.ClassType}}</div>
+                <div class="searchLessons-content-bnt-zk searchLessons-content-bnt-other" v-else>{{itme.ClassType}}</div>
+                </div>
+            </div>
+            <div class="h20"></div>
+            <div class="clearfix searchLessons-content-bottom-top">
+                <div class="h20"></div>
+                <div class="searchLessons-content-pic fl"><img :src="itme.TeacherPic"></div>
+                <div class="searchLessons-content-name fl"><a :href="itme.TeacherUrl">{{itme.TeacherName}}</a></div>
+                <div class="searchLessons-content-money fr clearfix" style="font-weight:600"><em>￥</em>{{itme.money}}</div>
+            </div>
+        </router-link> 
     </div>
     <div class="h20"></div>
   </div>
 </van-list>
-
-
-
-  
 
   <div class="footer_height"></div>
   <!-- <div class="searchLessons-content">

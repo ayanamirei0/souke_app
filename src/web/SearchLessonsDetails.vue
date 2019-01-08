@@ -19,7 +19,10 @@
       <div class="clearfix">
         <div class="searchLessons-content-sm iconfont icon-xuesheng">{{content.ClassNumber}}</div>
         <div class="searchLessons-content-sm iconfont icon-shijian">{{content.ClassTime}}</div>
-        <div class="searchLessons-content-sm iconfont icon-dingwei"><a :href="content.addressUrl">{{content.address}}</a></div>
+        <div class="searchLessons-content-sm iconfont icon-dingwei">
+            <a :href="content.addressUrl">{{content.address}}</a>
+            <span>></span>
+        </div>
         <div class="searchLessons-content-sm iconfont icon-rili">{{content.OpeningHours}}</div>
       </div>
       <div class="h20"></div>
