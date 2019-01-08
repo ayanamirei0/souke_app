@@ -1,10 +1,8 @@
 <template>
     <div class="index">
         <header class="head">
-            <div>
-                <span class="title">搜课</span>
-                <span class="city" @click="Toast()">北京</span>
-            </div>
+            <span class="title">搜课</span>
+            <span class="city" @click="Toast()">北京</span>
         </header>
         <div class="banner">
             <div class="swiper-container">
@@ -402,7 +400,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 @import '../assets/css/index/index.css';
 
 .swiper-slide {
