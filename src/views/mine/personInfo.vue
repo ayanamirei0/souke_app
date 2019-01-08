@@ -13,47 +13,43 @@
                 内容
             </van-popup>
         </div>
-        <div class="item">
+        <router-link to="/views/mine/ChangeName.vue" class="item">
             <p>学员姓名</p>
-            <router-link to="/views/mine/ChangeName.vue" class="change">
+            <div class="change">
                 <p>王钦<i class="go iconfont icon-tiem-right"></i></p>
-            </router-link>
-        </div>
-        <div class="item">
+            </div>
+        </router-link>
+        <div class="item" @click="changeSex()">
             <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</p>
-            <div class="change" @click="changeSex()">
+            <div class="change">
                 <p>男<i class="go iconfont icon-tiem-right"></i></p>
             </div>
         </div>
-        <div class="item">
+        <div class="item" @click="chooseDate()">
             <p>出生日期</p>
-            <div class="change" @click="chooseDate()">
+            <div class="change">
                 <p v-model="time">{{time}}<i class="go iconfont icon-tiem-right"></i></p>
             </div>
         </div>
-        <div class="item grade">
+        <router-link to="/views/mine/gradelist.vue" class="item grade">
             <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</p>
             <div class="change">
-                <router-link to="/views/mine/gradelist.vue">
-                    <p>初一年级<i class="go iconfont icon-tiem-right"></i></p>
-                </router-link>
+                <p>初一年级<i class="go iconfont icon-tiem-right"></i></p>
             </div>
-        </div>
+        </router-link>
         <div class="line_y line_info"></div>
-        <div class="item" >
+        <div class="item" @click="chooseArea()">
             <p>学校区域</p>
-            <div class="change" @click="chooseArea()">
+            <div class="change">
                 <p>{{schoolArea}}<i class="go iconfont icon-tiem-right"></i></p>
             </div>
         </div>
-        <div class="item">
+        <router-link to="/views/mine/changeSchoolName.vue" class="item">
             <p>学校名称</p>
             <div class="change">
-                <router-link to="/views/mine/changeSchoolName.vue">
-                    <p>清华大学附属中学上地学校<i class="go iconfont icon-tiem-right"></i></p>
-                </router-link>
+                <p>清华大学附属中学上地学校<i class="go iconfont icon-tiem-right"></i></p>
             </div>
-        </div>
+        </router-link>
 
         <!-- 弹出层_头像修改 -->
         <van-popup v-model="show_head" position="bottom" :overlay="true" class="choose_photo">

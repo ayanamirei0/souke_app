@@ -92,7 +92,7 @@ export default {
     }
     .container{
         background-color: #ffffff;
-        margin: .125rem 0 .4rem 0;
+        margin: .1rem 0 .4rem 0;
         .date{
             height: 1.575rem;
             line-height: 1.575rem;

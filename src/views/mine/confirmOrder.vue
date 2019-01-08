@@ -196,12 +196,14 @@ export default {
         text-align: center;
         background-color: #ffffff;
         padding: .65rem 0.5rem 0.6rem 0.3rem;
+        margin-bottom: .1rem;
+        position: relative;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
-            position: relative;
-            top: 0;
-            right: 6rem;
+            position: absolute;
+            top: .8rem;
+            left: 1%;
         }
         .title{
             font-size: .8rem;
@@ -209,12 +211,12 @@ export default {
     }
     .confirm_order{
         background-color: #ffffff;
-        margin-top: .5rem;
+        margin-bottom: .5rem;
         .content{
             padding: .675rem .575rem .6rem .5rem;
             height: 6.725rem;
             p{
-                margin-top: .45rem;
+                margin-bottom: .45rem;
                 color: #333333;
                 font-size: .65rem;
                 .icon{
@@ -406,7 +408,7 @@ export default {
     }
     .cost{
         background-color: #ffffff;
-        margin-top: .5rem;
+        margin-bottom: .5rem;
         .title{
             border-bottom: 1px solid #CDCDCD;
             color: #333333;
@@ -427,7 +429,7 @@ export default {
         }
     }
     .pay_way{
-        margin-top: .5rem;
+        margin-bottom: .5rem;
         background-color: #ffffff;
         p{
             border-bottom: 1px solid #CDCDCD;
@@ -460,7 +462,7 @@ export default {
     }
     .agreement{
         background-color: #ffffff;
-        margin-top: .5rem;
+        margin-bottom: .5rem;
         padding: .475rem 0 .5rem .6rem;
         position: relative;
         border-bottom: 1px solid #CDCDCD;
