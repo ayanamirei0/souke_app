@@ -1,5 +1,6 @@
 <template>
 <div class="searchLessons-box">  
+    <div class="top_fill" style="height:2.55rem"></div>
   <div class="SearchLessonsDetails_head clearfix">
     <div class="h36"></div>
     <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang修改2018-12-20 -->
@@ -175,6 +176,11 @@ export default {
     border-bottom: 1px solid #ECECEE; 
     padding: 0 0.5rem; 
     background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
     .Return{        //lihongliang 修改 2018-12-20
         .icon-fanhui{
             font-size: 1.1rem;

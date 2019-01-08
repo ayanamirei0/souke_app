@@ -1,5 +1,6 @@
 <template>
     <div class="paid">
+        <div class="top_fill"></div>
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <p class="title">已付款</p>
@@ -73,14 +74,21 @@ export default {
     width: 100%;
     height: 100%;
     background-color: @common_bg_color;
+    .top_fill{
+        height: 2.35rem;
+    }
      .top{
         padding: .65rem 0 .6rem 0;
         background-color: #ffffff;
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998;
         .icon-fanhui{
             position: absolute;
             top: .65rem;
-            left: .8rem;
+            left: 1%;
             font-size: 1.1rem;
             color: #333333;
         }

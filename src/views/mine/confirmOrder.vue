@@ -1,5 +1,6 @@
 <template>
     <div class="order">
+        <div class="top_fill"></div>
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span class="title">确认订单</span>
@@ -192,12 +193,18 @@ export default {
     width: 100%;
     height: 100%;
     background-color: @common_bg_color;
+    .top_fill{
+        height: 2.65rem;
+    }
     .top{
         text-align: center;
         background-color: #ffffff;
         padding: .65rem 0.5rem 0.6rem 0.3rem;
-        margin-bottom: .1rem;
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
