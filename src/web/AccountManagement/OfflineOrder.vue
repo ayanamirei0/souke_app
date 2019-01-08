@@ -186,7 +186,7 @@ export default {
             font-size: 1.1rem;
             position: relative;
             bottom: .13rem;
-            left: 0;
+            left: -.5rem;
         }
     }
 }
