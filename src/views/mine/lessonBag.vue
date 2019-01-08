@@ -84,6 +84,7 @@ export default {
         background-color: #ffffff;
         display: flex;
         justify-content: space-between;
+        margin-bottom: .1rem;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
@@ -98,7 +99,7 @@ export default {
         }
     }
     .lesson_order{
-        margin-top: .45rem;
+        margin-bottom: .45rem;
         display: flex;
         justify-content: flex-start;
         background-color: #ffffff;

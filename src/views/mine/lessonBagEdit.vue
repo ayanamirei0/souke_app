@@ -4,7 +4,7 @@
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span>购课袋</span>
             <span>
-                <router-link to="" class="complete">完成</router-link>
+                <router-link to="/views/mine/lessonBag.vue" class="complete">完成</router-link>
             </span>
         </div>
         <div class="lesson_order" v-for="(item, index) in titleList" :key="index">
@@ -35,7 +35,7 @@
                 <img src="../../assets/img/selected.png" alt="" v-show="this.checkBox.length == this.titleList.length">
                 <span>全选</span>
             </p>
-            <span class="pay" @click="changeShow">删除</span>
+            <span class="pay" @click="changeShow" :class="checkBox.length != 0 ? 'active' : 'normal'">删除</span>
             <van-popup v-model="show" class="popup">
                 <p class="describe">确定删除所选中的1门课程？</p>
                 <div class="result">
@@ -118,6 +118,7 @@ export default {
         background-color: #ffffff;
         display: flex;
         justify-content: space-between;
+        margin-bottom: .1rem;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
@@ -132,7 +133,7 @@ export default {
         }
     }
     .lesson_order{
-        margin-top: .45rem;
+        margin-bottom: .45rem;
         display: flex;
         justify-content: flex-start;
         background-color: #ffffff;
@@ -249,6 +250,12 @@ export default {
             font-size: .8rem;
             text-align: center;
             letter-spacing: .05rem;
+        }
+        .active{
+            background-color: #FA5118;
+        }
+        .normal{
+            background-color: rgba(250,81,24,.6);
         }
         .popup{
             width: 14.075rem;

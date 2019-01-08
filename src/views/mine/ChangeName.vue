@@ -79,7 +79,7 @@ export default {
                 width: 100%;
                 font-size: .7rem;
                 text-indent: .5rem;
-                color: #333333;
+                color: #000000;
 			}
 			input::-webkit-input-placeholder {
 				color: #999999;
