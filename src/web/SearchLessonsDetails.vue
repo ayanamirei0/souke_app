@@ -4,7 +4,7 @@
     <div class="h36"></div>
     <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang 修改 2018-12-20 -->
     <div class="column">课程详情</div>
-    <div class="fr ShoppingBag iconfont icon-gouwudai"><i>{{content.ShoppingVolume}}</i></div>
+    <router-link to="/views/mine/lessonBag.vue" class="fr ShoppingBag iconfont icon-gouwudai"><i>{{content.ShoppingVolume}}</i></router-link>
     <div class="h10"></div>
   </div>
   <div>
