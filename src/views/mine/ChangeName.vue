@@ -79,7 +79,11 @@ export default {
                 width: 100%;
                 font-size: .7rem;
                 text-indent: .5rem;
-                color: #999999;
+                color: #333333;
+			}
+			input::-webkit-input-placeholder {
+				color: #999999;
+				font-size: 0.7rem;
 			}
 		}
 		.btn {
