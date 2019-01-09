@@ -21,7 +21,7 @@
         <div class="searchLessons-content-sm iconfont icon-shijian">{{content.ClassTime}}</div>
         <div class="searchLessons-content-sm iconfont icon-dingwei">
             <a :href="content.addressUrl">{{content.address}}</a>
-            <span>></span>
+            <i class="go iconfont icon-tiem-right"></i>
         </div>
         <div class="searchLessons-content-sm iconfont icon-rili">{{content.OpeningHours}}</div>
       </div>
@@ -67,7 +67,7 @@
   <div class="SearchLessons_footer">
     <div class="searchLessons-content clearfix">
       <div class="SearchLessons_service fl"><a class="iconfont icon-kefu1" onclick="doyoo.util.openChat('g=10078688');return false;" title="在线咨询"></a></div>
-      <div class="SearchLessons_signUp fr" :class=" content.state!=1 ? 'SearchLessons_signUp_wks' : ''">{{content.statetext}}</div>
+      <router-link to="/views/mine/lessonBag.vue" class="SearchLessons_signUp fr" :class=" content.state!=1 ? 'SearchLessons_signUp_wks' : ''">{{content.statetext}}</router-link>
     </div>
   </div>
 </div>
@@ -204,7 +204,7 @@ export default {
             font-size: 1.1rem;
             position: relative;
             bottom: .13rem;
-            left: 0;
+            left: -.5rem;
         }
     }
 }
@@ -231,5 +231,11 @@ export default {
   position: relative;
   i{ display: block; width: .9rem; height: .9rem; background: #F74749; text-align: center; line-height: 0.9rem; border-radius: 50%; top: -0.45rem; text-align: center; color: #fff; line-height: 0.9rem; right: -0.35rem; position: absolute; font-size: .6rem;}
 }
-
+.searchLessons-content-sm .icon-tiem-right{
+    position: relative;
+    top: .08rem;
+    left: -.3rem;
+    font-size: .8rem;
+    color: #000000;
+}
 </style>
