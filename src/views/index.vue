@@ -144,28 +144,28 @@
                 <div class="content" v-if="num1 == 0">
                     <router-link to="SearchLessonsDetails/:id" class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/lxjw.jpg" alt="">
                         </div>
-                        <p>“成吉思汗”草原探秘夏令营</p>
+                        <p>流行街舞</p>
                     </router-link>
                     
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/ywbb.jpg" alt="">
                         </div>
-                        <p>思维训练精英班</p>
+                        <p>乐舞宝贝</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/zgw.jpg" alt="">
                         </div>
-                        <p>巨人大语文</p>
+                        <p>中国舞</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/blw.jpg" alt="">
                         </div>
-                        <p>思维训练精英班</p>
+                        <p>芭蕾舞</p>
                     </div>
                 </div>
                 <div class="content" v-if="num1 == 1">

@@ -163,7 +163,9 @@
   margin-bottom: .6rem;
   width: 47%;
 }
-
+.select_content .content .title img{
+    border-radius: .35rem;
+}
 .select_content .content .title p{
   font-family: 'PingFang-SC-Regular';
   color: #333333;
