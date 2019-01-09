@@ -1,34 +1,90 @@
 <template>
     <div class="schoolName">
+        <div class="top_fill"></div>
         <div class="top">
             <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
             <span class="title">修改学校名称</span>
             <span class="btn">保存</span>
         </div>
         <div class="content">
-            <ul>
-                <li class="title">1</li>
-                <li class="item" v-for="(item, index1) in list1" @click="addClass1(index1)" :class="{selected: current1 == index1}">
-                    {{item.title}}
-                    <img src="../../assets/img/hook.png" v-show="index1 == current1">
-                </li>
-            </ul>
-            <ul>
-                <li class="title">2</li>
-                <li class="item" v-for="(item, index2) in list2" @click="addClass2(index2)" :class="{selected: current2 == index2}">
-                    {{item.title}}
-                    <img src="../../assets/img/hook.png" v-show="index2 == current2">
-                </li>
-            </ul>
-            <ul>
-                <li class="title">B</li>
-                <li class="item" v-for="(item, indexB) in listB" @click="addClassB(indexB)" :class="{selected: currentB == indexB}">
-                    {{item.title}}
-                    <img src="../../assets/img/hook.png" v-show="indexB == currentB">
+            <ul v-for="(item, index) in list">
+                <li class="title" :id="item.title">{{item.title}}</li>
+                <li class="item" v-for="(items, index) in item.content" @click="addClass(items.id)" :class="{selected : current == items.id}">
+                    {{items.text}}
                 </li>
             </ul>
         </div>
-        <p class="nav">1<br>2<br>B<br>C<br>D<br>E<br>G<br>H<br>J<br>K<br>L<br>M<br>N<br>Q<br>R<br>S<br>T<br>W<br>X<br>Y<br>Z</p>
+        <ul class="nav">
+            <li>
+                <a href="#1">1</a>
+            </li>
+            <li>
+                <a href="#2">2</a>
+            </li>
+            <li>
+                <a href="#B">B</a>
+            </li>
+            <li>
+                <a href="#C">C</a>
+            </li>
+           <li>
+                <a href="#D">D</a>               
+           </li>
+           <li>
+                <a href="#E">E</a>
+           </li>
+           <li>
+               <a href="#F">F</a>
+           </li>
+           <li>
+               <a href="#G">G</a>
+           </li>
+           <li>
+               <a href="#H">H</a>
+           </li>
+           <li>
+               <a href="#I">I</a>
+           </li>
+           <li>
+               <a href="#J">J</a>
+           </li>
+           <li>
+               <a href="#K">K</a>
+           </li>
+           <li>
+               <a href="#L">L</a>
+           </li>
+           <li>
+               <a href="#M">M</a>
+           </li>
+           <li>
+               <a href="#N">N</a>
+           </li>
+           <li>
+               <a href="#Q">Q</a>
+           </li>
+           <li>
+               <a href="#R">R</a>
+           </li>
+           <li>
+               <a href="#S">S</a>
+           </li>
+           <li>
+               <a href="#T">T</a>
+           </li>
+           <li>
+               <a href="#w">w</a>
+           </li>
+           <li>
+               <a href="#X">X</a>
+           </li>
+           <li>
+               <a href="#Y">Y</a>
+           </li>   
+           <li>
+               <a href="#Z">Z</a>
+           </li>
+        </ul>
     </div>
 </template>
 
@@ -36,46 +92,69 @@
 export default {
     data() {
         return {
-            current1: 0,
-            current2: 0,
-            currentB: 0,
-            list1: [
-                { title: '101中学' },
-                { title: '105中学' }
-            ],
-            list2: [
-                {title: '21世纪实验学校'}
-            ],
-            listB: [
-                {title: '北大附中'},
-                {title: '北大资源中学'},
-                {title: '北航附中'},
-                {title: '北师大三附中'},
-                {title: '北外附中'},
-                {title: '北医附中'}
+            current: 0,
+            list: [
+                {
+                    title: '1',
+                    content:[
+                        { text: '101中学', id: 0 },
+                        { text: '105中学', id: 1 }
+                    ]
+                }
+                ,{
+                    title: '2',
+                    content:[
+                        { text: '21世纪实验学校', id: 2 }
+                    ]
+                },
+                {
+                    title: 'B',
+                    content:[
+                        { text: '北大附中', id: 3 },
+                        { text: '北大资源中学', id: 4 },
+                        { text: '北航附中', id: 5 },
+                        { text: '北师大三附中', id: 6 },
+                        { text: '北外附中', id: 7 },
+                        { text: '北医附中', id: 8 }
+                    ]
+                },
+                {
+                    title: 'C',
+                    content:[
+                        { text: '北大附中', id: 9 },
+                        { text: '北大资源中学', id: 10 },
+                        { text: '北航附中', id: 11 },
+                        { text: '北师大三附中', id: 12 },
+                        { text: '北外附中', id: 13 },
+                        { text: '北医附中', id: 14 }
+                    ]
+                }
             ]
         }
     },
     methods: {
-        addClass1(index1){
-            this.current1 = index1;
-        },
-        addClass2(index2){
-            this.current2 = index2;
-        },
-        addClassB(indexB){
-            this.currentB = indexB;
-        }
+        addClass(arg){
+            this.current = arg;
+        }   
     }
 };
 </script>
 
 <style lang="less" scoped>
 .schoolName{
-    position: relative;
+    .top_fill{
+        width: 100%;
+        height: 2.47rem;
+    }
     .top{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998;
         padding: .65rem 0 .6rem 0;
         display: flex;
+        background-color: #ffffff;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
@@ -91,18 +170,20 @@ export default {
         }
         .btn{
             font-size: .75rem;
-            color: #666666;
+            color: #2fb3f1;
             margin: .1rem .6rem 0 0;
         }
     }
     .content{
         padding-right: 5%;
+        position: fixed;      //解决锚点跳转以后，内容被顶部遮挡问题
+        overflow-y: auto;
+        height: 100%;
         ul{
             img{
                 width: .9rem;
                 height: .6rem;
-                float: right;
-                padding-right: .3rem;
+                margin-right: 1.1rem;
             }
             .title{
                 color: #333333;
@@ -117,12 +198,8 @@ export default {
             .item{
                 font-size: .75rem;
                 border-bottom: .05rem solid #ECECEE;
-                text-align: left;
                 padding: .9rem 0 .8rem 0;
-                margin-left: .65rem;
-            }
-            li:last-child{
-                border: 0 !important;
+                margin: 0 .65rem;
             }
             .selected{
                 color: #2fb3f1;
@@ -130,13 +207,17 @@ export default {
         }   
     }
     .nav{
-        width: .6rem;
-        font-size: .6rem;
-        line-height: .9rem;
-        color: #2FB3F1;
-        position: absolute;
-        top: 23%;
+        position: fixed;
+        top: 18%;
         right: 1%;
+        li{
+            width: .6rem;
+            line-height: .9rem;
+            a{
+                font-size: .6rem;
+                color: #2FB3F1;
+            }   
+        }   
     }
 }
 </style>
