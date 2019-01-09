@@ -2,7 +2,9 @@
     <div class="schoolName">
         <div class="top_fill"></div>
         <div class="top">
-            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
+            <router-link to="/views/mine/personInfo.vue">
+                <i class="iconfont icon-fanhui"></i>
+            </router-link>
             <span class="title">修改学校名称</span>
             <span class="btn">保存</span>
         </div>
