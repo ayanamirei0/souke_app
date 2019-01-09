@@ -20,7 +20,9 @@
     <div class="searchLessons-content">
         <router-link :to="'SearchLessonsDetails/' + itme.id">
             <div class="clearfix">
-                <div class="searchLessons-content-title fl">{{itme.title}}</div>
+                <div class="searchLessons-content-title fl">
+                    <b>{{itme.title}}</b>
+                </div>
                 <div class="fr clearfix">
                 <div class="searchLessons-content-bnt-xk searchLessons-content-bnt-qj marginright20">{{itme.ContinuationClass}}</div>
                 <div class="searchLessons-content-bnt-xk">{{itme.type}}</div>
