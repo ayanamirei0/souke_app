@@ -210,7 +210,7 @@ export default {
 }
 .Grey{ background: #EDEDED;}
 .SearchLessonsDetails_resubmit{ width: 3.25rem; height: 1.35rem; line-height: 1.35rem; text-align: center; background: #2FB3F1; border-radius: .675rem; color: #FFFFFF; font-size: .65rem;}
-.SearchLessonsDetails-content{ font-size: .75rem; color: #333333; line-height: 1.35rem;}
+.SearchLessonsDetails-content{ font-size: .9rem; color: #333333; line-height: 1.35rem; font-weight: 600; }
 .SearchLessonsDetails-content .margintop5{ margin-top: 0.2rem;}
 .Timetable-title{ font-size: .75rem;}
 .Timetable-content{ border-radius: .75rem; border: 1px solid #A7A7A7; box-sizing: border-box; overflow: hidden; position: relative;}
