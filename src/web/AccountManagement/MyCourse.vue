@@ -13,7 +13,7 @@
       <div class="clearfix">
         <div class="searchLessons-content-title fl">
             <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{time.type}}</div>
-            <router-link :to='"SearchLessonsDetails/"+time.id' v-if="time.state_text=='未结课' || time.state_text=='未开班'">{{time.title}}</router-link>
+            <router-link :to='"SearchLessonsDetails/"+time.id' v-if="time.state_text=='未结课' || time.state_text=='未开班'"><b>{{time.title}}</b></router-link>
             <em v-else-if="time.state_text=='已停班' || time.state_text=='已结课'"><b>{{time.title}}</b></em>
         </div>
       </div>
