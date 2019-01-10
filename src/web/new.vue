@@ -1,7 +1,7 @@
 <template>
 <div class="searchLessons-box">
     <p class="title_top">   <!-- lihongliang 添加 2018-12-27 -->
-        消息
+        <b>消息</b>
     </p> 
   <div class="margin_20">
     <div class="newtime flex-box b_white" onclick="doyoo.util.openChat('g=10078688');return false;">
