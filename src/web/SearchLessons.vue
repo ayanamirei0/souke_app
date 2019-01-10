@@ -948,4 +948,7 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
 .searchLessons_item{
     padding: 0 .2rem;
 }
+.searchLessons-box{
+    -webkit-overflow-scrolling: touch;  /* 解决页面在ios滑动卡顿问题 */
+}
 </style>

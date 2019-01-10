@@ -202,5 +202,7 @@ export default {
 .MyCourse_state3{ border:1px solid #1EA906; color: #1EA906; border-radius: 0.25rem;}
 .MyCourse_state4{ border:1px solid #666666; color: #666666; border-radius: 0.25rem;}
 .OrderTime{ border-bottom: 1px solid #DADADA; font-size: 0.6rem; color: #333333;}
-
+.searchLessons-box{
+    -webkit-overflow-scrolling: touch;  //解决页面在ios滑动卡顿问题
+}
 </style>

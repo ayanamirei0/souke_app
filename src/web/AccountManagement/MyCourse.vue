@@ -215,4 +215,7 @@ export default {
 .searchLessons-content .clearfix .searchLessons-content-sm a{
     color: #333333;
 }
+.searchLessons-box{
+    -webkit-overflow-scrolling: touch;  //解决页面在ios滑动卡顿问题
+}
 </style>

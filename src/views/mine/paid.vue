@@ -74,6 +74,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: @common_bg_color;
+    -webkit-overflow-scrolling: touch;  //解决页面在ios滑动卡顿问题
     .top_fill{
         height: 2.35rem;
     }

@@ -4,6 +4,7 @@
     width: 100%;
     overflow-y: auto;
     background-color: #ffffff;
+    -webkit-overflow-scrolling: touch;  /* 解决页面在ios滑动卡顿问题 */
 }
 .head {
     padding: .75rem 1rem .6rem 1rem;
@@ -20,7 +21,10 @@
     color: #333333;
     padding: .15rem .35rem;
     background-color: #efefef;
-    font-weight: 400;
+    position: relative;
+    bottom: .1rem;
+    left: 0;
+    border-radius: .1rem;
   }
   .subject {
     margin: .9rem 0 .6rem 0;

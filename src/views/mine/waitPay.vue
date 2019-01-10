@@ -102,6 +102,7 @@ export default {
 
 <style lang="less" scoped>
 .waitPay{
+    -webkit-overflow-scrolling: touch;  //解决页面在ios滑动卡顿问题
     position: fixed;
     overflow-y: auto;
     width: 100%;
