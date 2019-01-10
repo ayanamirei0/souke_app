@@ -1,7 +1,9 @@
 <template>
     <div class="lessonBag">
         <div class="top">
-            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
+            <router-link to="/mine">
+                <i class="iconfont icon-fanhui"></i>
+            </router-link>
             <span>购课袋</span>
             <span>
                 <router-link to="/views/mine/lessonBagEdit.vue" class="edit">编辑</router-link>
@@ -80,7 +82,7 @@ export default {
     height: 100%;
     background-color: @common_bg_color;
     .top{
-        padding: .65rem .5rem .6rem .65rem;
+        padding: .6rem .5rem .5rem .65rem;
         background-color: #ffffff;
         display: flex;
         justify-content: space-between;

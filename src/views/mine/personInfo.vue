@@ -1,7 +1,9 @@
 <template>
     <div class="PersonInfo">
         <div class="top">
-            <i class="iconfont icon-fanhui" @click="$router.go(-1)"></i>
+            <router-link to="/mine">
+                <i class="iconfont icon-fanhui"></i>
+            </router-link>
             <p>个人信息</p>
         </div>
         <div class="head" @click="changeHead()">
