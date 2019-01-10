@@ -12,7 +12,7 @@
       <div class="clearfix">
         <div class="searchLessons-content-title fl">
             <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{content.type}}</div>
-            {{content.title}}
+            <b>{{content.title}}</b> 
         </div>
       </div>
       <div class="h20"></div>
@@ -44,7 +44,7 @@
     <div class="clearfix">
       <div class="SearchLessonsDetails-content">
           <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{content.type}}</div>
-          {{content.title}}
+          <b>{{content.title}}</b>
           <div class="SearchLessonsDetails_resubmit fr">续报班课</div>
       </div>
     </div>

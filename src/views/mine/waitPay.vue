@@ -11,7 +11,7 @@
                 <div class="schedule">
                     <p class="title">
                         <span class="season">秋季</span>
-                        <span class="lesson">初一数学启思·卓越班</span>
+                        <span class="lesson"><b>初一数学启思·卓越班</b></span>
                     </p>
                     <p class="text"><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
                     <p class="text"><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30&nbsp;&nbsp;2018/05/05-2018/11/17</p>
@@ -43,7 +43,7 @@
                 <div class="schedule">
                     <p class="title">
                         <span class="season">秋季</span>
-                        <span class="lesson">初一语文启思·卓越班</span>
+                        <span class="lesson"><b>初一语文启思·卓越班</b></span>
                     </p>
                     <p class="text"><i class="iconfont icon-xuesheng icon"></i>1800511776</p>
                     <p class="text"><i class="iconfont icon-shijian icon"></i>周六上午09:00-10:30&nbsp;&nbsp;2018/05/05-2018/11/17</p>
@@ -161,7 +161,7 @@ export default {
                     }
                     .lesson{
                         color: #333333;
-                        font-size: .8rem;
+                        font-size: .9rem;
                         font-weight: 600;
                         position: relative;
                         top: .1rem;

@@ -18,7 +18,7 @@
       <div class="clearfix">
         <div class="searchLessons-content-title">
             <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{time.type}}</div>
-            {{time.title}}
+            <b>{{time.title}}</b>
             <div class="MyCourse_yc fr" :class=" time.MyCourse_state==1 ? 'MyCourse_state1' : time.MyCourse_state==2 ? 'MyCourse_state2' : time.MyCourse_state==3 ? 'MyCourse_state3': time.MyCourse_state==4 ? 'MyCourse_state4' : ''">{{time.state_text}}</div>
         </div>
       </div>
