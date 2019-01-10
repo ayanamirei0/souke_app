@@ -6,7 +6,7 @@
                 <i class="iconfont icon-fanhui"></i>
             </router-link>
             <span class="title">修改学校名称</span>
-            <span class="btn">保存</span>
+            <router-link to="/views/mine/personInfo.vue" class="btn">保存</router-link>
         </div>
         <div class="content">
             <ul v-for="(item, index) in list">
