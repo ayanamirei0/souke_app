@@ -2,10 +2,10 @@
     <div class="searchLessons-box">
         <div class="white-bg">
             <div class="SearchLessonsDetails_head clearfix">
-                <div class="h36"></div>
+                <div class="h36" style="height:.8rem;"></div>
                  <div class="Return"><i class="iconfont icon-fanhui" @click="$router.go(-1)"></i></div>      <!-- lihongliang修改2018-12-20 -->
                 <div class="column">账号管理</div>
-                <div class="h20"></div>
+                <div class="h20" style="height:.4rem;"></div>
             </div>
             <div class="GrayLine"></div>
             <!-- <div class="h36"></div>    lihongliang修改2018-12-20     -->
