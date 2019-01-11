@@ -909,7 +909,7 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
 .van-popup.subject_hr{ height:8.8rem;}
 .van-popup.campusListBox{ height:100%; border-top: 1px solid #C2C2C2;}
 .gradeTips{ background:#DCF4FF; line-height: 1.75rem; height: 1.75rem; width: 100%; text-align: center; font-size: .6rem; color: #2FB3F1;}
-.van-ellipsis{ font-size: .7rem; height: 2.2rem; text-align: center;}
+.van-ellipsis{ font-size: .7rem; height: 2.2rem; text-align: center; line-height: 2.2rem;}
 .van-tree-select__nitem{ background: #E6E6E6;}
 .van-tree-select__nitem--active, .van-tree-select__nitem:active{ background: #fff;}
 .van-tree-select__item{ border-bottom: 1px solid #dadada; box-sizing: border-box;}
