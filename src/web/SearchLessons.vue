@@ -1,5 +1,5 @@
 <template>
-<div class="searchLessons-box">
+<div class="searchLessons-box searchLessons-pop">
   <div class="searchLessons-head-h160"></div>
   <div class="searchLessons-head">
     <router-link to="Search" class="searchLessons-head-search iconfont icon-sousuo"></router-link>
@@ -56,7 +56,7 @@
     <div class="h20"></div>
   </div>
 </van-list>
-
+<Tabbar v-show="tabShow"></Tabbar>   <!-- 底部导航栏组件 -->
   <div class="footer_height"></div>
   <!-- <div class="searchLessons-content">
     <div class="clearfix">
@@ -107,7 +107,7 @@
   </van-popup>
 
   <!-- 更多筛选 -->
-  <van-popup v-model="MoreShow" position="right" :overlay="true" class="MoreShow" :class="{MoreShow_top : MoreShow}">
+  <van-popup v-model="MoreShow" position="right" :overlay="true" class="MoreShow" :class="{MoreShow_top : MoreShow}" :close-on-click-overlay="false">
        <div class="More_content">
          <div class="More_content_more">更多</div>
          <div class="h50"></div>
@@ -154,7 +154,7 @@
 
 <script>
 
-
+import Tabbar from "../views/tabbar";
 
 import Vue from 'vue';
 import Cookies from 'js-cookie'
@@ -163,6 +163,8 @@ Vue.use(Row).use(Col).use(Toast).use(TreeSelect).use(Popup).use(Switch).use(List
 export default {
   data () {
     return {
+        tabShow: true,      //控制底部导航栏显示隐藏
+
       height:352,
       campusListBox_height:100,
       gradeShow: false,
@@ -641,11 +643,11 @@ export default {
 
   mounted(){
 
-//Cookies.set('CardNo', '2', {expires: 7});//cookie保存7天
-//get
-// let CardNo = Cookies.get("CardNo");
-// console.log(CardNo)
-var windowTop = 0; //初始话可视区域距离页面顶端的距离
+    //Cookies.set('CardNo', '2', {expires: 7});//cookie保存7天
+    //get
+    // let CardNo = Cookies.get("CardNo");
+    // console.log(CardNo)
+    var windowTop = 0; //初始话可视区域距离页面顶端的距离
     $('.searchLessons-box').scroll(function() {
         var scrolls = $(this).scrollTop(); //获取当前可视区域距离页面顶端的距离
 
@@ -700,6 +702,9 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
       })
        
   }, 
+  components: {
+        Tabbar
+    },
   methods:{
    onLoad() {
       // 异步更新数据
@@ -767,6 +772,7 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
       this.subjectShow = false;
       this.SeasonShow = false;
       this.campusShow = false;
+      this.tabShow = false;
     },
 
     // 年级筛选
@@ -871,7 +877,7 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
     // 更多筛选完成
     complete(){
       this.MoreShow=!this.MoreShow;
-
+      this.tabShow = true;
       this.$axios({
           method: 'post',
           url:'/user',
@@ -904,7 +910,7 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
 }
 </script>
 <style scope>
-.van-modal,.van-popup--top{ top: 3.8rem;}
+.searchLessons-pop .van-modal, .searchLessons-pop .van-popup--top{ top: 3.8rem;}
 .van-popup.subject_hr,.van-popup.grade,.van-popup.SeasonListBox,.van-popup.campusListBox{ width: 100%; top:3.8rem; left: 0; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0);}
 .van-popup.subject_hr{ height:8.8rem;}
 .van-popup.campusListBox{ height:100%; border-top: 1px solid #C2C2C2;}

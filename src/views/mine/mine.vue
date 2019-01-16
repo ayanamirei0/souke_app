@@ -88,13 +88,16 @@
                 </div>
                 <i class="go iconfont icon-tiem-right"></i>   
             </router-link>
-        </div>    
+        </div>
+        <Tabbar></Tabbar>  <!-- 底部导航栏组件 -->
     </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
+import Tabbar from "../tabbar";
+
 export default {
     data(){
         return{
@@ -112,6 +115,9 @@ export default {
             this.show_mall= false;
         }
         //Cookies.remove('CardNo');
+    },
+    components: {
+        Tabbar
     },
     methods: {
         Toast() {

@@ -40,10 +40,16 @@
 
 
   </div>
+  <Tabbar></Tabbar>    <!-- 底部导航栏组件 -->
 </div>
 </template>
 <script>
+import Tabbar from "../views/tabbar";
+
 export default {
+    components: {
+        Tabbar
+    },
   methods: {
     gosystem: function() {
       this.$router.push({ name: "system" });

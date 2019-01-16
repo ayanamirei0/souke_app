@@ -47,7 +47,6 @@ export default new Router({
       path: '/index',
       name: 'Index',
       component: Index, 
-      meta: { tabShow: true }
     },
     {
       path: '/RegisterPhoneVerification',
@@ -83,7 +82,6 @@ export default new Router({
       path: '/SearchLessons',
       name: 'SearchLessons',
       component: SearchLessons, 
-      meta: { tabShow: true },
     },
     {
       path: '/SearchLessonsDetails/:id',
@@ -99,7 +97,6 @@ export default new Router({
       path: '/News',
       name: 'News',
       component: News,
-      meta: { tabShow: true },
     },
     {
       path: '/system',
@@ -134,32 +131,27 @@ export default new Router({
     {
       path: '/mine',
       name: 'Mine',
-      component: Mine,
-      meta: { tabShow: true }
+      component: Mine
     },
     {
         path: '/views/mine/personInfo.vue',
         name: 'PersonInfo',
-        component: PersonInfo,
-        meta: { tabShow: false }
+        component: PersonInfo
     },
     {
         path: '/views/mine/ChangeName.vue',
         name: ChangeName,
-        component: ChangeName,
-        meta: { tabShow: false }
+        component: ChangeName
     },
     {
         path: '/views/mine/gradeList.vue',
         name: 'GradeList',
         component: GradeList,
-        meta: { tabShow: false }
     },
     {
         path: '/views/mine/changeSchoolName.vue',
         name: 'ChangeSchoolName',
         component: ChangeSchoolName,
-        meta: { tabShow: false }
     },
     {
         path: '/views/mine/coupon.vue',

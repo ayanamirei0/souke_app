@@ -337,11 +337,13 @@
         <div class="bottom_tip">
             <p class="text">已经到底了~</p>
         </div>
+        <Tabbar></Tabbar>      <!-- 底部导航栏组件 -->
     </div>
 </template>
 
 <script>
 import Swiper from 'swiper';
+import Tabbar from "../views/tabbar";
 import './../assets/css/common/swiper.min.css';
 
 export default {
@@ -358,6 +360,9 @@ export default {
         active: ""
         };
     }, 
+    components: {
+        Tabbar
+    },
     methods: {
         tabSwitch1(index) {
             this.num1 = index;
@@ -382,7 +387,7 @@ export default {
             autoplayDisableOnInteraction : false,       //点击后打断auto-play
             loop:true,
             centeredSlides : true,      //设定为true时，活动块会居中，而不是默认状态下的居左。
-            loopAdditionalSlides: 100,      //解决swiper中同时开启loop和centeredSlides后,轮播到最后一张出现空白的问题
+            loopAdditionalSlides: 3,      //解决swiper中同时开启loop和centeredSlides后,轮播到最后一张出现空白的问题
             slidesPerView:'1.1',
             // pagination : '.swiper-pagination',       //pagination分页器
             // paginationClickable:true,
