@@ -45,9 +45,9 @@ export default {
 		}
     },
 	created() {
-        // let index = sessionStorage.getItem(this.cache);
+        //  let index = sessionStorage.getItem(this.cache);
         let index = this.$route.name;
-        console.log(index, 'created');
+        console.log(index);
 		this.selected = this.computedSelected(index);
     },
     // beforeRouteUpdate(to, from, next) {
@@ -73,7 +73,7 @@ export default {
             console.log(arg[0].page);
 			this.selected = arg[0].name;
             this.$router.push(path);
-            // sessionStorage.setItem(this.cache, arg[0].name);	
+            //  sessionStorage.setItem(this.cache, arg[0].name);	
 		}
     },
     watch: {    //当监听的数据为对象或数组时，newVal跟oldVal是想等的，因为这两个形参指的是同一个数据对象
@@ -85,7 +85,7 @@ export default {
         },
         $route(to, from) {
             console.log(to, from, 'luyou');
-            // sessionStorage.setItem(this.cache, to.name);
+            //  sessionStorage.setItem(this.cache, to.name);
             this.selected = to.name;
         }
     }

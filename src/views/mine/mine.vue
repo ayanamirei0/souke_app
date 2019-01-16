@@ -1,3 +1,4 @@
+
 <template>
     <div class="mine">
         <div class="head">
@@ -5,16 +6,22 @@
                 <span class="menu">我的</span>
                 <span class="mall" @click="Toast()">积分商城</span>
             </div>
-            <router-link to="/views/mine/personInfo.vue" class="headInfo">
+            <router-link to="/views/mine/personInfo.vue" class="headInfo" v-if="show_mall">
                 <img src="../../assets/img/profile.png" alt="" class="img">
                 <div class="data">
-                    <p class="tel">187****0721</p>
+                    <p class="tel">{{MemberName}}</p>
                     <div class="account">
                         <img src="../../assets/img/wd.png" alt="">
                         <span class="num">S18092700256</span>
                     </div>
                 </div>
                 <i class="go iconfont icon-tiem-right"></i>
+            </router-link>
+            
+            <router-link class="login" to="login" v-else-if="!show_mall">
+                <img src="../../assets/img/profile.png" alt="" class="img">
+                <p class="titlename">点击登录</p>
+                <i class="go iconfont icon-tiem-right"></i> 
             </router-link>
             <!-- <div class="login">
                 <img src="../../assets/img/profile.png" alt="" class="img">
@@ -86,11 +93,25 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Cookies from 'js-cookie'
 export default {
     data(){
         return{
-            show_mall: false
+            show_mall: false,
+            MemberName:''
         }
+    },
+    mounted(){
+        let CardNo = Cookies.get("CardNo");
+        if(CardNo){
+            this.show_mall= !this.show_mall;
+            this.MemberName=CardNo.substr(0,3)+"****"+CardNo.substr(7);
+        }
+        else{
+            this.show_mall= false;
+        }
+        //Cookies.remove('CardNo');
     },
     methods: {
         Toast() {
@@ -180,12 +201,13 @@ export default {
             display: flex;
             flex-wrap: wrap;
             background-color: #ffffff;
+            box-shadow:0px 11px 21px 0px rgba(47,179,241,0.1);
             .img{
                 width: 2.675rem;
                 height: 2.7rem;
                 margin: .75rem .6rem .825rem .775rem;
             }
-            .title{
+            .titlename{
                 padding: 1rem 0 1.025rem 0;
                 width: 69%;
                 line-height: 2.1rem;
@@ -330,5 +352,8 @@ export default {
     }   
 }
 </style>
+
+
+
 
 

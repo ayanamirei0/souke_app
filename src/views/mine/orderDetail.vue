@@ -15,7 +15,9 @@
                 <p class="text"><i class="iconfont icon-dingwei icon"></i>东城区广渠门鼎新</p>
                 <div class="user">
                     <p><i class="iconfont icon-yonghu icon"></i>李向阳</p>
-                    <span class="continue">继续报课</span>
+                    <router-link to="/SearchLessonsDetails/15">
+                        <span class="continue">续报班课</span>
+                    </router-link>
                 </div>
             </div>
             <ul class="costInfo">
@@ -65,14 +67,14 @@
                     <span class="btn" @click="showPopup">申请退款</span>
                 </li>
             </ul>
-            <van-popup v-model="showTip" class="tip">
+            <!-- <van-popup v-model="showTip" class="tip">
                 <p class="title">提示</p>
                 <div class="content">
                     <p>暂未开通退款功能详询</p>
                     <p class="tel">400-888-3456</p>
                 </div>
                 <p class="btn" @click="closeTip">确认</p>
-            </van-popup>
+            </van-popup> -->
         </div>
     </div>
 </template>
@@ -86,11 +88,11 @@ export default {
     },
     methods: {
         showPopup() {
-            this.showTip = true;
+            alert("暂未开通退款功能详询"+String.fromCharCode(13)+"400-888-3456")
         },
-        closeTip() {
-            this.showTip = false;
-        }
+        // closeTip() {
+        //     this.showTip = false;
+        // }
     }
 }
 </script>

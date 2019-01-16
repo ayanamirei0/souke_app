@@ -12,7 +12,7 @@
       <div class="clearfix">
         <div class="searchLessons-content-title fl">
             <div class="searchLessons-content-bnt-xk marginright20 margintop5">{{content.type}}</div>
-            <b>{{content.title}}</b> 
+            <b>{{content.title}}</b>
         </div>
       </div>
       <div class="h20"></div>

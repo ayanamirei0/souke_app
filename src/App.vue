@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive><router-view/></keep-alive> 
+    <router-view/>
     <Tabbar v-if="$route.meta.tabShow"></Tabbar>  
   </div>
 </template>
@@ -30,4 +30,6 @@ export default {
 <style>
 @import "./assets/css/common/goole.css";
 @import "./assets/css/common/css.css";
+
+
 </style>

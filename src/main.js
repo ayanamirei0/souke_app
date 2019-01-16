@@ -7,7 +7,7 @@ import App from './App'
 import router from './router'
 import axios from './axios'
 import  './mock/mock.js'
-
+import Cookies from 'js-cookie'
 
 import 'vant/lib/index.css'
 import './assets/css/index.css'

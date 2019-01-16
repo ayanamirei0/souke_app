@@ -16,8 +16,12 @@
             <div class="middle">
                 <p>实付款：￥7200.00</p>
                 <div class="btn">
-                    <span class="left">查看订单</span>
-                    <span class="right">继续选课</span>
+                    <router-link to="/views/mine/orderDetail.vue">
+                        <span class="left">查看订单</span>
+                    </router-link>
+                    <router-link to="/SearchLessons">
+                        <span class="right">继续选课</span>
+                    </router-link>
                 </div>
             </div>
             <div class="hot_lesson">
@@ -106,13 +110,18 @@ export default {
             }
         }
         .middle{
+            position: relative;
+            height: 5.5rem;
             p{
                 color: #333333;
                 font-size: .65rem;
                 padding-top: .575rem;
             }
             .btn{
-                padding: 1.15rem 2.1rem 1.275rem 2.1rem;
+                position: absolute;
+                width: 85%;
+                top: 50%;
+                left: 11%;
                 span{
                     display: inline-block;
                     width: 6rem;

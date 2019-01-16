@@ -1,7 +1,7 @@
 <template>
     <div class="index">
         <header class="head">
-            <span class="title">搜课</span>
+            <span class="title"><b>搜课</b></span>
             <span class="city" @click="Toast()">北京</span>
         </header>
         <div class="banner">

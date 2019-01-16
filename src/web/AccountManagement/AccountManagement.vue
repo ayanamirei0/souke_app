@@ -86,9 +86,6 @@ export default {
         .Return{        //lihongliang 修改 2018-12-20
             .icon-fanhui{
                     font-size: 1.1rem;
-                    position: relative;
-                    bottom: .13rem;
-                    left: 0;
             }
         }
     }
