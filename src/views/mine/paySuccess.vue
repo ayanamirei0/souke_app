@@ -67,7 +67,7 @@ export default {
     .top{
         text-align: center;
         background-color: #ffffff;
-        padding: .65rem 0.5rem 0.6rem 0.3rem;
+        padding: .65rem 0.5rem 0.6rem 0.5rem;
         border-bottom: 1px solid #C1C1C1;
         position: relative;
         .icon-fanhui{
