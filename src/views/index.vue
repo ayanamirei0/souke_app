@@ -214,27 +214,27 @@
                 <div class="content" v-if="num2 === 0">
                     <router-link to="SearchLessonsDetails/:id" class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/mybb.jpg" alt="">
                         </div>
-                        <p>新概念英语</p>
+                        <p>墨韵宝贝（一年级）</p>
                     </router-link>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/rbyn.jpg" alt="">
                         </div>
-                        <p>THINK国际</p>
+                        <p>软笔（一年级）</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/rbln.jpg" alt="">
                         </div>
-                        <p>巨人作文启航班</p>
+                        <p>软笔（六年级）</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/16.png" alt="">
+                            <img src="../assets/img/ybsn.jpg" alt="">
                         </div>
-                        <p>思维训练培优班</p>
+                        <p>硬笔（三年级）</p>
                     </div>
                 </div>
                 <div class="content" v-if="num2 === 1">
