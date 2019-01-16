@@ -111,7 +111,7 @@ export default {
         .icon-fanhui{
             position: absolute;
             top: .65rem;
-            left: .8rem;
+            left: 1%;
             font-size: 1.1rem;
             color: #333333;
         }

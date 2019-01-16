@@ -82,7 +82,7 @@ export default {
     height: 100%;
     background-color: @common_bg_color;
     .top{
-        padding: .6rem .5rem .5rem .65rem;
+        padding: .6rem .5rem .5rem .125rem;
         background-color: #ffffff;
         display: flex;
         justify-content: space-between;
