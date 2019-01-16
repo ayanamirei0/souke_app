@@ -128,7 +128,9 @@
         <div class="bottom_fill"></div>
         <div class="bottom_tab">
             <p>
-                <span class="total">实付款:</span><span class="price">￥8200.00</span>
+                <span class="total">实付款:</span>
+                <span class="yuan">￥</span>
+                <span class="price"><b>8200.00</b></span>
             </p>
             <p>
                 <router-link class="select_lesson" to="/SearchLessons">继续选课</router-link>
@@ -517,9 +519,15 @@ export default {
             font-size: .8rem;
             margin-left: .525rem;
         }
+        .yuan{
+            color: #FA5118;
+            font-size: .7rem;
+        }
         .price{
             color: #FA5118;
-            font-size: .8rem;
+            font-size: .9rem;
+            font-weight: 600;
+            margin-left: -.3rem;
         }
         .select_lesson{
             display: inline-block;
