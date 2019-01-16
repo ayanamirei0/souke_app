@@ -1,5 +1,4 @@
 <template>
-
     <div class="box">
             <div class="h36"></div>
             <div class="Return"><a href="javascript:history.go(-1);"><img src="../assets/img/return.png"></a></div>
@@ -11,7 +10,7 @@
                 <div class="h50"></div>
                 <form  @submit.prevent="submit">
                     <div class="input_text ico1 clearfix">
-                        <input type="text" v-model="tel" name="tel" placeholder="请输入手机号码">
+                        <input type="tel" v-model="tel" name="tel" placeholder="请输入手机号码">
                     </div>
                     <div class="h20"></div>
                     <div class="input_text ico2 clearfix">
@@ -32,6 +31,7 @@
 <script>
 import Vue from 'vue';
 import { Toast } from 'vant';
+import Cookies from 'js-cookie'
 Vue.use(Toast);
 export default {
   name: 'login',
@@ -55,18 +55,32 @@ export default {
           if(this.pas==""){
             Toast('请输入登录密码');
             return false
-          }
-        //   this.$http.post('http://localhost:8088',{
-        //       a:"a"
-        //   }).then(response => {
+          }        
 
-        //     console.log(response.data);
 
-        //     }, response => {
-        //             console.log("error"); 
-        //     });
+        this.$axios({
+            method: 'post',
+            url:'/login',
+            params: {
+                tel:this.tel,
+                pas:this.pas
+            }
+        }).then((res)=>{
+            Cookies.set('CardNo', this.tel, {expires: 1})
+            this.$router.push({ path: '/mine' })
+        })
+
           
       }
   }
 }
 </script>
+
+<style lang="less" scoped>
+.box{
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+</style>

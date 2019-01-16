@@ -13,9 +13,7 @@
                     <div class="form-content clearfix">
                         <div class="form-text fl w130 h40 mr54">性别</div>
                         <div class="form-data fl w442">
-                            <select name="" v-model="sexDefault">
-                                <select-a v-for="(itme,key) in sex" :value="itme.value" :key="key" :content="itme.content"></select-a>
-                            </select>
+                            <div class="csrq" @click="changeSex()" :class="{ color999 : isSex }">{{sex}}</div>
                         </div>
                     </div>
                     <div class="form-content clearfix">
@@ -55,7 +53,27 @@
             <van-popup v-model="show" position="bottom" :overlay="true">
                 <van-datetime-picker  v-model="currentDate" @confirm="confirm" @cancel="cancel"  type="date"  :min-date="minDate"  :max-date="maxDate"/>
             </van-popup>
-            
+
+         <!-- 弹出层_性别选择 -->
+        <van-popup v-model="show_sex" :overlay="true" class="choose_sex">
+            <p class="sex">请选择您的性别</p>
+            <div class="img">
+                <div @click="selectSex()">
+                    <img src="../assets/img/man_s.png" alt="" v-if="show_man">
+                    <img src="../assets/img/man.png" alt="" v-else>
+                </div>
+                <div @click="selectSex()">
+                    <img src="../assets/img/woman_s.png" alt="" v-if="show_woman">
+                    <img src="../assets/img/woman.png" alt="" v-else>
+                </div>
+            </div>
+            <div class="text">
+                <p class="line" @click="changeSex()">取消</p>
+                <p @click="sexConfirm()">确定</p>
+            </div>
+        </van-popup>
+
+
         </div>
       
        
@@ -103,12 +121,28 @@ export default {
         show: false,
         value:'请选择出生日期',
         isActive: true,
-        //sex:"请选择您的性别",
+        sex:"请选择您的性别",
+        show_sex: false,
+        show_man: true,
+        show_woman: false,
+        isSex: true,
     };
   }, 
   
     methods:{  
-      
+     changeSex() {
+      this.show_sex = !this.show_sex;
+    },
+    selectSex() {
+      this.show_man = !this.show_man;
+      this.show_woman = !this.show_woman;
+    },
+    sexConfirm(){
+        if(this.show_man){this.sex='男'}
+        if(this.show_woman){this.sex='女'} 
+        this.show_sex=false
+        this.isSex=false
+    },
     confirm(value){                    
         let d = new Date(value);
         this.value=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
@@ -145,3 +179,6 @@ export default {
     }
 }
 </script>
+<style>
+@import "../assets/css/mine/personInfo.css";
+</style>

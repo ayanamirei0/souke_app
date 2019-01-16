@@ -15,7 +15,7 @@
                     <div class="h20"></div>
                     <div class="input_text ico2 clearfix">
                         <input type="tel" v-model="code" class="Code" placeholder="请输入验证码">
-                        <div class="ObtainCode"><button type="button" @click="CountDown">获取验证码</button></div>
+                        <div class="ObtainCode"><button type="button" @click="CountDown" :class=" {on : ObtainCodeShow}">获取验证码</button></div>
                     </div>
                     <div class="reminder"><van-checkbox v-model="checked" checked-color="#2FB3F1">我接受并同意<a href="">《用户服务条款》</a></van-checkbox></div>
                     <div class="h50"></div>
@@ -38,7 +38,8 @@ export default {
     return {
       checked: true,
       tel:'',
-      code:''
+      code:'',
+      ObtainCodeShow:false,
     };
   },
     methods:{        
@@ -52,7 +53,8 @@ export default {
                 return Toast('请输入正确手机号码');
             }
           } 
-            Toast.success('验证码已发送');        
+            //Toast.success('验证码已发送');
+            Toast('测试验证码：1234');      
             let time = 60;
             this.timer = window.setInterval(()=>{
                 console.log(time);
@@ -61,11 +63,12 @@ export default {
                     window.clearInterval(this.timer);
                     this.timer = null;
                     el.target.disabled = '';
+                    this.ObtainCodeShow=false;
                 }else{
                     --time;
                     el.target.innerHTML = '等待'+time+'s';
                     el.target.disabled = ' disabled';
-                    //el.target.style.background='#2FB3F1'
+                    this.ObtainCodeShow=true;
                 }
             },1000);
         },

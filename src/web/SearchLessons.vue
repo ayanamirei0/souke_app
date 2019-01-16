@@ -931,16 +931,16 @@ var windowTop = 0; //初始话可视区域距离页面顶端的距离
     right: .3rem;
 }
 .searchLessons-content-bnt-rb{
-    color: #ed5604;
-    border: 1px solid #ed5604; 
+    color: #ed5604 !important;
+    border: 1px solid #ed5604 !important; 
 }
 .searchLessons-content-bnt-mb{
-    color: #b0b0b0;
-    border: 1px solid #b0b0b0;
+    color: #b0b0b0 !important;
+    border: 1px solid #b0b0b0 !important;
 }
 .searchLessons-content-bnt-other{
-    color: #0de482;
-    border: 1px solid #0de482;
+    color: #0de482 !important;
+    border: 1px solid #0de482 !important;
 }
 .searchLessons-content{
     border-radius: 10px;

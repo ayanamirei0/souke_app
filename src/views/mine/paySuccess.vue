@@ -55,17 +55,23 @@ export default {
 
 <style lang="less" scoped>
 .paySuccess{
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
     .top{
         text-align: center;
         background-color: #ffffff;
         padding: .65rem 0.5rem 0.6rem 0.3rem;
         border-bottom: 1px solid #C1C1C1;
+        position: relative;
         .icon-fanhui{
             font-size: 1.1rem;
             color: #333333;
-            position: relative;
-            top: 0;
-            right: 6rem;
+            position: absolute;
+            top: .8rem;
+            left: 1%;
         }
         .title{
             font-size: .8rem;
@@ -117,14 +123,14 @@ export default {
                     font-size: .75rem;
                 }
                 .left{
-                    border: .025rem solid #2FB3F1;
+                    border: 1px solid #2FB3F1;
                     color: #2FB3F1;
                     background-color: #ffffff;
                 }
                 .right{
                     background-color: #2FB3F1;
                     color: #ffffff;
-                    margin-left: 1.17rem;
+                    margin-left: 7%;
                 }
             }   
         }

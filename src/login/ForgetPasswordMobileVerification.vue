@@ -43,7 +43,8 @@ export default {
                 return Toast('请输入正确手机号码');
             }
           }    
-           Toast.success('验证码已发送');      
+           //Toast.success('验证码已发送');
+           Toast('测试验证码：1234');     
             let time = 60;
             this.timer = window.setInterval(()=>{
                 console.log(time);
