@@ -150,11 +150,11 @@ export default {
                     font-size: .8rem;
                     text-align: center;
                     position: relative;
-                    padding: .5rem 7.25rem .75rem 7.25rem;
+                    padding: .5rem 7.2rem .75rem 7.2rem;
                 }
                 p:before{
                     content: '';
-                    width: 38%;
+                    width: 39%;
                     height: 1px;
                     background-color: #C1C1C1;
                     position: absolute;
@@ -164,7 +164,7 @@ export default {
                 p:after{
                     content: '';
                     display:inline-block;
-                    width: 38%;
+                    width: 39%;
                     height: 1px;
                     background-color: #C1C1C1;
                     position: absolute;
