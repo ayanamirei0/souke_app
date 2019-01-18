@@ -154,7 +154,7 @@ export default {
                 }
                 p:before{
                     content: '';
-                    width: 39%;
+                    width: 38%;
                     height: 1px;
                     background-color: #C1C1C1;
                     position: absolute;
@@ -164,7 +164,7 @@ export default {
                 p:after{
                     content: '';
                     display:inline-block;
-                    width: 39%;
+                    width: 38%;
                     height: 1px;
                     background-color: #C1C1C1;
                     position: absolute;
