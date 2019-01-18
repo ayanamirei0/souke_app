@@ -21,7 +21,7 @@ export default {
 					imgActive: require("../assets/img/home_.png")
 				},
 				{
-					text: "搜索",
+					text: "搜课",
 					page: "/SearchLessons",
                     name: "SearchLessons",
 					img: require("../assets/img/search.png"),
