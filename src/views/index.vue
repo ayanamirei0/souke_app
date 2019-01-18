@@ -283,27 +283,27 @@
                 <div class="content" v-if="num3 === 0">
                     <router-link to="SearchLessonsDetails/:id" class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/egn.jpg" alt="">
                         </div>
-                        <p>“成吉思汗”草原探秘夏令营</p>
+                        <p>E概念英语1阶</p>
                     </router-link>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/jqgj.jpg" alt="">
                         </div>
-                        <p>“国学大师”书法篆刻夏令营</p>
+                        <p>剑桥国际英标</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/jqzh.jpg" alt="">
                         </div>
-                        <p>“百变玩家”综合体验夏令营</p>
+                        <p>剑桥1级综合</p>
                     </div>
                     <div class="title">
                         <div class="img">
-                            <img src="../assets/img/15.png" alt="">
+                            <img src="../assets/img/ysw.jpg" alt="">
                         </div>
-                        <p>“灌篮高手”篮球训练夏令营</p>
+                        <p>悦思维1阶上</p>
                     </div>
                 </div>
                 <div class="content" v-if="num3 === 1">
