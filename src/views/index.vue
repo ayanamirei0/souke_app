@@ -389,6 +389,10 @@ export default {
             centeredSlides : true,      //设定为true时，活动块会居中，而不是默认状态下的居左。
             loopAdditionalSlides: 3,      //解决swiper中同时开启loop和centeredSlides后,轮播到最后一张出现空白的问题
             slidesPerView:'1.1',
+
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true,//修改swiper的父元素时，自动初始化swiper
+
             // pagination : '.swiper-pagination',       //pagination分页器
             // paginationClickable:true,
             // prevButton:'.swiper-button-prev',
@@ -401,7 +405,7 @@ export default {
             //             slidesPerView: 1.1,
             //             }
             //     }
-        })
+        });
     }
 }
 </script>
