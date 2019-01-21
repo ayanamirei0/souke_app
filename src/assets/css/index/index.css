@@ -1,10 +1,14 @@
 .index{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
-    background-color: #ffffff;
     -webkit-overflow-scrolling: touch;  /* 解决页面在ios滑动卡顿问题 */
+}
+.index .container_middle{   /* ios下固定定位position：fixed属性引起的底部导航栏滑屏抖动问题 */
+    width: 100%;
+    height: auto;
+    position: absolute;
+    overflow-y: scroll;
+    padding-bottom: 2.55rem;     /* bottom值为Tabar的高 */
+    box-sizing: border-box;     /* 这里改变盒子模型为怪异盒模型，这样padding值不会增加main的高度 */
+    background-color: #ffffff; 
 }
 .head {
     padding: .75rem 1rem .6rem 1rem;
@@ -194,7 +198,8 @@
 }
 .bottom_tip{
   text-align: center;
-  margin: 1.1rem 0 3.5rem 0;
+  padding: .5rem 0;
+  background-color: #F8F8F8;
 }
 .bottom_tip .text{
   color: #999999;
