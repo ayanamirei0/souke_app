@@ -172,27 +172,27 @@
                     <div class="content" v-if="num1 == 1">
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/qhyf.jpg" alt="">
                             </div>
-                            <p>“成吉思汗”草原探秘夏令营</p>
+                            <p>启航扬帆</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/qmjc.jpg" alt="">
                             </div>
-                            <p>思维训练精英班</p>
+                            <p>启蒙基础班</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/qszy.jpg" alt="">
                             </div>
-                            <p>巨人作文启航班</p>
+                            <p>启思卓越班</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/mathVip.jpg" alt="">
                             </div>
-                            <p>思维训练培优班</p>
+                            <p>数学VIP班</p>
                         </div>
                     </div>
                 </div>
@@ -241,27 +241,27 @@
                     <div class="content" v-if="num2 === 1">
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/15.png" alt="">
+                                <img src="../assets/img/cyms.jpg" alt="">
                             </div>
-                            <p>“成吉思汗”草原探秘夏令营</p>
+                            <p>创意美术</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/15.png" alt="">
+                                <img src="../assets/img/smsc.jpg" alt="">
                             </div>
-                            <p>“国学大师”书法篆刻夏令营</p>
+                            <p>素描色彩</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/15.png" alt="">
+                                <img src="../assets/img/tsms.jpg" alt="">
                             </div>
-                            <p>“百变玩家”综合体验夏令营</p>
+                            <p>特色美术</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/15.png" alt="">
+                                <img src="../assets/img/ysjms.jpg" alt="">
                             </div>
-                            <p>“灌篮高手”篮球训练夏令营</p>
+                            <p>艺术节美术</p>
                         </div>
                     </div>
                 </div>
@@ -310,27 +310,27 @@
                     <div class="content" v-if="num3 === 1">
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/crazy_robot.jpg" alt="">
                             </div>
-                            <p>巨人大语文</p>
+                            <p>疯狂玩机器人</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/robot_gold.jpg" alt="">
                             </div>
-                            <p>思维训练精英班</p>
+                            <p>机器人金品</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/lesson_gold.jpg" alt="">
                             </div>
-                            <p>巨人作文启航班</p>
+                            <p>金品课程</p>
                         </div>
                         <div class="title">
                             <div class="img">
-                                <img src="../assets/img/16.png" alt="">
+                                <img src="../assets/img/model_make.jpg" alt="">
                             </div>
-                            <p>思维训练培优班</p>
+                            <p>模型制作</p>
                         </div>
                     </div>
                 </div>
