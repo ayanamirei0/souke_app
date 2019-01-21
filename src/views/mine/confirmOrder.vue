@@ -201,7 +201,8 @@ export default {
     .top{
         text-align: center;
         background-color: #ffffff;
-        padding: .65rem 0.5rem 0.6rem 0.3rem;
+        padding: .65rem 0 .6rem 0;
+        border-bottom: 1px solid #C1C1C1;
         position: fixed;
         top: 0;
         left: 0;
