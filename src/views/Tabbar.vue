@@ -71,7 +71,7 @@ export default {
 		changeTab(...arg) {
 			let path = arg[0].page;
             console.log(arg[0].page);
-			this.selected = arg[0].name;
+			//this.selected = arg[0].name;
             this.$router.push(path);
             //  sessionStorage.setItem(this.cache, arg[0].name);	
 		}
