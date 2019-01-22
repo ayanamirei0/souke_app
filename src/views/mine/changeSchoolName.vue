@@ -11,7 +11,7 @@
         <div class="content">
             <ul v-for="(item, index) in list" :key="index">
                 <li class="title" :id="item.title">{{item.title}}</li>
-                <li class="item" v-for="(items, index) in item.content" :key="index" @click="addClass(items.id)" :class="{selected : current == items.id}">
+                <li class="item" v-for="(items, index) in item.content" :key="index" @click="addClass(items.id)" :class="{selected: current == items.id}">
                     {{items.text}}
                 </li>
             </ul>
