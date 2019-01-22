@@ -199,7 +199,7 @@
 .bottom_tip{
   text-align: center;
   padding: .5rem 0;
-  background-color: #F8F8F8;
+  /* background-color: #F8F8F8; */
 }
 .bottom_tip .text{
   color: #999999;
