@@ -8,7 +8,7 @@
 			<p>修改学员信息</p>
 		</div>
 		<div class="main">
-			<p class="top_tip">为了让老师更好的了解你，请输入真是姓名</p>
+			<p class="top_tip">为了让老师更好的了解你，请输入真实姓名</p>
 			<div class="input">
 				<input type="text" placeholder="请输入学员姓名" v-model="student_input">
 			</div>
